@@ -1,0 +1,138 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "id": "/cddo-data-resource-schema.json",
+    "title": "Schema for the Data Marketplace",
+    "description": "Schema to be used for data resource records in the Cross-Government Data Marketplace Catalogue.",
+    "type": "object",
+    "required": ["@id","@type","title","description","keyword","theme","licence","version","accessRights","issued","contactPoint","modified","creator","publisher"],
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "format": "iri-reference",
+            "default": "./cddo-data-resource-schema.json"
+        },
+        "@context": {
+            "type": "string",
+            "format": "iri-reference",
+            "default": "./cddo-context.json"
+        },
+        "@id": {
+            "description": "A unique url to identify the data resource", 
+            "type": "string",
+            "format": "iri"
+        },
+        "@type": {
+            "description": "The type of the data resource.",
+            "type": "string",
+            "enum": ["DataService", "Dataset"]
+        },
+        "title": {
+            "description": "The name of the data resource", 
+            "type": "string"
+        },
+        "alternativeTitle": {
+            "description": "Alternative names for the data resource including common abbreviations and synonyms.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "description": {
+            "description": "A description of the data resource", 
+            "type": "string"
+        },
+        "identifier": {
+            "description": "A unique number, code, or reference value assigned to an information resource within a given context. Local identifier for the resource.",
+            "type": "string"
+        },
+        "keyword": {
+            "description": "Uncontrolled terms (words or phrases) assigned to describe an information resource.",
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "theme": {
+            "description": "A controlled term that expresses a topic of the intellectual content of an information resource.",
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "iri"
+                    }
+                },
+                {
+                    "type": "string",
+                    "format": "iri"
+                }
+            ]
+        },
+        "licence": {
+            "description": "Reference to the legal document outlining access and usage rights for an information resource.",
+            "type": "string",
+            "format": "iri"
+        },
+        "version": {
+            "description": "The version number of the data resource.",
+            "type": "string"
+        },
+        "accessRights": {
+            "description": "Information about who can access the resource or an indication of its security status.",
+            "$ref": "./access-rights.json#/accessRights"
+        },
+        "securityClassification": {
+            "description": "An information security designation that identifies the minimum level of protection assigned to an information resource.",
+            "$ref": "./security-classifications.json#/securityClassifications"
+        },
+        "issued": {
+            "description": "The date on which an information resource was originally published or otherwise made publicly available for the first time.",
+            "type": "string",
+            "format": "date" 
+        },
+        "contactPoint": {
+            "description": "Point of contact for the data resource either as a team email address or a contact object.",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "idn-email"
+                },
+                {
+                    "type": "object",
+                    "required": ["contactName","email"],
+                    "properties": {
+                        "contactName": {
+                            "description": "Name of the point of contact or the team name.",
+                            "type": "string"
+                        },
+                        "email": {
+                            "description": "Email address for the point of contact. Preferable a team email address.",
+                            "type": "string",
+                            "format": "idn-email"
+                        }
+                    }
+                }
+            ]
+        },
+        "modified": {
+            "description": "The date on which the content of an information resource is changed.",
+            "type": "string",
+            "format": "date"
+        },
+        "creator": {
+            "description": "The URI of the business entity responsible for creating or compiling the original content of an information resource.",
+            "$ref": "./available-organisations.json#/org-uris"
+        },
+        "publisher": {
+            "description": "The URI of the business entity responsible for making an information resource publicly available.",
+            "$ref": "./available-organisations.json#/org-uris"
+        }
+    }
+}

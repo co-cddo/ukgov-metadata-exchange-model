@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "org-uris": {
+        "type": "string",
+        "format": "iri",
+        "enum": [
+            "department-for-work-pensions",
+            "food-standards-agency",
+            "nhs-digital",
+            "ordnance-survey"
+        ]
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "id": "/cddo-data-resources-schema.json",
+    "title": "Data Resource Collection Schema",
+    "description": "Schema for a collection of data resource records in the Cross-Government Data Catalogue.",
+    "type": "object",
+    "required": ["$schema","@context","resources"],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "format": "iri-reference",
+            "default": "./cddo-data-resource-schema.json"
+        },
+        "@context": {
+            "type": "string",
+            "format": "iri-reference",
+            "default": "./CDDO-context.json"
+        },
+        "resources": {
+            "type": "array",
+            "items": {
+                "allOf": [
+                    {
+                        "if": {
+                            "properties": {
+                                "@type": {
+                                    "const": "DataService"
+                                }
+                            }
+                        },
+                        "then": {
+                            "$ref": "./cddo-data-service-schema.json"
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "@type": {
+                                    "const": "Dataset"
+                                }
+                            }
+                        },
+                        "then": {
+                            "$ref": "./cddo-dataset-schema.json"
+                        }
+                    }
+                ]
+            }
+        }
+   }
+}

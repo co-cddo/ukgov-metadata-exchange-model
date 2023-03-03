@@ -1,0 +1,37 @@
+{
+    "$schema": "../cddo-organisations-schema.json",
+    "@context": "../CDDO-context.json",
+    "organisations": [
+        {
+            "@id": "department-for-work-pensions",
+            "@type": "Organisation",
+            "title": "Department for Work & Pensions",
+            "acronym": "DWP",
+            "homepage": "https://www.gov.uk/government/organisations/department-for-work-pensions"
+        },
+        {
+            "@id": "food-standards-agency",
+            "@type": "Organisation",
+            "title": "Food Standards Agency",
+            "acronym": "FSA",
+            "homepage": "https://www.food.gov.uk/"
+        },
+        {
+            "@id": "nhs-digital",
+            "@type": "Organisation",
+            "title": "NHS Digital",
+            "acronym": "NHS Digital",
+            "alternativeTitle": [
+                "HSCIC"
+            ],
+            "homepage": "https://digital.nhs.uk/"
+        },
+        {
+            "@id": "ordnance-survey",
+            "@type": "Organisation",
+            "title": "Ordnance Survey",
+            "acronym": "OS",
+            "homepage": "https://www.gov.uk/government/organisations/ordnance-survey"
+        }
+    ]
+}

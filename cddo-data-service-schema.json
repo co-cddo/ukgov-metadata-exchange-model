@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "id": "/cddo-data-service-schema.json",
+    "title": "Data Service Schema for the Data Marketplace",
+    "description": "Schema to be used for data service records in the Cross-Government Data Marketplace Catalogue. The schema extends the data resource schema.",
+    "allOf": [{"$ref": "./cddo-data-resource-schema.json"}],
+    "required": ["endpointDescription","serviceType","status"],
+    "type": "object",
+    "properties": {
+            "endpointURL": {
+                "description": "The root location or primary endpoint of the service (a Web-resolvable IRI).",
+                "type": "string",
+                "format": "iri"
+            },
+            "endpointDescription": {
+                "description": "A description of the services available via the end-points, including their operations, parameters etc.",
+                "type": "string",
+                "format": "iri"
+            },
+            "servesData": {
+                "description": "A collection of data that this data service can distribute.",
+                "type": "string",
+                "format": "iri"
+            },
+            "serviceType": {
+                "description": "The nature or genre of the resource.",
+                "$ref": "./service-types.json#/serviceTypes"
+            },
+            "status": {
+                "description": "",
+                "$ref": "./status.json#/status"
+            }
+        }
+}

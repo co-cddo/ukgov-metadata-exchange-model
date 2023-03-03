@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "id": "/cddo-organisation-schema.json",
+    "title": "Organisation Metadata Schema",
+    "description": "Schema to be used for organisation records in the Cross-Government Data Catalogue.",
+    "type": "object",
+    "required": ["@id","@type","title","acronym"],
+    "additionalProperties": false,
+    "properties": {
+        "@id": {
+            "description": "A unique url to identify the organisation",
+            "$ref": "./available-organisations.json#/org-uris"
+        },
+        "@type": {
+            "description": "Required @type is Organisation.",
+            "type": "string",
+            "format": "regex",
+            "pattern": "Organisation"
+        },
+        "title": {
+            "description": "The official name of the organisation",
+            "type": "string"
+        },
+        "acronym": {
+            "description": "The official acronym for the organisation",
+            "type": "string"
+        },
+        "alternativeTitle": {
+            "description": "Alternative names and acronyms for the organisation.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "homepage": {
+            "description": "The official homepage for the department",
+            "type": "string",
+            "format": "iri"
+        }
+    }
+}

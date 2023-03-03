@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "id": "/cddo-organisation-schema.json",
+    "title": "Organisations Dataset Schema",
+    "description": "Schema to be used for the set of organisations maintained for the Cross-Government Data Catalogue.",
+    "type": "object",
+    "required": ["$schema","@context","organisations"],
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "format": "iri-reference",
+            "default": "./cddo-organisation-schema.json"
+        },
+        "@context": {
+            "type": "string",
+            "format": "iri-reference",
+            "default": "./CDDO-context.json"
+        },
+        "organisations": {
+            "type": "array",
+            "items": {
+                "$ref": "./cddo-organisation-schema.json"
+            }
+        }
+    }
+}

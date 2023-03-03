@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "id": "/cddo-dataset-schema.json",
+    "title": "Dataset Schema for the Data Marketplace",
+    "description": "Schema to be used for dataset records in the Cross-Government Data Marketplace Catalogue. The schema extends the data resource schema.",
+    "allOf": [{"$ref": "./cddo-data-resource-schema.json"}],
+    "required": ["distribution", "updateFrequency"],
+    "type": "object",
+    "properties": {
+            "accessRights": {
+                "description": "",
+                "type": "string",
+                "format": "iri"
+            }
+        }
+}

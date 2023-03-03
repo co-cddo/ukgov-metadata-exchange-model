@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "accessRights": {
+        "type": "string",
+        "enum": [
+            "INTERNAL",
+            "OPEN",
+            "COMMERCIAL"
+        ]
+    }
+}

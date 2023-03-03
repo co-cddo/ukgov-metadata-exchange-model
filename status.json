@@ -1,0 +1,15 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "status": {
+        "type": "string",
+        "enum": [
+            "ALPHA",
+            "BETA",
+            "PRIVATE_BETA",
+            "PUBLIC_BETA",
+            "PRODUCTION",
+            "DEPRECATED",
+            "WITHDRAWN"
+        ]
+    }
+}

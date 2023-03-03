@@ -1,0 +1,102 @@
+{
+    "@context": {
+        "@vocab": "http://www.w3.org/ns/dcat#",
+        "adms": "https://www.w3.org/ns/adms#",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "dct": "http://purl.org/dc/terms/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "title": "dct:title",
+        "alternativeTitle": "dct:alternative",
+        "description": "dct:description",
+        "identifier": "dct:identifier",
+        "keyword": "dcat:keyword",
+        "theme": {
+            "@id": "dcat:theme",
+            "@type": "@id"
+        },
+        "licence": {
+            "@id": "dct:license",
+            "@type": "@id"
+        },
+        "status": {
+            "@context": {
+                "@base": "http://example.com/status/"
+            },
+            "@id": "adms:status",
+            "@type": "@id"
+        },
+        "accessRights": {
+            "@context": {
+                "@base": "https://exmaple.com/access-rights/"
+            },
+            "@id": "dct:accessRights",
+            "@type": "@id"
+        },
+        "securityClassification": {
+            "@context": {
+                "@base": "http://example.com/security-classification/"
+            },
+            "@id": "http://example.com/securityClassification",
+            "@type": "@id"
+        },
+        "version": "dcat:version",
+        "issued": "dct:issued",
+        "contactPoint": "dcat:contactPoint",
+        "modified": "dct:modified",
+        "creator": {
+            "@context": {
+                "@base": "https://www.gov.uk/api/organisations/"
+            },
+            "@id": "dct:creator",
+            "@type": "@id"
+        },
+        "publisher": {
+            "@context": {
+                "@base": "https://www.gov.uk/api/organisations/"
+            },
+            "@id": "dct:publisher",
+            "@type": "@id"
+        },
+        "endpointURL": {
+            "@id": "dcat:endpointURL",
+            "@type": "@id"
+        },
+        "endpointDescription": {
+            "@id": "dcat:endpointDescription",
+            "@type": "@id"
+        },
+        "serviceType": {
+            "@context": {
+                "@base": "http://example.com/service-type/"
+            },
+            "@id": "dct:type",
+            "@type": "@id"
+        },
+        "servesData": {
+            "@id": "dcat:servesData",
+            "@type": "@id"
+        },
+        "Organisation": {
+            "@id": "foaf:Organization"
+        },
+        "acronym": {
+            "@id": "rdfs:label"
+        },
+        "homepage": {
+            "@id": "foaf:homepage"
+        },
+        "contactName": {
+            "@id": "vcard:fn"
+        },
+        "email": {
+            "@id": "vcard:hasEmail"
+        },
+        "telephone": {
+            "@id": "vcard:hasTelephone"
+        },
+        "address": {
+            "@id": "vcard:hasAddress"
+        }
+    }
+}
