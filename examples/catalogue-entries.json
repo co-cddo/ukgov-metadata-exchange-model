@@ -5,6 +5,8 @@
         {
             "identifier": "dwp-exchange",
             "@type": "Catalog",
+            "title": "Department for Work and Pensions Exchange Catalogue",
+            "description": "Catalogue of data resources provided by the Department for Work and Pensions",
             "service": {
                 "@id": "https://api.engineering.dwp.gov.uk/retirement-bereavement-care-address-lookup-location-service-v2.0.0",
                 "@type": "DataService",
@@ -35,6 +37,8 @@
         {
             "identifier": "fsa-data-portal",
             "@type": "Catalog",
+            "title": "Food Standards Agency Data Catalogue",
+            "description": "Catalogue of data resources provided by the Food Standards Agency. All of our open datasets are available for you to use for free.",
             "homepage": "https://data.food.gov.uk/catalog",
             "service": {
                 "@id": "https://data.food.gov.uk/food-alerts/",
@@ -63,6 +67,8 @@
         {
             "identifier": "nhs-digital-api-catalogue",
             "@type": "Catalog",
+            "title": "NHS Digital API Catalogue",
+            "description": "These are the APIs which are currently available, or in development, from NHS Digital and associated organisations. It includes APIs (https://digital.nhs.uk/developer/guides-and-documentation/introduction-to-healthcare-technology/integration-and-apis#apis) as well as API standards (https://digital.nhs.uk/developer/guides-and-documentation/introduction-to-healthcare-technology/integration-and-apis#api-standards) defined by us. For other data standards, see the NHS Data Standards Directory (https://data.standards.nhs.uk/).",
             "homepage": "https://digital.nhs.uk/developer/api-catalogue/",
             "service": [
                 {
