@@ -1,12 +1,20 @@
-# Data Catalogue Model Implementation
+# Cross-Government Data Marketplace Data Exchange Model Implementation
 
-This directory captures the implementation of the [Government Data Catalogue model](https://docs.google.com/document/d/13KqG1Zom0YqCehPHagCnV6ADOwj8k6qcv7Us4UDWnNg/).
+This repository captures the implementation of the [Government Data Marketplace Data Exchange model](https://docs.google.com/document/d/13KqG1Zom0YqCehPHagCnV6ADOwj8k6qcv7Us4UDWnNg/).
 
-The implementation is as [JSON Schema](https://json-schema.org/) files (conforming to the `2020-12` draft) to capture the expected form of the JSON files. There is the option to convert into linked data by linking in the [context file](cddo-context.json).
+This repository contains [JSON Schema](https://json-schema.org/) files (conforming to the `2020-12` draft) to capture the expected form of the JSON files. There is the option to convert into linked data by linking in the [context file](cddo-context.json).
 
 ## Schemas
 
-The JSON Schemas are split into separate interlinked files with data service and dataset schemas extending the base data service schema. The schema files are:
+The JSON Schemas are split into separate interlinked files with data service and dataset schemas extending the base data service schema. 
+
+**Status:** 
+
+- DataService has been approved by the Metadata Working Group
+- Dataset and Distribution are still to be finalised and proposed to the working group
+
+The schema files are:
+
 - Core Schemas:
   - [cddo-data-resources-schema.json](cddo-data-resources-schema.json): Schema for an array of data resources.  
     __Reuses:__ 
@@ -15,13 +23,15 @@ The JSON Schemas are split into separate interlinked files with data service and
   - [cddo-data-resource-schema.json](cddo-data-resource-schema.json): Schema capturing common properties for all data resources. Resource must be typed as either a dataset or a data service and should be validated against the schema specific to that resource.  
   _This schema is not intended to be used independently of one of the more specific schemas._
   - [cddo-data-service-schema.json](cddo-data-service-schema.json): Schema for data service properties that extends [cddo-data-resource-schema.json](cddo-data-resource-schema.json)
-  - [cddo-dataset-schema.json](cddo-dataset-schema.json): Schema for dataset properties that extends [cddo-data-resource-schema.json](cddo-data-resource-schema.json)
+  - [cddo-dataset-schema.json](cddo-dataset-schema.json) (early draft): Schema for dataset properties that extends [cddo-data-resource-schema.json](cddo-data-resource-schema.json) 
   - [cddo-organisation-schema.json](cddo-organisation-schema.json): Schema for a single organisation
   - [cddo-organisations-schema.json](cddo-organisations-schema.json): Schema for an array of organisations.  
     __Reuses:__ [cddo-organisation-schema.json](cddo-organisation-schema.json)
 - Auxiliary Schemas:
   - [available-organisations.json](available-organisations.json): Enumerated list of valid organisation slugs
-  - [status.json](status.json): Enumerated list of service status
+  - [security-classification.json](security-classification.json): Enumerated list of security classifications
+  - [service-status.json](service-status.json): Enumerated list of service status
+  - [service-types.json](service-types.json): Enumerated list of service types
 
 ## Organisation
 
@@ -51,7 +61,7 @@ The [`services.json`](examples/services.json) file contains sample data about da
 check-jsonschema -v --schemafile cddo-data-resources-schema.json examples/services.json
 ```
 
-> __Note:__ There are validation errors in three out of the four sample service descriptions. This is due to the lack of available sample data from these sources.
+> __Note:__ There are validation errors in all four sample service descriptions. The first resource uses an invalid creator value, the other resources are missing a security classification, and the fourth resource is also missing a version value.
 
 The [`dwp-address-lookup.json`](examples/dwp-address-lookup.json) file contains the description of a single data service based on information available from DWP.
 

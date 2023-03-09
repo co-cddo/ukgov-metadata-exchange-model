@@ -5,10 +5,12 @@
         "dcat": "http://www.w3.org/ns/dcat#",
         "dct": "http://purl.org/dc/terms/",
         "foaf": "http://xmlns.com/foaf/0.1/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "vcard": "http://www.w3.org/2006/vcard/ns#",
         "title": "dct:title",
         "alternativeTitle": "dct:alternative",
         "description": "dct:description",
+        "summary": "rdfs:comment",
         "identifier": "dct:identifier",
         "keyword": "dcat:keyword",
         "theme": {
@@ -19,7 +21,7 @@
             "@id": "dct:license",
             "@type": "@id"
         },
-        "status": {
+        "serviceStatus": {
             "@context": {
                 "@base": "http://example.com/status/"
             },
@@ -43,6 +45,7 @@
         "version": "dcat:version",
         "issued": "dct:issued",
         "contactPoint": "dcat:contactPoint",
+        "created": "dct:created",
         "modified": "dct:modified",
         "creator": {
             "@context": {
@@ -56,6 +59,10 @@
                 "@base": "https://www.gov.uk/api/organisations/"
             },
             "@id": "dct:publisher",
+            "@type": "@id"
+        },
+        "relatedResource": {
+            "@id": "dct:relation",
             "@type": "@id"
         },
         "endpointURL": {

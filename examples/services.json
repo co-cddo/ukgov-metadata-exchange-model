@@ -3,20 +3,20 @@
     "@context": "../CDDO-context.json",
     "resources": [
         {
-            "@id": "https://api.engineering.dwp.gov.uk/retirement-bereavement-care-address-lookup-location-service-v2.0.0",
+            "identifier": "retirement-bereavement-care-address-lookup-location-service-v2.0.0",
             "@type": "DataService",
             "serviceType": "REST",
             "title": "Address Lookup",
-            "description": "DWP single, strategic solution for looking up addresses including fuzzy search and UPRN.",
-            "identifier": "retirement-bereavement-care-address-lookup-location-service-v2.0.0",
+            "summary": "DWP single, strategic solution for looking up addresses including fuzzy search and UPRN.",
+            "description": "The location-service provides endpoints to perform a range of address based queries for UK locations. The reference data used is provided by Ordnance Survey and covers Great Britain, Northern Ireland and the Channel Islands.\nThe API currently supports the following functions:\nPostcode Lookup and filtering\nFuzzy address searching\nUnique Property Reference Number (UPRN) lookup\nAddress matching\nData provided\n\nPostcode lookup and fuzzy address search\n\nThis endpoint serves as both the standard postcode lookup, and the fuzzy lookup. If you call the endpoint with just a search string query parameter, the service will perform a fuzzy search against your string and bring back the closest matching results.\n\nFor example, sending a request to the lookup endpoint with the search string “holy island castle”, will return the following address as the top result :\n \"NATIONAL TRUST\",\n\"LINDISFARNE CASTLE\",\n\"HOLY ISLAND\",\n\"BERWICK-UPON-TWEED\",\n\"TD15 2SH\"\n\nAlternatively, if you want to limit your search to a specific postcode, you can call the endpoint with the postcode query parameter set. If you call the endpoint with just the postcode, then the service will return all addresses for that postcode.\n\nIf you call the endpoint with both postcode, and search string, the service will return only addresses that match the provided postcode and search string.\n\nThere is also one further parameter for this endpoint (excludeBusiness), which if set will restrict the returned result list to non-commercial addresses.\n\nUnique Property Reference Number lookup\n\nThis endpoint will take a unique property reference number (UPRN) as a query parameter and return the specific address record for that ID if present in the data set. As the data set contains a snapshot of current addresses, it may be the case that UPRNs which are no longer valid get removed from the data set by Ordnance Survey.\n\nAddress matching\n\nThis endpoint provides an address matching function. It will take an unstructured address string along with a postcode and try to find an exact match in the data set. If the service can find an exact match, then that specific record will be returned. If no match is found, then no records are returned. This endpoint also uses fuzzy matching algorithms, which allow it to cope with spelling mistakes, transposed characters, and other errors within the search string.",
             "keyword": [
                 "Address",
                 "Search",
                 "UPRN"
             ],
             "theme": "http://example.com/cv/addressLookup",
-            "licence": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-            "status": "PRODUCTION",
+            "licence": "https://opensource.org/license/isc-license-txt/",
+            "serviceStatus": "LIVE",
             "version": "2.0.0",
             "accessRights": "INTERNAL",
             "securityClassification": "OFFICIAL",
@@ -29,7 +29,7 @@
             "servesData": "https://www.data.gov.uk/dataset/2dfb82b4-741a-4b93-807e-11abb4bb0875/"
         },
         {
-            "@id": "https://data.food.gov.uk/food-alerts/",
+            "identifier": "https://data.food.gov.uk/food-alerts/",
             "@type": "DataService",
             "serviceType": "EVENT",
             "title": "FSA Food Alerts",
@@ -37,7 +37,7 @@
             "keyword": ["Alert", "Allergy", "Product Recall", "PRIN", "Food", "FAFA"],
             "theme": ["http://eurovoc.europa.eu/c_af502da0","http://eurovoc.europa.eu/6569","http://eurovoc.europa.eu/5431"],
             "licence": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-            "status": "BETA",
+            "serviceStatus": "BETA",
             "version": "0.1",
             "accessRights": "OPEN",
             "issued": "2018-01-01",
@@ -52,11 +52,12 @@
             "endpointDescription": "http://data.food.gov.uk/food-alerts/ui/reference"
         },
         {
-            "@id": "https://digital.nhs.uk/developer/api-catalogue/ordnance-survey-places-api",
+            "identifier": "https://digital.nhs.uk/developer/api-catalogue/ordnance-survey-places-api",
             "@type": "DataService",
             "serviceType": "REST",
             "title": "Ordnance Survey Places API",
-            "description": "Identify UK addresses with the OS Places API.",
+            "summary": "Identify UK addresses with the OS Places API.",
+            "description": "Use this API for looking up and validating addresses, typically before updating patient details in the Personal Demographics Service.\r\n\r\nYou can:\r\n\r\nidentify UK addresses\r\nverify the address records you are capturing against authoritative data from Ordnance Survey\u2019s AddressBase\u00ae Premium and AddressBase\u00ae Premium - Islands\r\nmake requests using a full or partial address, a postcode, or a Unique Property Reference Number (UPRN)\r\nfind addresses closest to a given point\r\nfind all the known addresses within a user-defined area, bounding box or circle\r\nverify an address before updating a patient's details in the Personal Demographics Service\r\nThis API is a third party API recommended for UK government services.",
             "keyword": [
                 "Demographics",
                 "Reference Data",
@@ -68,7 +69,7 @@
             ],
             "theme": "http://eurovoc.europa.eu/3460",
             "licence": "https://osdatahub.os.uk/legal/apiTermsConditions",
-            "status": "PRODUCTION",
+            "serviceStatus": "LIVE",
             "accessRights": "OPEN",
             "version": "v1",
             "contactPoint": {
@@ -78,23 +79,34 @@
             "modified": "2023-01-20",
             "creator": "ordnance-survey",
             "publisher": "nhs-digital",
+            "relatedResource": [
+                "https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir",
+                "https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-hl7-v3"
+            ],
             "endpointURL": "https://api.os.uk/search/places/v1/",
             "endpointDescription": "https://osdatahub.os.uk/docs/places/overview"
         },
         {
-            "@id": "https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir",
+            "identifier": "https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir",
             "@type": "DataService",
             "serviceType": "EVENT",
             "title": "Vaccination Events - FHIR",
-            "description": "Publish or receive messages about changes to a patient's vaccination details.",
+            "summary": "Publish or receive messages about changes to a patient's vaccination details.",
+            "description": "Use this integration to publish or receive messages about changes to a patient's vaccination details, including:\r\n\r\nnew vaccinations\r\nupdated vaccination details\r\ndeleted vaccination details\r\nThis service currently covers childhood vaccinations up to the age of 19, and for direct care purposes only, in the context of Digital Child Health. If you'd like to use this API to publish or consume other vaccination types across all age groups, contact nrlnems.ls@nhs.net.\r\n\r\nUsing a publish-subscribe model, we share information about these events with healthcare workers in other organisations such as GPs, Emergency Departments and Local Authorities.\r\n\r\nThis integration uses a publish-subscribe model - the sending system publishes events to National Events Management Service (NEMS), and NEMS forwards the events to all subscribed systems via MESH.\r\n\r\nFor example, when a GP system records a vaccination, it sends an event message containing the vaccination details to NEMS. NEMS then sends the message to all healthcare workers who have subscribed to receive vaccination event messages.",
             "keyword": ["Community of care", "Vaccination", "Community health", "Hospital", "Inpatient", "Outpatient", "GP / Primary Care", "Publish/Subscribe Events", "Internet Facing", "FHIR", "STU3", "MESH", "NEMS"],
             "theme": ["http://eurovoc.europa.eu/c_af502da0","http://eurovoc.europa.eu/4636"],
-            "status": "PRODUCTION",
+            "licence": "DATA_SHARE_AGREEMENT",
+            "serviceStatus": "LIVE",
             "accessRights": "OPEN",
             "contactPoint": "nrlnems.ls@nhs.net",
             "modified": "2022-10-24",
             "creator": "nhs-digital",
             "publisher": "nhs-digital",
+            "relatedResource": [
+                "https://digital.nhs.uk/developer/api-catalogue/national-events-management-service-fhir",
+                "https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api",
+                "https://digital.nhs.uk/developer/api-catalogue/digital-child-health-fhir"
+            ],
             "endpointDescription": "https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir"
         }
     ]

@@ -4,7 +4,7 @@
     "title": "Schema for the Data Marketplace",
     "description": "Schema to be used for data resource records in the Cross-Government Data Marketplace Catalogue.",
     "type": "object",
-    "required": ["@id","@type","title","description","keyword","theme","licence","version","accessRights","issued","contactPoint","modified","creator","publisher"],
+    "required": ["identifier","@type","title","description","licence","version","accessRights","securityClassification","contactPoint","modified","creator","publisher"],
     "properties": {
         "$schema": {
             "type": "string",
@@ -16,10 +16,9 @@
             "format": "iri-reference",
             "default": "./cddo-context.json"
         },
-        "@id": {
-            "description": "A unique url to identify the data resource", 
-            "type": "string",
-            "format": "iri"
+        "identifier": {
+            "description": "A unique identifier of the resource being described or catalogued.", 
+            "type": "string"
         },
         "@type": {
             "description": "The type of the data resource.",
@@ -32,17 +31,24 @@
         },
         "alternativeTitle": {
             "description": "Alternative names for the data resource including common abbreviations and synonyms.",
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "type": "string"
+                }
+            ]
         },
         "description": {
-            "description": "A description of the data resource", 
+            "description": "A  detailed narrative of the content of an information resource to aid an acquirer to understand what data is available within the resource.", 
             "type": "string"
         },
-        "identifier": {
-            "description": "A unique number, code, or reference value assigned to an information resource within a given context. Local identifier for the resource.",
+        "summary": {
+            "description": "A short textual summary of the resource with a maximum length of 3-4 sentences.",
             "type": "string"
         },
         "keyword": {
@@ -77,8 +83,15 @@
         },
         "licence": {
             "description": "Reference to the legal document outlining access and usage rights for an information resource.",
-            "type": "string",
-            "format": "iri"
+            "anyOf": [
+                {
+                    "type": "string",
+                    "format": "iri"
+                },
+                {
+                    "const": "DATA_SHARE_AGREEMENT"
+                }
+            ]
         },
         "version": {
             "description": "The version number of the data resource.",
@@ -121,6 +134,11 @@
                 }
             ]
         },
+        "created": {
+            "description": "The date on which the content of an information resource is created or compiled.",
+            "type": "string",
+            "format": "date"
+        },
         "modified": {
             "description": "The date on which the content of an information resource is changed.",
             "type": "string",
@@ -133,6 +151,22 @@
         "publisher": {
             "description": "The URI of the business entity responsible for making an information resource publicly available.",
             "$ref": "./available-organisations.json#/org-uris"
+        },
+        "relatedResource": {
+            "description": "A resource that bears a close relationship to the described resource.",
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "iri"
+                    }
+                },
+                {
+                    "type": "string",
+                    "format": "iri"
+                }
+            ]
         }
     }
 }

@@ -4,7 +4,7 @@
     "title": "Data Service Schema for the Data Marketplace",
     "description": "Schema to be used for data service records in the Cross-Government Data Marketplace Catalogue. The schema extends the data resource schema.",
     "allOf": [{"$ref": "./cddo-data-resource-schema.json"}],
-    "required": ["endpointDescription","serviceType","status"],
+    "required": ["endpointDescription","serviceType","serviceStatus"],
     "type": "object",
     "properties": {
             "endpointURL": {
@@ -26,9 +26,9 @@
                 "description": "The nature or genre of the resource.",
                 "$ref": "./service-types.json#/serviceTypes"
             },
-            "status": {
+            "serviceStatus": {
                 "description": "",
-                "$ref": "./status.json#/status"
+                "$ref": "./service-status.json#/serviceStatus"
             }
         }
 }
