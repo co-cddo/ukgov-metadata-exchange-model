@@ -19,8 +19,19 @@
             },
             "servesData": {
                 "description": "A collection of data that this data service can distribute.",
-                "type": "string",
-                "format": "iri"
+                "oneOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "iri"
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "iri"
+                    }
+                ]
             },
             "serviceType": {
                 "description": "The nature or genre of the resource.",
