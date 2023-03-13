@@ -7,10 +7,26 @@
     "required": ["distribution", "updateFrequency"],
     "type": "object",
     "properties": {
-            "accessRights": {
-                "description": "",
+            "distribution": {
+                "description": "An available distribution of the dataset. \n(Mandatory if applicable)",
+                "oneOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "iri"
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "format": "iri"
+                    }
+                ]
+            },
+            "updateFrequency": {
+                "description": "The time interval at which new or updated versions of an information resource are issued. If the frequency is unknown then use the value `freq:irregular`.",
                 "type": "string",
-                "format": "iri"
+                "$ref": "./frequencies.json#/frequencies"
             }
         }
 }
