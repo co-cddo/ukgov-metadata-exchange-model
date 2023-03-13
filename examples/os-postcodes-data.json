@@ -20,5 +20,9 @@
   "modified": "2023-02-01",
   "creator": "ordnance-survey",
   "publisher": "department-for-work-pensions",
-  "updateFrequency": "freq:quarterly"
+  "updateFrequency": "freq:quarterly",
+  "distribution": [
+    "https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=CSV&redirect",
+    "https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=GeoPackage&redirect"
+  ]
 }
