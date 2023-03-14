@@ -48,8 +48,9 @@
             "type": "string"
         },
         "summary": {
-            "description": "A short textual summary of the resource with a maximum length of 3-4 sentences.",
-            "type": "string"
+            "description": "A short textual summary of the resource with a maximum length of 250 characters.",
+            "type": "string",
+            "maxLength": 250
         },
         "keyword": {
             "description": "Uncontrolled terms (words or phrases) assigned to describe an information resource.",
