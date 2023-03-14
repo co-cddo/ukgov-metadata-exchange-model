@@ -11,7 +11,7 @@ The JSON Schemas are split into separate interlinked files with data service and
 **Status:** 
 
 - DataService has been approved by the Metadata Working Group
-- Dataset and Distribution are still to be finalised and proposed to the working group
+- Dataset and Distribution are in draft and still to be approved by the Metadata Working Group
 
 The schema files are:
 
@@ -23,7 +23,8 @@ The schema files are:
   - [cddo-data-resource-schema.json](cddo-data-resource-schema.json): Schema capturing common properties for all data resources. Resource must be typed as either a dataset or a data service and should be validated against the schema specific to that resource.  
   _This schema is not intended to be used independently of one of the more specific schemas._
   - [cddo-data-service-schema.json](cddo-data-service-schema.json): Schema for data service properties that extends [cddo-data-resource-schema.json](cddo-data-resource-schema.json)
-  - [cddo-dataset-schema.json](cddo-dataset-schema.json) (early draft): Schema for dataset properties that extends [cddo-data-resource-schema.json](cddo-data-resource-schema.json) 
+  - [cddo-dataset-schema.json](cddo-dataset-schema.json) (draft): Schema for dataset properties that extends [cddo-data-resource-schema.json](cddo-data-resource-schema.json) 
+  - [cddo-distribution-schema.json](cddo-distribution-schema.json) (draft)
   - [cddo-organisation-schema.json](cddo-organisation-schema.json): Schema for a single organisation
   - [cddo-organisations-schema.json](cddo-organisations-schema.json): Schema for an array of organisations.  
     __Reuses:__ [cddo-organisation-schema.json](cddo-organisation-schema.json)
@@ -49,11 +50,7 @@ The [`examples`](exmaples) directory contains sample data.
 
 The files can be validated against the schemas by using a JSON Schema validator, e.g. [check-jsonschema](https://github.com/python-jsonschema/check-jsonschema) is a python based CLI that we have used for testing; other validators are available (see [here](https://json-schema.org/implementations.html)).
 
-The [`organisations.json`](examples/organisations.json) contains the data about the organisations that supply or publish data resources.
-
-```shell
-check-jsonschema -v --schemafile cddo-organisations-schema.json examples/organisations.json
-```
+### Data Services
 
 The [`services.json`](examples/services.json) file contains sample data about data services drawn from DWP, FSA, and NHS.
 
@@ -70,3 +67,28 @@ check-jsonschema -v --schemafile cddo-data-service-schema.json examples/dwp-addr
 ```
 
 > __Note:__ An error is reported for the `creator` field.
+
+### Datasets
+
+The [`os-postcodes-data.json`](examples/os-postcodes-data.json) file contains the description of a single dataset based on information available from DWP and OS ([data.gov.uk record](https://www.data.gov.uk/dataset/2dfb82b4-741a-4b93-807e-11abb4bb0875/os-postcodes-data#licence-info) and [OS Data Record](https://osdatahub.os.uk/downloads/open/CodePointOpen). The OS postcodes dataset is one of the datasets referenced in the [DWP Address Lookup Service description](examples/dwp-address-lookup.json).
+
+```shell
+check-jsonschema -v --schemafile cddo-dataset-schema.json examples/os-postcodes-data.json
+```
+
+### Distributions
+
+The [`os-postcodes-csv-distribution.json`](examples/os-postcodes-csv-distribution.json) and [`os-postcodes-geopackage-distribution.json`](examples/os-postcodes-geopackage-distribution.json) files contain the descriptions of distributions of OS postcodes dataset.
+
+```shell
+check-jsonschema -v --schemafile cddo-distribution-schema.json examples/os-postcodes-csv-distribution.json examples/os-postcodes-geopackage-distribution.json
+```
+
+### Organisations
+
+The [`organisations.json`](examples/organisations.json) file contains the data about the organisations that supply or publish data resources.
+
+```shell
+check-jsonschema -v --schemafile cddo-organisations-schema.json examples/organisations.json
+```
+
