@@ -1,5 +1,5 @@
 {
-  "$schema": "../cddo-data-resource-schema.json",
+  "$schema": "../cddo-data-service-schema.json",
   "@context": "../cddo-context.json",
   "identifier": "retirement-bereavement-care-address-lookup-location-service-v2.0.0",
   "@type": "DataService",

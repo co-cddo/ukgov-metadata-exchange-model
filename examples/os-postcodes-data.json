@@ -1,5 +1,5 @@
 {
-  "$schema": "../cddo-data-resource-schema.json",
+  "$schema": "../cddo-dataset-schema.json",
   "@context": "../cddo-context.json",
   "identifier": "https://www.data.gov.uk/dataset/2dfb82b4-741a-4b93-807e-11abb4bb0875/os-postcodes-data",
   "@type": "Dataset",
