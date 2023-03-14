@@ -104,6 +104,40 @@
         },
         "address": {
             "@id": "vcard:hasAddress"
+        },
+        "distribution": {
+            "@id": "dcat:distribution",
+            "@type": "@id"
+        },
+        "updateFrequency": {
+            "@context": {
+                "@base": "http://purl.org/cld/freq/"
+            },
+            "@id": "dct:accrualPeriodicity",
+            "@type": "@id"
+        },
+        "accessService": {
+            "@id": "dcat:accessService"
+        },
+        "filesize": {
+            "@id": "dcat:byteSize"
+        },
+        "compressionFormat": {
+            "@context": {
+                "@base": "https://www.iana.org/assignments/media-types/"
+            },
+            "@id": "dcat:compressionFormat",
+            "@type": "@id"
+        },
+        "downloadURL": {
+            "@id": "dcat:downloadURL"
+        },
+        "mediaType": {
+            "@context": {
+                "@base": "https://www.iana.org/assignments/media-types/"
+            },
+            "@id": "dcat:mediaType",
+            "@type": "@id"
         }
     }
 }
