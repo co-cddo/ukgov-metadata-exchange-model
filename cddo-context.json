@@ -119,7 +119,7 @@
         "accessService": {
             "@id": "dcat:accessService"
         },
-        "filesize": {
+        "byteSize": {
             "@id": "dcat:byteSize"
         },
         "compressionFormat": {

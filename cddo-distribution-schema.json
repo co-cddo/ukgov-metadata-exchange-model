@@ -4,6 +4,7 @@
     "title": "Distribution Schema for the Data Marketplace",
     "description": "Schema to be used for dataset distribution records in the Cross-Government Data Marketplace Catalogue.",
     "required": ["@type", "identifier","accessService","mediaType","licence","title"],
+    "additionalProperties": false,
     "type": "object",
     "properties": {
         "$schema": {
@@ -75,7 +76,7 @@
                 }
             ]
         },
-        "filesize": {
+        "byteSize": {
             "description": "The filesize of the item (file) being described.",
             "type": "integer",
             "minimum": 0

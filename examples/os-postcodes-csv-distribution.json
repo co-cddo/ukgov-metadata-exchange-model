@@ -11,7 +11,7 @@
   "issued": "2023-02-01",
   "modified": "2023-02-01",
   "accessService": "retirement-bereavement-care-address-lookup-location-service-v2.0.0",
-  "filesize": 14330000,
+  "byteSize": 14330000,
   "downloadURL": "https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=CSV&redirect",
   "mediaType": "text/csv"
 }
