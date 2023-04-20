@@ -1,6 +1,6 @@
 # Cross-Government Data Marketplace Data Exchange Model Implementation
 
-This repository captures the implementation of the [Government Data Marketplace Data Exchange model](https://docs.google.com/document/d/13KqG1Zom0YqCehPHagCnV6ADOwj8k6qcv7Us4UDWnNg/).
+This repository captures the implementation of the [Government Data Marketplace Data Exchange model](https://docs.google.com/document/d/13KqG1Zom0YqCehPHagCnV6ADOwj8k6qcv7Us4UDWnNg/). It is an implementation of the Cross-Government Data Sharing Metadata Requirements Specification that has been defined by the [Cross-Government Metadata Implementation Working Group](https://khub.net/group/cross-government-metadata-implementation-working-group/group-home).
 
 This repository contains [JSON Schema](https://json-schema.org/) files (conforming to the `2020-12` draft) to capture the expected form of the JSON files. There is the option to convert into linked data by linking in the [context file](cddo-context.json).
 
