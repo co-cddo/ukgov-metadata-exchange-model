@@ -1,7 +1,7 @@
 {
   "$schema": "../cddo-data-service-schema.json",
   "@context": "../cddo-context.json",
-  "identifier": "retirement-bereavement-care-address-lookup-location-service-v2.0.0",
+  "identifier": "fcbc4d3f-0c05-4857-b0e3-eeec6bfea3a1",
   "@type": "DataService",
   "serviceType": "REST",
   "title": "Address Lookup",
