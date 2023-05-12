@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "uk_cross_government_metadata_exchange_model"
+version = "0.1.0"
+description = "A metadata model for describing data assets for exchanging between UK government organisations."
+authors = ["Alasdair Gray <alasdair.gray@digital.cabinet-office.gov.uk>"]
+license = "MIT"
+readme = "README.md"
+include = ["README.md", "src/uk_cross_government_metadata_exchange_model/schema", "project"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+linkml-runtime = "^1.1.24"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+style = "pep440"
+
+[tool.poetry.dev-dependencies]
+linkml = "^1.3.5"
+mkdocs-material = "^8.2.8"
+mkdocs-mermaid2-plugin = "^0.6.0"
+schemasheets = "^0.1.14"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry.extras]
+docs = ["linkml", "mkdocs-material"]

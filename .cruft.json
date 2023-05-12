@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "110f17ab28076babd66a8688c4caf566fb4613b6",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "data-catalogue-schemas",
+      "__project_slug": "data_catalogue_schemas",
+      "github_org": "co-cddo",
+      "__source_path": "src/uk_cross_government_metadata_exchange_model/schema/uk_cross_government_metadata_exchange_model.yaml",
+      "project_description": "A metadata model for describing data assets for exchanging between UK government organisations.",
+      "full_name": "Alasdair Gray",
+      "email": "alasdair.gray@digital.cabinet-office.gov.uk",
+      "__author": "Alasdair Gray <alasdair.gray@digital.cabinet-office.gov.uk>",
+      "license": "",
+      "main_schema_class": "Organisation",
+      "create_python_classes": "Yes",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}
