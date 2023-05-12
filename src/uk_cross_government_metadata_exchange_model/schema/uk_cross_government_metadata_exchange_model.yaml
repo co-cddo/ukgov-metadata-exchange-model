@@ -1,49 +1,65 @@
 ---
 id: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model
 name: uk-cross-government-metadata-exchange-model
-title: uk-cross-government-metadata-exchange-model
+title: UK Cross-Government Metadata Exchange Model
 description: |-
   A metadata model for describing data assets for exchanging between UK government organisations.
-license: MIT
+license: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 see_also:
-  - https://co-cddo.github.io/uk-cross-government-metadata-exchange-model
+  - https://co-cddo.github.io/data-catalogue-schemas
 
 prefixes:
   uk_cross_government_metadata_exchange_model: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model/
   linkml: https://w3id.org/linkml/
-  biolink: https://w3id.org/biolink/
+  dcat: http://www.w3.org/ns/dcat#
+  dct: http://purl.org/dc/terms/
   schema: http://schema.org/
-  PATO: http://purl.obolibrary.org/obo/PATO_
-  example: https://example.org/
+
 default_prefix: uk_cross_government_metadata_exchange_model
 default_range: string
 
 imports:
   - linkml:types
 
+emit_prefixes:
+  - dcat
+  - dct
+  - rdf
+  - rdfs
+  - skos
+  - xsd
+
 classes:
 
-  NamedThing:
-    description: >-
-      A generic grouping for any identifiable entity
+  DataResource:
+    abstract: true
+    class_uri: dcat:Resource
+
+  DataService:
+    is_a: DataResource
+    class_uri: dcat:DataService
+    
+  Distribution:
+    class_uri: dcat:Distribution
     slots:
-      - id
-      - name
+      - identifier
+      - accessService
+      - byteSize
+      - downloadURL
+      - mediaType
+      - accessRights
       - description
-    class_uri: schema:Thing
+      - issued
+      - licence
+      - modified
+      - title
 
   Organisation:
-    is_a: NamedThing
     description: >-
-      Represents a Organisation
+      Represents an Organisation
     slots:
-      - primary_email
-      - birth_date
-      - age_in_years
-      - vital_status
-    slot_usage:
-      primary_email:
-        pattern: "^\\S+@[\\S+\\.]+\\S+"
+      - identifier
+      - title
 
   OrganisationCollection:
     tree_root: true
@@ -56,41 +72,86 @@ classes:
         inlined: true
 
 slots:
-  id:
-    identifier: true
-    slot_uri: schema:identifier
-    range: uriorcurie
-    description: A unique identifier for a thing
-  name:
-    slot_uri: schema:name
-    description: A human-readable name for a thing
-  description:
-    slot_uri: schema:description
-    description: A human-readable description for a thing
-  primary_email:
-    slot_uri: schema:email
-    description: The main email address of a person
-  birth_date:
-    slot_uri: schema:birthDate
-    range: date
-    description: Date on which a person is born
-  age_in_years:
+  accessService:
+    slot_uri: dcat:accessService
+    description: A data service that gives access to the distribution of the dataset.
+    notes: Only required if applicable
+    recommended: true 
+    multivalued: true
+    range: DataService
+  accessRights:
+    slot_uri: dct:accessRights
+    description: A rights statement that concerns how the distribution is accessed.
+    range: AccessRightsValues
+  byteSize:
+    slot_uri: dcat:byteSize
+    description: The size of the distribution in bytes.
+    recommended: true
     range: integer
-    description: Number of years since birth
-  vital_status:
-    range: PersonStatus
-    description: living or dead status
+    minimum_value: 1
+    examples:
+      - value: 1024
+  description:
+    slot_uri: dct:description
+    description: A free-text account of the distribution.
+    range: string
+  downloadURL:
+    slot_uri: dcat:downloadURL
+    description: The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType.
+    range: uri
+  identifier:
+    slot_uri: dct:identifier
+    description: A unique identifier of the resource being described or cataloged.
+    identifier: true
+    required: true
+    range: uriorcurie
+  issued:
+    slot_uri: dct:issued
+    description: Date of formal issuance (e.g., publication) of the distribution.
+    range: date
+  licence:
+    slot_uri: dct:license
+    description: A legal document under which the distribution is made available.
+    required: true
+    any_of:
+      - range: uriorcurie
+      - range: DataShareAgreement
+  mediaType:
+    slot_uri: dcat:mediaType
+    description: The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
+    range: uri
+    required: true
+  modified:
+    slot_uri: dct:modified
+    description: Most recent date on which the distribution was changed, updated or modified.
+    required: true
+    range: date
+  title:
+    slot_uri: dct:title
+    description: A name given to the distribution.
+    required: true
+    range: string
 
+## Definition of the values that can be used in the accessRights property
 enums:
-  PersonStatus:
+  AccessRightsValues:
     permissible_values:
-      ALIVE:
-        description: the person is living
-        meaning: PATO:0001421
-      DEAD:
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        description: the vital status is not known
-        todos:
-          - map this to an ontology
+      INTERNAL:
+        description: >
+          Not publicly accessible for privacy, security or other reasons. 
+          Usage note: This category may include resources that contain sensitive or personal information.
+          These data resources would only be available to internal government users.
+      OPEN:
+        description: >
+          Publicly accessible by everyone. 
+          Usage note: Permissible obstacles include registration and request for API keys, as long as anyone can request such registration and/or API keys.
+          These data resources would be available to any user without a requirement to authenticate, i.e. open data.
+      COMMERCIAL:
+        description: >
+          Only available under certain conditions. 
+          Usage note: This category may include resources that require payment, resources shared under non-disclosure agreements, resources for which the publisher or owner has not yet decided if they can be publicly released.
+          These data resources would be available to any user without a requirement to authenticate, i.e. open data.
+  DataShareAgreement:
+    permissible_values:
+      DATA_SHARE_AGREEMENT:
+        description: A data share agreement is required to use this data asset.
