@@ -1,4 +1,4 @@
-# uk-cross-government-metadata-exchange-model
+# UK Cross-Government Metadata Exchange Model
 
 A metadata model for describing data assets for exchanging between UK government organisations.
 
@@ -20,14 +20,18 @@ A metadata model for describing data assets for exchanging between UK government
 
 ## Developer Documentation
 
-<details>
+### Initialise your environment
+
+```shell
+python3 -m venv venv
+source venv/bin/activate
+pip install linkml
+```
+
+###
+<!-- <details>
 Use the `make` command to generate project artefacts:
 
 * `make all`: make everything
 * `make deploy`: deploys site
-</details>
-
-## Credits
-
-This project was made with
-[linkml-project-cookiecutter](https://github.com/linkml/linkml-project-cookiecutter).
+</details> -->

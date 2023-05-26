@@ -13,6 +13,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   dcat: http://www.w3.org/ns/dcat#
   dct: http://purl.org/dc/terms/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   schema: http://schema.org/
 
 default_prefix: uk_cross_government_metadata_exchange_model
@@ -21,13 +22,13 @@ default_range: string
 imports:
   - linkml:types
 
-emit_prefixes:
-  - dcat
-  - dct
-  - rdf
-  - rdfs
-  - skos
-  - xsd
+# emit_prefixes:
+#   - dcat
+#   - dct
+#   - rdf
+#   - rdfs
+#   - skos
+#   - xsd
 
 classes:
 
@@ -42,6 +43,7 @@ classes:
   Distribution:
     class_uri: dcat:Distribution
     slots:
+      - type
       - identifier
       - accessService
       - byteSize
@@ -53,6 +55,10 @@ classes:
       - licence
       - modified
       - title
+    slot_usage:
+      type:
+        pattern: "dcat:Distribution"
+
 
   Organisation:
     description: >-
@@ -62,7 +68,6 @@ classes:
       - title
 
   OrganisationCollection:
-    tree_root: true
     description: >-
       A holder for Organisation objects
     attributes:
@@ -119,8 +124,8 @@ slots:
   mediaType:
     slot_uri: dcat:mediaType
     description: The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
-    range: uri
     required: true
+    range: uri
   modified:
     slot_uri: dct:modified
     description: Most recent date on which the distribution was changed, updated or modified.
@@ -131,26 +136,32 @@ slots:
     description: A name given to the distribution.
     required: true
     range: string
+  type:
+    slot_uri: rdf:type
+    designates_type: true
+    description: The type of the resource being defined
+    required: true
+    range: uriorcurie
 
 ## Definition of the values that can be used in the accessRights property
 enums:
   AccessRightsValues:
     permissible_values:
       INTERNAL:
-        description: >
-          Not publicly accessible for privacy, security or other reasons. 
+        description: 
+          "Not publicly accessible for privacy, security or other reasons. 
           Usage note: This category may include resources that contain sensitive or personal information.
-          These data resources would only be available to internal government users.
+          These data resources would only be available to internal government users."
       OPEN:
-        description: >
-          Publicly accessible by everyone. 
+        description: 
+          "Publicly accessible by everyone. 
           Usage note: Permissible obstacles include registration and request for API keys, as long as anyone can request such registration and/or API keys.
-          These data resources would be available to any user without a requirement to authenticate, i.e. open data.
+          These data resources would be available to any user without a requirement to authenticate, i.e. open data."
       COMMERCIAL:
-        description: >
-          Only available under certain conditions. 
+        description: 
+          "Only available under certain conditions. 
           Usage note: This category may include resources that require payment, resources shared under non-disclosure agreements, resources for which the publisher or owner has not yet decided if they can be publicly released.
-          These data resources would be available to any user without a requirement to authenticate, i.e. open data.
+          These data resources would be available to any user without a requirement to authenticate, i.e. open data."
   DataShareAgreement:
     permissible_values:
       DATA_SHARE_AGREEMENT:

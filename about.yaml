@@ -1,7 +1,0 @@
----
-name: uk_cross_government_metadata_exchange_model
-author: Alasdair Gray <alasdair.gray@digital.cabinet-office.gov.uk>
-description: A metadata model for describing data assets for exchanging between UK government organisations.
-source_schema_path: src/uk_cross_government_metadata_exchange_model/schema/uk_cross_government_metadata_exchange_model.yaml
-google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
-google_sheet_tabs: personinfo enums
