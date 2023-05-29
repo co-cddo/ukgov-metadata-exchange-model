@@ -13,7 +13,7 @@ help:
 	@echo "  clean       remove all temporary files"
 	@echo "  gen-project generate model constraints in different representations"
 	@echo "  test        run all the tests"
-	@echo "  serve       run the documentation locally"
+	@echo "  serve       run the documentation locally; need to use ctrl-c to close the documentation server down"
 	@echo "  all         run clean, gen-project, test, and serve"
 	@echo ""
 	@echo "Check the Makefile to know exactly what each target is doing."

@@ -8,30 +8,21 @@ A metadata model for describing data assets for exchanging between UK government
 
 ## Repository Structure
 
-* [examples/](examples/) - example data
 * [project/](project/) - project files (do not edit these)
 * [src/](src/) - source files (edit these)
-  * [uk_cross_government_metadata_exchange_model](src/uk_cross_government_metadata_exchange_model)
-    * [schema](src/uk_cross_government_metadata_exchange_model/schema) -- LinkML schema
-      (edit this)
-    * [datamodel](src/uk_cross_government_metadata_exchange_model/datamodel) -- generated
-      Python datamodel
-* [tests/](tests/) - Python tests
+  * [data/](src/data/) - example data by class with subfolders for valid and invalid examples
+  * [docs/](src/docs/) - static documentation files to be included in the generated documentation site
+  * [model](src/model/) - [LinkML](https://linkml.io) specification of the metadata model – edit these files
 
 ## Developer Documentation
 
-### Initialise your environment
+To initialise your environment run
 
 ```shell
-python3 -m venv venv
-source venv/bin/activate
-pip install linkml
+make install
 ```
 
-###
-<!-- <details>
-Use the `make` command to generate project artefacts:
-
-* `make all`: make everything
-* `make deploy`: deploys site
-</details> -->
+To discover what other targets are available run
+```shell
+make help
+```
