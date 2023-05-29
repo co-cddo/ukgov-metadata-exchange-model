@@ -1,5 +1,6 @@
 ---
 site_name: "UK Cross-Government Metadata Model"
+docs_dir: docs
 theme:
   name: material
   # palette:
