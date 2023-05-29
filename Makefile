@@ -78,7 +78,7 @@ $(DOCDIR):
 
 gendoc: $(DOCDIR)
 	cp src/docs/*.md $(DOCDIR)
-	gen-doc -d $(DOCDIR) src/model/uk_cross_government_metadata_exchange_model.yaml
+	$(RUN) gen-doc -d $(DOCDIR) src/model/uk_cross_government_metadata_exchange_model.yaml
 
 MKDOCS = $(RUN) mkdocs
 
