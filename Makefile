@@ -32,10 +32,11 @@ $(DEST)/examples: src/model/uk_cross_government_metadata_exchange_model.yaml
     	-s $< \
     	--target-class Distribution
 	# Invalid example: missing `type` attribute
-	-linkml-validate \
+	@linkml-validate \
     	src/data/Distribution/invalid/os-postcodes-csv-distribution.yaml \
     	-s $< \
-    	--target-class Distribution
+    	--target-class Distribution && \
+		{ echo "Unexpected test pass"; exit 1; } || echo "Expected test failure! Proceed"
 
 #junk:
 	# mkdir -p $@
