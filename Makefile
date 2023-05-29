@@ -1,18 +1,38 @@
-VENV = venv
-PYTHON = $(VENV)/bin/python3
-PIP = $(VENV)/bin/pip
+NAME := uk-cross-government-metadata exchange-model
+INSTALL_STAMP := .install.stamp
+POETRY = $(shell command -v poetry 2> /dev/null)
+
+.DEFAULT_GOAL := help
+
+.PHONY: help clean
+
+help:
+	@echo "Please use 'make <target>' where <target> is one of"
+	@echo ""
+	@echo "  install     install packages and prepare environment"
+	@echo "  clean       remove all temporary files"
+	@echo "  gen-project generate model constraints in different representations"
+	@echo "  test        run all the tests"
+	@echo "  serve       run the documentation locally"
+	@echo "  all         run clean, gen-project, test, and serve"
+	@echo ""
+	@echo "Check the Makefile to know exactly what each target is doing."
+
+RUN = $(POETRY) run
 DEST = project
 DOCDIR = docs
 EXAMPLEDIR = examples
 
-all: gen-project test gendoc
+all: clean gen-project test serve
 
-$(VENV)/bin/activate: requirements.txt
-	python3 -m venv $(VENV)
-	$(PIP) install -r requirements.txt
+install: $(INSTALL_STAMP)
+$(INSTALL_STAMP): pyproject.toml poetry.lock
+	@if [ -z $(POETRY) ]; then echo "Poetry could not be found. See https://python-poetry.org/docs/"; exit 2; fi
+	$(POETRY) install
+	touch $(INSTALL_STAMP)
 
-gen-project: $(VENV)/bin/activate
-	gen-project -d $(DEST) src/model/uk_cross_government_metadata_exchange_model.yaml
+gen-project: 
+	$(RUN) gen-project -d $(DEST) src/model/uk_cross_government_metadata_exchange_model.yaml
 
 gen-examples: $(DOCDIR)
 	sp src/data/README.md $(DOCDIR)/$(EXAMPLEDIR)
@@ -22,17 +42,17 @@ test: gen-project $(DEST)/examples
 
 $(DEST)/examples: src/model/uk_cross_government_metadata_exchange_model.yaml
 	# Valid
-	linkml-validate \
+	$(RUN) linkml-validate \
 	    src/data/Distribution/valid/os-postcodes-csv-distribution.yaml \
     	-s $< \
     	--target-class Distribution
 	# Valid
-	linkml-validate \
+	$(RUN) linkml-validate \
     	src/data/Distribution/valid/os-postcodes-csv-distribution-minimal.yaml \
     	-s $< \
     	--target-class Distribution
 	# Invalid example: missing `type` attribute
-	@linkml-validate \
+	@$(RUN) linkml-validate \
     	src/data/Distribution/invalid/os-postcodes-csv-distribution.yaml \
     	-s $< \
     	--target-class Distribution && \
@@ -51,8 +71,7 @@ $(DEST)/examples: src/model/uk_cross_government_metadata_exchange_model.yaml
 
 # Run documentation locally
 # serve will be passed as an argument to mkdocs
-serve: $(VENV)/bin/activate gendoc
-	mkdocs -v serve
+serve: mkd-serve
 
 $(DOCDIR):
 	mkdir -p $@
@@ -61,13 +80,15 @@ gendoc: $(DOCDIR)
 	cp src/docs/*.md $(DOCDIR)
 	gen-doc -d $(DOCDIR) src/model/uk_cross_government_metadata_exchange_model.yaml
 
-MKDOCS = mkdocs
+MKDOCS = $(RUN) mkdocs
 
 # Run mkdocs with whatever argument was used in the make target
 mkd-%: gendoc
-	$(MKDOCS) $%
+	$(MKDOCS) $*
 
 clean:
 	-rm -r $(DEST)
 	-rm -r $(DOCDIR)
 	-rm -r $(VENV)
+	find . -type d -name "__pycache__" | xargs rm -rf {};
+	rm -rf $(INSTALL_STAMP) .coverage .mypy_cache
