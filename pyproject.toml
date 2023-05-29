@@ -5,7 +5,6 @@ description = "A metadata model for describing data assets for exchanging betwee
 authors = ["Alasdair Gray <alasdair.gray@digital.cabinet-office.gov.uk>"]
 license = "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
 readme = "README.md"
-packages = [{include = "uk_cross_government_metadata_exchange_model"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
