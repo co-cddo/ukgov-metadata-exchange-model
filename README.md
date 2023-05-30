@@ -17,9 +17,13 @@ A metadata model for describing data assets for exchanging between UK government
 ## Developer Documentation
 
 To initialise your environment run
-
 ```shell
 make install
+```
+
+To update the dependencies in your environment run
+```shell
+make update
 ```
 
 To discover what other targets are available run

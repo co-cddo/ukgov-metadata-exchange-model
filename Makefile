@@ -10,6 +10,7 @@ help:
 	@echo "Please use 'make <target>' where <target> is one of"
 	@echo ""
 	@echo "  install     install packages and prepare environment"
+	@echo "  update      update packages"
 	@echo "  clean       remove all temporary files"
 	@echo "  gen-project generate model constraints in different representations"
 	@echo "  test        run all the tests"
@@ -29,6 +30,11 @@ install: $(INSTALL_STAMP)
 $(INSTALL_STAMP): pyproject.toml poetry.lock
 	@if [ -z $(POETRY) ]; then echo "Poetry could not be found. See https://python-poetry.org/docs/"; exit 2; fi
 	$(POETRY) install
+	touch $(INSTALL_STAMP)
+
+update: pyproject.toml poetry.lock
+	@if [ -z $(POETRY) ]; then echo "Poetry could not be found. See https://python-poetry.org/docs/"; exit 2; fi
+	$(POETRY) update
 	touch $(INSTALL_STAMP)
 
 gen-project: 
