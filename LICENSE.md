@@ -1,4 +1,4 @@
-*Source: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/*
+*Source: [http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)*
 
 # Open Government Licence v3.0 (OGL-UK-3.0)
 You are encouraged to use and re-use the Information that is available under this licence freely and flexibly, with only a few conditions.

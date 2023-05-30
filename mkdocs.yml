@@ -15,6 +15,7 @@ nav:
   # - Home: home.md
   - Index: index.md
   - About: about.md
+  - License: LICENSE.md
 site_url: https://co-cddo.github.io/data-catalogue-schemas
 repo_url: https://github.com/co-cddo/data-catalogue-schemas
 
