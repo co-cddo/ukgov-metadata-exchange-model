@@ -26,6 +26,10 @@ EXAMPLEDIR = examples
 
 all: clean gen-project test serve
 
+###########################################################
+# Environment configuration
+###########################################################
+
 install: $(INSTALL_STAMP)
 $(INSTALL_STAMP): pyproject.toml poetry.lock
 	@if [ -z $(POETRY) ]; then echo "Poetry could not be found. See https://python-poetry.org/docs/"; exit 2; fi
@@ -37,50 +41,72 @@ update: pyproject.toml poetry.lock
 	$(POETRY) update
 	touch $(INSTALL_STAMP)
 
+###########################################################
+# Schema generation
+###########################################################
+
 gen-project: 
 	$(RUN) gen-project -d $(DEST) src/model/uk_cross_government_metadata_exchange_model.yaml
 
+###########################################################
+# Examples and Tests
+###########################################################
+
 gen-examples: $(DOCDIR)
-	sp src/data/README.md $(DOCDIR)/$(EXAMPLEDIR)
+	cp src/data/README.md $(DOCDIR)/$(EXAMPLEDIR)
+	# TODO: Convert to JSON for the example directory
 	cp src/data/*/valid/* $(DOCDIR)/$(EXAMPLEDIR)
 
-test: gen-project $(DEST)/examples
+test: gen-project gen-examples test-valid test-invalid
 
-$(DEST)/examples: src/model/uk_cross_government_metadata_exchange_model.yaml
-	# Valid
-	$(RUN) linkml-validate \
-	    src/data/Distribution/valid/os-postcodes-csv-distribution.yaml \
-    	-s $< \
-    	--target-class Distribution
-	# Valid
-	$(RUN) linkml-validate \
-    	src/data/Distribution/valid/os-postcodes-csv-distribution-minimal.yaml \
-    	-s $< \
-    	--target-class Distribution
-	# Invalid example: missing `type` attribute
-	@$(RUN) linkml-validate \
-    	src/data/Distribution/invalid/os-postcodes-csv-distribution.yaml \
-    	-s $< \
-    	--target-class Distribution && \
-		{ echo "Unexpected test pass"; exit 1; } || echo "Expected test failure! Proceed"
+test-valid: src/model/uk_cross_government_metadata_exchange_model.yaml
+	for dir in src/data/*; do\
+		if [ -d $${dir} ]; then\
+  			for file in $${dir}/valid/*.yaml; do\
+    			echo $${file};\
+    			$(RUN) linkml-validate \
+      				$${file} \
+      				-s $< \
+      				--target-class `basename $${dir}`&&\
+				echo "Test passed" || { echo "Test failed!"; exit 1; };\
+  			done;\
+		fi;\
+	done;
 
-#junk:
-	# mkdir -p $@
-	# linkml-run-examples \
-	# 	--output-formats json \
-	# 	--output-formats yaml \
-	# 	--input-directory src/data/examples-valid \
-	# 	--counter-example-input-directory src/data/examples-invalid \
-	# 	--output-directory $@ \
-	# 	--schema $< \
-	# 	> $@/README.md
+test-invalid: src/model/uk_cross_government_metadata_exchange_model.yaml
+	for dir in src/data/*; do\
+		if [ -d $${dir} ]; then\
+  			for file in $${dir}/invalid/*.yaml; do\
+    			echo $${file};\
+    			$(RUN) linkml-validate \
+      				$${file} \
+      				-s $< \
+      				--target-class `basename $${dir}`&&\
+				{ echo "Invalid example passed test!"; exit 1; } || echo "Expected error due to testing invalid example";\
+  			done;\
+		fi;\
+	done;
+
+#TODO: When linkml fixes their linkml-run-examples command we should be able to use the following to run the tests
+# linkml-run-examples \
+# 	--output-formats json \
+# 	--output-formats yaml \
+# 	--input-directory src/data/examples-valid \
+# 	--counter-example-input-directory src/data/examples-invalid \
+# 	--output-directory $@ \
+# 	--schema $< \
+# 	> $@/README.md
+
+###########################################################
+# DOCUMENTATION
+###########################################################
 
 # Run documentation locally
 # serve will be passed as an argument to mkdocs
 serve: mkd-serve
 
 $(DOCDIR):
-	mkdir -p $@
+	mkdir -p $(DOCDIR)/$(EXAMPLEDIR)
 
 gendoc: $(DOCDIR)
 	cp src/docs/*.md $(DOCDIR)
@@ -92,6 +118,10 @@ MKDOCS = $(RUN) mkdocs
 # Run mkdocs with whatever argument was used in the make target
 mkd-%: gendoc
 	$(MKDOCS) $*
+
+###########################################################
+# CLEANUP
+###########################################################
 
 clean:
 	-rm -r $(DEST)
