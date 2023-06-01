@@ -57,11 +57,14 @@ gen-examples: $(DOCDIR)
 	# TODO: Convert to JSON for the example directory
 	cp src/data/*/valid/* $(DOCDIR)/$(EXAMPLEDIR)
 
+# TODO: Extend tests to lint schema to ensure elements are correctly described, see https://linkml.io/linkml/schemas/linter.html
+
 test: gen-project gen-examples test-valid test-invalid
 
 test-valid: src/model/uk_cross_government_metadata_exchange_model.yaml
 	for dir in src/data/*; do\
 		if [ -d $${dir} ]; then\
+			echo `basename $${dir}`;\
   			for file in $${dir}/valid/*.yaml; do\
     			echo $${file};\
     			$(RUN) linkml-validate \
