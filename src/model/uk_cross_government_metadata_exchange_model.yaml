@@ -14,6 +14,7 @@ prefixes:
   adms: https://www.w3.org/ns/adms#
   dcat: http://www.w3.org/ns/dcat#
   dct: http://purl.org/dc/terms/
+  freq: http://purl.org/cld/freq/
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   schema: http://schema.org/
@@ -100,6 +101,16 @@ classes:
         recommended: true
       type:
         pattern: "dcat:DataService"
+
+  Dataset:
+    is_a: DataResource
+    class_uri: dcat:Dataset
+    slots:
+      - distribution
+      - updateFrequency
+    slot_usage:
+      type:
+        pattern: "dcat:Dataset"
     
   Distribution:
     class_uri: dcat:Distribution
@@ -187,6 +198,13 @@ slots:
     slot_uri: dct:description
     description: A free-text account of the distribution.
     range: string
+  distribution:
+    slot_uri: dcat:distribution
+    description: An available distribution of the dataset.
+    recommended: true
+    multivalued: true
+    range: uriorcurie
+    # range: Dataset
   downloadURL:
     slot_uri: dcat:downloadURL
     description: The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType.
@@ -227,7 +245,6 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       - range: string
         pattern: DATA_SHARE_AGREEMENT
         # - range: DataShareAgreement
-
   mediaType:
     slot_uri: dcat:mediaType
     description: The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
@@ -308,6 +325,15 @@ Usage note: The intended use of this text is in a page containing multiple searc
     description: The type of the resource being defined
     required: true
     range: uriorcurie
+  updateFrequency:
+    slot_uri: dct:accrualPeriodicity
+    description: |
+      The frequency at which a dataset is published.	
+      
+      An available distribution of the dataset. If the frequency is unknown then use the value `freq:irregular`.
+    notes: The value for this field should be one of the terms from the Dublin Core Frequency Vocabulary, e.g. to say a dataset is updated quarterly use the value freq:quarterly.
+    required: true
+    range: FrequencyValues
   version:
     slot_uri: dcat:version
     description: The version indicator (name or identifier) of a resource.
@@ -333,10 +359,76 @@ enums:
           "Only available under certain conditions. 
           Usage note: This category may include resources that require payment, resources shared under non-disclosure agreements, resources for which the publisher or owner has not yet decided if they can be publicly released.
           These data resources would be available to any user without a requirement to authenticate, i.e. open data."
+  # Should be able to use the ontology to dynamically pull in terms
+  # However, Frequency is not a well specified concept scheme so there is no relationship we can use to define the nodes
+  # FrequencyValues:
+  #   reachable_from:
+  #     source_ontology: https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/freq.rdf
+  #     source_nodes:
+  #       - freq:quarterly #CL:0000540 ## neuron
+  #     include_self: true
+  #     # relationship_types:
+  #     #   - rdfs:subClassOf
+  FrequencyValues:
+    enum_uri: http://purl.org/cld/freq/
+    see_also: https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/
+    permissible_values:
+      freq:triennial:
+        meaning: freq:triennial
+        description: The event occurs every three years.
+      freq:biennial:
+        meaning: freq:biennial
+        description: The event occurs every two years.
+      freq:annual:
+        meaning: freq:annual
+        description: The event occurs once a year.
+      freq:semiannual:
+        meaning: freq:semiannual
+        description: The event occurs twice a year.
+      freq:threeTimesAYear:
+        meaning: freq:threeTimesAYear
+        description: Three times a year
+      freq:quarterly:
+        meaning: freq:quarterly
+        description: The event occurs every three months.
+      freq:bimonthly:
+        meaning: freq:bimonthly
+        description: The event occurs every two months.
+      freq:monthly:
+        meaning: freq:monthly
+        description: The event occurs once a month.
+      freq:semimonthly:
+        meaning: freq:semimonthly
+        description: The event occurs twice a month.
+      freq:biweekly:
+        meaning: freq:biweekly
+        description: The event occurs every two weeks.
+      freq:threeTimesAMonth:
+        meaning: freq:threeTimesAMonth
+        description: The event occurs three times a month.
+      freq:weekly:
+        meaning: freq:weekly
+        description: The event occurs once a week.
+      freq:semiweekly:
+        meaning: freq:semiweekly
+        description: The event occurs twice a week.
+      freq:threeTimesAWeek:
+        meaning: freq:threeTimesAWeek
+        description: The event occurs three times a week.
+      freq:daily:
+        meaning: freq:daily
+        description: The event occurs once a day.
+      freq:continuous:
+        meaning: freq:continuous
+        description: The event repeats without interruption.
+      freq:irregular:
+        meaning: freq:irregular
+        description: The event occurs at uneven intervals.
   OrganisationValues:
     permissible_values:
       food-standards-agency:
       department-for-work-pensions:
+      ordnance-survey:
   SecurityClassificationValues:
     permissible_values:
       OFFICIAL: 
