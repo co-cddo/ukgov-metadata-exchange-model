@@ -166,6 +166,7 @@ slots:
     slot_uri: dct:alternative
     description: An alternative name used as a substitute or additional access point for an information resource.
     recommended: true
+    multivalued: true
     range: string
   byteSize:
     slot_uri: dcat:byteSize
@@ -301,11 +302,10 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: ServiceTypeValues
   summary:
     slot_uri: rdfs:comment
-    description: "A short textual summary of the resource with a maximum length of 250 characters. 
+    description: |
+      "A short textual summary of the resource with a maximum length of 250 characters. 
 
-Usage note: The intended use of this text is in a page containing multiple search results. If omitted, the first part of the description text will be used. This may be up to a certain character count or the detection of a paragraph break.
-
-"
+      Usage note: The intended use of this text is in a page containing multiple search results. If omitted, the first part of the description text will be used. This may be up to a certain character count or the detection of a paragraph break."
     recommended: true
     range: string
   theme:
