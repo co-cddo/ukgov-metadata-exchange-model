@@ -62,7 +62,7 @@ gen-examples: $(DOCDIR)
 test: gen-project gen-examples test-valid test-invalid
 
 test-valid: src/model/uk_cross_government_metadata_exchange_model.yaml
-	for dir in src/data/*; do\
+	@for dir in src/data/*; do\
 		if [ -d $${dir} ]; then\
 			echo `basename $${dir}`;\
   			for file in $${dir}/valid/*.yaml; do\
@@ -75,20 +75,22 @@ test-valid: src/model/uk_cross_government_metadata_exchange_model.yaml
   			done;\
 		fi;\
 	done;
+	@echo "Successfully passed all positive tests!\n"
 
 test-invalid: src/model/uk_cross_government_metadata_exchange_model.yaml
-	for dir in src/data/*; do\
+	@for dir in src/data/*; do\
 		if [ -d $${dir} ]; then\
   			for file in $${dir}/invalid/*.yaml; do\
     			echo $${file};\
     			$(RUN) linkml-validate \
       				$${file} \
       				-s $< \
-      				--target-class `basename $${dir}`&&\
-				{ echo "Invalid example passed test!"; exit 1; } || echo "Expected error due to testing invalid example";\
+      				--target-class `basename $${dir}` &> $${dir}/invalid/$${file}-test-output.txt &&\
+				{ echo "Test failed"; exit 1; } || echo "Test passed";\
   			done;\
 		fi;\
 	done;
+	@echo "Successfully passed all negative tests!\n"
 
 #TODO: When linkml fixes their linkml-run-examples command we should be able to use the following to run the tests
 # linkml-run-examples \
