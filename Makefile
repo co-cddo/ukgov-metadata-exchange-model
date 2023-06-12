@@ -9,13 +9,14 @@ POETRY = $(shell command -v poetry 2> /dev/null)
 help:
 	@echo "Please use 'make <target>' where <target> is one of"
 	@echo ""
-	@echo "  install     install packages and prepare environment"
-	@echo "  update      update packages"
-	@echo "  clean       remove all temporary files"
-	@echo "  gen-project generate model constraints in different representations"
-	@echo "  test        run all the tests"
-	@echo "  serve       run the documentation locally; need to use ctrl-c to close the documentation server down"
-	@echo "  all         run clean, gen-project, test, and serve"
+	@echo "  install      install packages and prepare environment"
+	@echo "  update       update packages"
+	@echo "  clean        remove all temporary files"
+	@echo "  gen-project  generate model constraints in different representations"
+	@echo "  test         run all the tests"
+	@echo "  serve        run the documentation locally; need to use ctrl-c to close the documentation server down"
+	@echo "  docker-serve build and run the documentation in a Docker container"
+	@echo "  all          run clean, gen-project, test, and serve"
 	@echo ""
 	@echo "Check the Makefile to know exactly what each target is doing."
 
@@ -124,6 +125,11 @@ MKDOCS = $(RUN) mkdocs
 mkd-%: gendoc
 	$(MKDOCS) $*
 
+# Allows the testing of documentation locally on macOS machines
+# Needed as macOS does not support multiple entities with the same name but different cases
+docker-serve:
+	docker build -t model-docs .   
+	docker run -p 8080:8080 model-docs
 ###########################################################
 # CLEANUP
 ###########################################################
