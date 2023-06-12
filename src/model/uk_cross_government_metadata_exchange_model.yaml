@@ -429,9 +429,15 @@ enums:
         description: The event occurs at uneven intervals.
   OrganisationValues:
     permissible_values:
-      food-standards-agency:
       department-for-work-pensions:
+        meaning: https://www.gov.uk/government/organisations/department-for-work-pensions
+        description: Department for Work & Pensions
+      food-standards-agency:
+        meaning: https://www.gov.uk/government/organisations/food-standards-agency
+        description: Food Standards Agency
       ordnance-survey:
+        meaning: https://www.gov.uk/government/organisations/ordnance-survey
+        description: Ordnance Survey
   SecurityClassificationValues:
     permissible_values:
       OFFICIAL: 
