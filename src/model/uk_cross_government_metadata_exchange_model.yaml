@@ -2,7 +2,10 @@
 id: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model
 name: uk-cross-government-metadata-exchange-model
 title: UK Cross-Government Metadata Exchange Model
-description: |-
+description: |
+  !!! warning 
+      This is a working draft and has not yet been approved for release.
+  
   A metadata model for describing data assets for exchanging between UK government organisations.
 license: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 see_also:

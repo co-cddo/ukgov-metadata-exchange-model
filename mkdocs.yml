@@ -12,6 +12,8 @@ theme:
 plugins:
   - search
   - mermaid2
+markdown_extensions:
+  - admonition
 nav:
   # - Home: home.md
   - Home: index.md
