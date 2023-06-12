@@ -1,0 +1,36 @@
+## NHS Vaccination Events
+---
+identifier: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir
+type: dcat:DataService
+serviceType: EVENT
+title: Vaccination Events - FHIR
+description: Publish or receive messages about changes to a patient's vaccination details.
+keyword: 
+  - Community of care
+  - Vaccination
+  - Community health
+  - Hospital
+  - Inpatient
+  - Outpatient
+  - GP / Primary Care
+  - Publish/Subscribe Events
+  - Internet Facing
+  - FHIR
+  - STU3
+  - MESH
+  - NEMS
+theme: 
+  - http://eurovoc.europa.eu/c_af502da0
+  - http://eurovoc.europa.eu/4636
+serviceStatus: LIVE
+accessRights: OPEN
+securityClassification: NOT_APPLICABLE
+licence: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir#who-can-use-this
+contactPoint: 
+  contactName: nrlnems.ls@nhs.net
+  email: nrlnems.ls@nhs.net
+modified: 2022-10-24
+creator: nhs-digital
+publisher: nhs-digital
+version: live
+endpointDescription: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir

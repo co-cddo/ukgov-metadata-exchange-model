@@ -435,6 +435,9 @@ enums:
       food-standards-agency:
         meaning: https://www.gov.uk/government/organisations/food-standards-agency
         description: Food Standards Agency
+      nhs-digital:
+        meaning: https://www.gov.uk/government/organisations/nhs-digital
+        description: NHS Digital
       ordnance-survey:
         meaning: https://www.gov.uk/government/organisations/ordnance-survey
         description: Ordnance Survey
@@ -444,6 +447,8 @@ enums:
         description: Covers most of the day-to-day business of government, service delivery, commercial activity and policy development.
       SECRET:
       TOP_SECRET:
+      NOT_APPLICABLE:
+        description: Used for data assets coming from agencies and other public bodies where the security classification system is not applied.
   ServiceStatusValues:
     permissible_values:
       DISCOVERY:
