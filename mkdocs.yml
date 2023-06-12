@@ -14,7 +14,10 @@ plugins:
   - mermaid2
 nav:
   # - Home: home.md
-  - Index: index.md
+  - Home: index.md
+  - Model:
+    - 'Data Service': DataService.md
+    - Dataset: Dataset.md
   - About: about.md
   - License: LICENSE.md
 site_url: https://co-cddo.github.io/data-catalogue-schemas
