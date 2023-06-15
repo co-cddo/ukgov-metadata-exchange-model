@@ -1,0 +1,25 @@
+title: UK Government Organisations
+name: UK-Government-Organisations
+id: https://www.gov.uk/api/organisations
+
+description: Details of the UK Government Organisations, including departments, agencies, and public bodies. 
+license: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+version: 2023-05-03
+
+default_range: string
+
+enums:
+  OrganisationValues:
+    permissible_values:
+      department-for-work-pensions:
+        meaning: https://www.gov.uk/government/organisations/department-for-work-pensions
+        description: Department for Work & Pensions
+      food-standards-agency:
+        meaning: https://www.gov.uk/government/organisations/food-standards-agency
+        description: Food Standards Agency
+      nhs-digital:
+        meaning: https://www.gov.uk/government/organisations/nhs-digital
+        description: NHS Digital
+      ordnance-survey:
+        meaning: https://www.gov.uk/government/organisations/ordnance-survey
+        description: Ordnance Survey
