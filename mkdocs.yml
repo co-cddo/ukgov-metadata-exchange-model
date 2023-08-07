@@ -1,0 +1,34 @@
+---
+site_name: "UK Cross-Government Metadata Model"
+docs_dir: docs
+theme:
+  name: tech_docs_template
+  # palette:
+  #  scheme: slate
+  #  primary: cyan
+  features:
+    - content.tabs.link
+  favicon: assets/favicons/favicon.ico
+plugins:
+  - search
+  - mermaid2
+markdown_extensions:
+  - admonition
+nav:
+  # - Home: home.md
+  - Home: index.md
+  - Model:
+    - 'Data Service': DataService.md
+    - Dataset: Dataset.md
+  - About: about.md
+  - License: LICENSE.md
+site_url: https://co-cddo.github.io/data-catalogue-schemas
+repo_url: https://github.com/co-cddo/data-catalogue-schemas
+dev_addr: '0.0.0.0:8080'
+
+# Uncomment this block to enable use of Google Analytics.
+# Replace the property value with your own ID.
+# extra:
+#   analytics:
+#     provider: google
+#     property: G-XXXXXXXXXX

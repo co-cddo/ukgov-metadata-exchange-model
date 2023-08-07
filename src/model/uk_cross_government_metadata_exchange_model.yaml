@@ -1,0 +1,476 @@
+---
+id: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model
+name: uk-cross-government-metadata-exchange-model
+title: UK Cross-Government Metadata Exchange Model
+description: |
+  !!! warning 
+      This is a working draft and has not yet been approved for release.
+  
+  A metadata model for describing data assets for exchanging between UK government organisations.
+license: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+see_also:
+  - https://co-cddo.github.io/data-catalogue-schemas
+
+prefixes:
+  uk_cross_government_metadata_exchange_model: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model/
+  linkml: https://w3id.org/linkml/
+  adms: https://www.w3.org/ns/adms#
+  dcat: http://www.w3.org/ns/dcat#
+  dct: http://purl.org/dc/terms/
+  freq: http://purl.org/cld/freq/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  schema: http://schema.org/
+  vcard: http://www.w3.org/2006/vcard/ns#
+
+default_prefix: uk_cross_government_metadata_exchange_model
+default_range: string
+
+imports:
+  - linkml:types
+  - uk-gov-orgs
+
+# emit_prefixes:
+#   - dcat
+#   - dct
+#   - rdf
+#   - rdfs
+#   - skos
+#   - xsd
+
+classes:
+  ContactPoint:
+    class_uri: vcard:Kind
+    attributes: 
+      contactName:
+        slot_uri: vcard:fn
+        description: Team name
+        required: true 
+        range: string
+      email:
+        slot_uri: vcard:hasEmail
+        description: Team email address
+        required: true
+        range: string
+        pattern: ^\S+@[\S+\.]+\S+
+      telephone:
+        slot_uri: vcard:hasTelephone
+        description: Telephone number for the contact team
+        range: string
+      address:
+        slot_uri: vcard:hasAddress
+        description: Address for the contact team
+        range: string
+
+  DataResource:
+    abstract: true
+    class_uri: dcat:Resource
+    slots:
+      - accessRights
+      - alternativeTitle
+      - contactPoint
+      - created
+      - creator
+      - description
+      - identifier
+      - issued
+      - keyword
+      - licence
+      - modified
+      - publisher
+      - relatedResource
+      - securityClassification
+      - summary
+      - title
+      - type
+      - theme
+      - version
+    slot_usage:
+      description:
+        required: true
+      modified:
+        required: true
+
+  DataService:
+    is_a: DataResource
+    class_uri: dcat:DataService
+    slots:
+      - endpointDescription
+      - endpointURL
+      - servesData
+      - serviceStatus
+      - serviceType
+    slot_usage:
+      issued:
+        recommended: true
+      type:
+        pattern: "dcat:DataService"
+
+  Dataset:
+    is_a: DataResource
+    class_uri: dcat:Dataset
+    slots:
+      - distribution
+      - updateFrequency
+    slot_usage:
+      type:
+        pattern: "dcat:Dataset"
+    
+  Distribution:
+    class_uri: dcat:Distribution
+    slots:
+      - accessRights
+      - accessService
+      - byteSize
+      - description
+      - downloadURL
+      - identifier
+      - issued
+      - licence
+      - mediaType
+      - modified
+      - title
+      - type
+    slot_usage:
+      modified:
+        recommended: true
+      type:
+        pattern: "dcat:Distribution"
+
+  Organisation:
+    description: >-
+      Represents an Organisation
+    slots:
+      - identifier
+      - title
+
+  OrganisationCollection:
+    description: >-
+      A holder for Organisation objects
+    attributes:
+      entries:
+        range: Organisation
+        multivalued: true
+        inlined: true
+
+slots:
+  accessService:
+    slot_uri: dcat:accessService
+    description: A data service that gives access to the distribution of the dataset.
+    notes: Only required if applicable
+    recommended: true 
+    multivalued: true
+    range: uriorcurie
+    # range: DataService
+  accessRights:
+    slot_uri: dct:accessRights
+    description: A rights statement that concerns how the distribution is accessed.
+    range: AccessRightsValues
+  alternativeTitle:
+    slot_uri: dct:alternative
+    description: An alternative name used as a substitute or additional access point for an information resource.
+    recommended: true
+    multivalued: true
+    range: string
+  byteSize:
+    slot_uri: dcat:byteSize
+    description: The size of the distribution in bytes.
+    recommended: true
+    range: integer
+    minimum_value: 1
+    examples:
+      - value: 1024
+  contactPoint:
+    slot_uri: dcat:contactPoint
+    description: The e-mail address to be used to contact the organisational contact for the resource as listed in the Contact Name.
+    required: true
+    range: ContactPoint
+    # any_of:
+    #   - range: string
+    #     pattern: ^\S+@[\S+\.]+\S+
+    #   - range: ContactPoint
+  created:
+    slot_uri: dct:created
+    description: The date, or date and time, on which the content of an information resource is created or compiled.
+    range: date
+  creator:
+    slot_uri: dct:creator
+    description: The business entity responsible for creating or compiling the original content of an information resource.
+    required: true
+    multivalued: true
+    range: OrganisationValues
+  description:
+    slot_uri: dct:description
+    description: A free-text account of the distribution.
+    range: string
+  distribution:
+    slot_uri: dcat:distribution
+    description: An available distribution of the dataset.
+    recommended: true
+    multivalued: true
+    range: uriorcurie
+    # range: Dataset
+  downloadURL:
+    slot_uri: dcat:downloadURL
+    description: The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType.
+    range: uri
+  endpointDescription:
+    slot_uri: dcat:endpointDescription
+    description: A description of the services available via the end-points, including their operations, parameters etc.
+    required: true
+    range: uriorcurie
+  endpointURL:
+    slot_uri: dcat:endpointURL
+    description: "The electronic location where the item (file) being described can be found. 
+Note that there could be a security risk in sharing the endpoint URL for internal services, e.g. hackers can target the endpoint if they become aware of it.
+"
+    range: uri
+  identifier:
+    slot_uri: dct:identifier
+    description: A unique identifier of the resource being described or cataloged.
+    identifier: true
+    required: true
+    range: uriorcurie
+  issued:
+    slot_uri: dct:issued
+    description: Date of formal issuance (e.g., publication) of the distribution.
+    range: date
+  keyword:
+    slot_uri: dcat:keyword
+    description: Uncontrolled terms (words or phrases) assigned to describe an information resource.
+    multivalued: true
+    range: string
+  licence:
+    slot_uri: dct:license
+    description: A legal document under which the distribution is made available.
+    required: true
+    # range: uriorcurie
+    any_of:
+      - range: uriorcurie
+      - range: string
+        pattern: DATA_SHARE_AGREEMENT
+        # - range: DataShareAgreement
+  mediaType:
+    slot_uri: dcat:mediaType
+    description: The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
+    required: true
+    range: uri
+  modified:
+    slot_uri: dct:modified
+    description: Most recent date on which the distribution was changed, updated or modified.
+    range: date
+  publisher:
+    slot_uri: dct:publisher
+    description: The business entity responsible for making an information resource publicly available.
+    required: true
+    range: OrganisationValues
+  relatedResource:
+    slot_uri: dct:relation
+    description: A resource that bears a close relationship to the described resource.
+    recommended: true
+    multivalued: true
+    range: uriorcurie
+    # any_of:
+    #   - range: uriorcurie
+    #   - range: DataService
+  securityClassification:
+    description: An information security designation that identifies the minimum level of protection assigned to an information resource.
+    required: true
+    range: SecurityClassificationValues
+  servesData:
+    slot_uri: dcat:servesData
+    description: A collection of data that this data service can distribute.
+    recommended: true
+    multivalued: true
+    range: uriorcurie
+    # any_of:
+    #   - range: uriorcurie
+    #   - range: Dataset
+  serviceStatus:
+    slot_uri: adms:status
+    description: |
+      The status of the resource in the context of a particular workflow process. 
+
+      Lifecycle status
+    required: true
+    range: ServiceStatusValues
+  serviceType:
+    slot_uri: dct:type
+    description: |
+      The nature or genre of the resource.
+
+      The business design or structure used in the presentation and publication of an information resource.
+
+      Type of the service, e.g. REST, SOAP, ALERT.
+    required: true
+    range: ServiceTypeValues
+  summary:
+    slot_uri: rdfs:comment
+    description: |
+      "A short textual summary of the resource with a maximum length of 250 characters. 
+
+      Usage note: The intended use of this text is in a page containing multiple search results. If omitted, the first part of the description text will be used. This may be up to a certain character count or the detection of a paragraph break."
+    recommended: true
+    range: string
+  theme:
+    slot_uri: dcat:theme
+    description: A controlled term that expresses the broad topical content of an information resource./A controlled term that expresses a topic of the intellectual content of an information resource.
+    recommended: true
+    multivalued: true
+    range: uriorcurie
+  title:
+    slot_uri: dct:title
+    description: A name given to the distribution.
+    required: true
+    range: string
+  type:
+    slot_uri: rdf:type
+    designates_type: true
+    description: The type of the resource being defined
+    required: true
+    range: uriorcurie
+  updateFrequency:
+    slot_uri: dct:accrualPeriodicity
+    description: |
+      The frequency at which a dataset is published.	
+      
+      An available distribution of the dataset. If the frequency is unknown then use the value `freq:irregular`.
+    notes: The value for this field should be one of the terms from the Dublin Core Frequency Vocabulary, e.g. to say a dataset is updated quarterly use the value freq:quarterly.
+    required: true
+    range: FrequencyValues
+  version:
+    slot_uri: dcat:version
+    description: The version indicator (name or identifier) of a resource.
+    required: true
+    range: string
+
+## Definition of the values that can be used in the accessRights property
+enums:
+  AccessRightsValues:
+    permissible_values:
+      INTERNAL:
+        description: 
+          "Not publicly accessible for privacy, security or other reasons. 
+          Usage note: This category may include resources that contain sensitive or personal information.
+          These data resources would only be available to internal government users."
+      OPEN:
+        description: 
+          "Publicly accessible by everyone. 
+          Usage note: Permissible obstacles include registration and request for API keys, as long as anyone can request such registration and/or API keys.
+          These data resources would be available to any user without a requirement to authenticate, i.e. open data."
+      COMMERCIAL:
+        description: 
+          "Only available under certain conditions. 
+          Usage note: This category may include resources that require payment, resources shared under non-disclosure agreements, resources for which the publisher or owner has not yet decided if they can be publicly released.
+          These data resources would be available to any user without a requirement to authenticate, i.e. open data."
+  # Should be able to use the ontology to dynamically pull in terms
+  # However, Frequency is not a well specified concept scheme so there is no relationship we can use to define the nodes
+  # FrequencyValues:
+  #   reachable_from:
+  #     source_ontology: https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/freq.rdf
+  #     source_nodes:
+  #       - freq:quarterly #CL:0000540 ## neuron
+  #     include_self: true
+  #     # relationship_types:
+  #     #   - rdfs:subClassOf
+  FrequencyValues:
+    enum_uri: http://purl.org/cld/freq/
+    see_also: https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/
+    permissible_values:
+      freq:triennial:
+        meaning: freq:triennial
+        description: The event occurs every three years.
+      freq:biennial:
+        meaning: freq:biennial
+        description: The event occurs every two years.
+      freq:annual:
+        meaning: freq:annual
+        description: The event occurs once a year.
+      freq:semiannual:
+        meaning: freq:semiannual
+        description: The event occurs twice a year.
+      freq:threeTimesAYear:
+        meaning: freq:threeTimesAYear
+        description: Three times a year
+      freq:quarterly:
+        meaning: freq:quarterly
+        description: The event occurs every three months.
+      freq:bimonthly:
+        meaning: freq:bimonthly
+        description: The event occurs every two months.
+      freq:monthly:
+        meaning: freq:monthly
+        description: The event occurs once a month.
+      freq:semimonthly:
+        meaning: freq:semimonthly
+        description: The event occurs twice a month.
+      freq:biweekly:
+        meaning: freq:biweekly
+        description: The event occurs every two weeks.
+      freq:threeTimesAMonth:
+        meaning: freq:threeTimesAMonth
+        description: The event occurs three times a month.
+      freq:weekly:
+        meaning: freq:weekly
+        description: The event occurs once a week.
+      freq:semiweekly:
+        meaning: freq:semiweekly
+        description: The event occurs twice a week.
+      freq:threeTimesAWeek:
+        meaning: freq:threeTimesAWeek
+        description: The event occurs three times a week.
+      freq:daily:
+        meaning: freq:daily
+        description: The event occurs once a day.
+      freq:continuous:
+        meaning: freq:continuous
+        description: The event repeats without interruption.
+      freq:irregular:
+        meaning: freq:irregular
+        description: The event occurs at uneven intervals.
+  SecurityClassificationValues:
+    permissible_values:
+      OFFICIAL: 
+        description: Covers most of the day-to-day business of government, service delivery, commercial activity and policy development.
+      SECRET:
+      TOP_SECRET:
+      NOT_APPLICABLE:
+        description: Used for data assets coming from agencies and other public bodies where the security classification system is not applied.
+  ServiceStatusValues:
+    permissible_values:
+      DISCOVERY:
+        description: Service is in discovery phase, see https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works
+        meaning: https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works
+      ALPHA:
+        description: Service is in alpha phase, see https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works
+        meaning: https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works
+      BETA:
+        description: Service is in beta phase, see https://www.gov.uk/service-manual/agile-delivery/how-the-beta-phase-works
+        meaning: https://www.gov.uk/service-manual/agile-delivery/how-the-beta-phase-works
+      PRIVATE_BETA:
+        is_a: BETA
+        description: Service is in private beta, see https://www.gov.uk/service-manual/agile-delivery/how-the-beta-phase-works
+        meaning: https://www.gov.uk/service-manual/agile-delivery/how-the-beta-phase-works
+      PUBLIC_BETA:
+        is_a: BETA
+        description: Service is in public beta, see https://www.gov.uk/service-manual/agile-delivery/how-the-beta-phase-works
+        meaning: https://www.gov.uk/service-manual/agile-delivery/how-the-beta-phase-works
+      LIVE:
+        description: Service is live, see https://www.gov.uk/service-manual/agile-delivery/how-the-live-phase-works in production
+        meaning: https://www.gov.uk/service-manual/agile-delivery/how-the-live-phase-works
+      DEPRECATED:
+        description: Service has been deprecated and will be withdrawn in the future. However but it is still available for use, see https://www.gov.uk/service-manual/agile-delivery/retiring-your-service
+        meaning: https://www.gov.uk/service-manual/agile-delivery/retiring-your-service
+      WITHDRAWN:
+        description: Service has been withdrawn from use
+  ServiceTypeValues:
+    permissible_values:
+      EVENT:
+        description: A notification service
+        meaning: https://www.wikidata.org/wiki/Q7063032
+      REST:
+        description: representational state transfer web service
+        meaning: https://www.wikidata.org/wiki/Q749568
+      SOAP:
+        description: Simple Object Access Protocol Web Service
+        meaning: https://www.wikidata.org/wiki/Q189620

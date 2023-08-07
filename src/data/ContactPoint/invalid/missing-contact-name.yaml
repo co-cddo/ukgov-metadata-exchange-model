@@ -1,0 +1,4 @@
+# Example minimal ContactPoint metadata record
+# Missing contactName
+---
+email: "data@food.gov.uk"
