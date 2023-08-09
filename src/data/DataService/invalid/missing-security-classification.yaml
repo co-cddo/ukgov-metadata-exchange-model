@@ -18,14 +18,15 @@ theme:
   - http://eurovoc.europa.eu/5431
 licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 status: BETA
-version: 0.1
+version: "0.1"
 accessRights: OPEN
-issued: 2018-01-01
+issued: "2018-01-01"
 contactPoint:
   contactName: Data Team
   email: data@food.gov.uk
-modified: 2018-01-30
-creator: food-standards-agency
+modified: "2018-01-30"
+creator: 
+  - food-standards-agency
 publisher: food-standards-agency
 endpointURL: http://data.food.gov.uk/food-alerts/
 endpointDescription: http://data.food.gov.uk/food-alerts/ui/reference

@@ -13,13 +13,14 @@ keyword:
 theme: https://www.data.gov.uk/search?filters%5Btopic%5D=Mapping
 licence: https://opensource.org/license/isc-license-txt/
 serviceStatus: LIVE
-version: 2.0.0
+version: "2.0.0"
 accessRights: INTERNAL
 securityClassification: OFFICIAL_SENSITIVE
-issued: 2022-01-23
+issued: "2022-01-23"
 contactPoint: integration.technologyplatforms@dwp.gsi.gov.uk
-modified: 2023-01-30
-creator: retirement-bereavement-care
+modified: "2023-01-30"
+creator: 
+  - retirement-bereavement-care
 publisher: department-for-work-pensions
 endpointDescription: https://engineering.dwp.gov.uk/apis/docs
 servesData: 

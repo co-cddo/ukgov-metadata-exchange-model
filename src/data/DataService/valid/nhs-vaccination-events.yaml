@@ -29,8 +29,9 @@ licence: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir#
 contactPoint: 
   contactName: nrlnems.ls@nhs.net
   email: nrlnems.ls@nhs.net
-modified: 2022-10-24
-creator: nhs-digital
+modified: "2022-10-24"
+creator: 
+  - nhs-digital
 publisher: nhs-digital
 version: live
 endpointDescription: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir

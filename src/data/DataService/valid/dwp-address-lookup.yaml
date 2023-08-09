@@ -47,14 +47,16 @@ description: |-
 keyword: 
   - Address Search 
   - UPRN
-theme: https://www.data.gov.uk/search?filters%5Btopic%5D=Mapping
+theme: 
+  - https://www.data.gov.uk/search?filters%5Btopic%5D=Mapping
 version: 2.0.0
 securityClassification: OFFICIAL
-creator: department-for-work-pensions
+creator: 
+  - department-for-work-pensions
 summary: DWP single strategic solution for looking up addresses including fuzzy search and UPRN.
-issued: 2022-01-23
+issued: "2022-01-23"
 licence: https://opensource.org/license/isc-license-txt/
-modified: 2023-01-30
+modified: "2023-01-30"
 publisher: department-for-work-pensions
 endpointDescription: https://engineering.dwp.gov.uk/apis/docs
 servesData: 
