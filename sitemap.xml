@@ -2,342 +2,342 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/AccessRightsValues/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Boolean/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/ContactPoint/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Curie/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/DataResource/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/DataService/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Dataset/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Date/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/DateOrDatetime/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Datetime/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Decimal/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Distribution/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Double/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Float/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/FrequencyValues/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Integer/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/LICENSE/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Ncname/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Nodeidentifier/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Objectidentifier/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Organisation/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/OrganisationCollection/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/OrganisationValues/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/SecurityClassificationValues/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/ServiceStatusValues/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/ServiceTypeValues/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/String/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Time/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Uri/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/Uriorcurie/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/about/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/accessRights/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/accessService/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/address/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/alternativeTitle/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/byteSize/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/contactName/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/contactPoint/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/created/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/creator/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/description/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/distribution/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/downloadURL/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/email/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/endpointDescription/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/endpointURL/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/entries/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/identifier/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/issued/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/keyword/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/licence/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/mediaType/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/modified/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/publisher/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/relatedResource/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/securityClassification/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/servesData/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/serviceStatus/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/serviceType/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/summary/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/telephone/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/theme/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/title/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/type/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/uk-cross-government-metadata-exchange-model/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/updateFrequency/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://co-cddo.github.io/data-catalogue-schemas/version/</loc>
-         <lastmod>2023-08-08</lastmod>
+         <lastmod>2023-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
