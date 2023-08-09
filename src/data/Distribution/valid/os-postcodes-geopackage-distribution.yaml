@@ -8,9 +8,10 @@ description: Free and open postcode location data. Can be used for geographical 
 licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 #version: 2023-02
 accessRights: OPEN
-issued: 2023-02-01
-modified: 2023-02-01
-accessService: retirement-bereavement-care-address-lookup-location-service-v2.0.0
+issued: "2023-02-01"
+modified: "2023-02-01"
+accessService: 
+  - retirement-bereavement-care-address-lookup-location-service-v2.0.0
 byteSize: 55410000
 downloadURL: https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=CSV&redirect
 mediaType: application/geopackage+sqlite3

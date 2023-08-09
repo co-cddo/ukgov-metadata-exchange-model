@@ -12,15 +12,16 @@ keyword:
 theme: 
   - https://www.data.gov.uk/search?filters%5Btopic%5D=Mapping
 licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
-version: 2023-02
+version: "2023-02"
 accessRights: OPEN
 securityClassification: OFFICIAL
-issued: 2022-02-01
+issued: "2022-02-01"
 contactPoint:
   contactName: Ordnance Survey Customer Service Centre
   email: customerservices@os.uk
-modified: 2023-02-01
-creator: ordnance-survey
+modified: "2023-02-01"
+creator: 
+  - ordnance-survey
 publisher: department-for-work-pensions
 updateFrequency: freq:quarterly
 distribution:
