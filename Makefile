@@ -57,6 +57,18 @@ gen-examples: $(DOCDIR)
 	cp src/data/README.md $(DOCDIR)/$(EXAMPLEDIR)
 	# TODO: Convert to JSON for the example directory
 	cp src/data/*/valid/* $(DOCDIR)/$(EXAMPLEDIR)
+	linkml-convert \
+		-s src/model/uk_cross_government_metadata_exchange_model.yaml \
+		-o $(DOCDIR)/$(EXAMPLEDIR)/ContactPoint-fsa-minimal.json \
+		-t json \
+		-C ContactPoint \
+		$(DOCDIR)/$(EXAMPLEDIR)/ContactPoint-fsa-minimal.yaml
+	linkml-convert \
+		-s src/model/uk_cross_government_metadata_exchange_model.yaml \
+		-o $(DOCDIR)/$(EXAMPLEDIR)/DataService-dwp-address-lookup.json \
+		-t json \
+		-C DataService \
+		$(DOCDIR)/$(EXAMPLEDIR)/DataService-dwp-address-lookup.yaml
 
 # TODO: Extend tests to lint schema to ensure elements are correctly described, see https://linkml.io/linkml/schemas/linter.html
 
@@ -114,10 +126,12 @@ serve: mkd-serve
 $(DOCDIR):
 	mkdir -p $(DOCDIR)/$(EXAMPLEDIR)
 
-gendoc: $(DOCDIR)
+gendoc: gen-examples
 	cp src/docs/*.md $(DOCDIR)
 	cp LICENSE.md $(DOCDIR)
-	$(RUN) gen-doc -d $(DOCDIR) src/model/uk_cross_government_metadata_exchange_model.yaml
+	$(RUN) gen-doc -d $(DOCDIR) \
+		--example-directory $(DOCDIR)/$(EXAMPLEDIR) \
+		src/model/uk_cross_government_metadata_exchange_model.yaml
 
 MKDOCS = $(RUN) mkdocs
 
