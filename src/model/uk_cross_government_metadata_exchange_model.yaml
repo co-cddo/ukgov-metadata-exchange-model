@@ -157,7 +157,7 @@ slots:
   accessService:
     slot_uri: dcat:accessService
     description: A data service that gives access to the distribution of the dataset.
-    notes: Only required if applicable
+    comments: Only required if applicable
     recommended: true 
     multivalued: true
     range: uriorcurie
@@ -335,7 +335,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       The frequency at which a dataset is published.	
       
       An available distribution of the dataset. If the frequency is unknown then use the value `freq:irregular`.
-    notes: The value for this field should be one of the terms from the Dublin Core Frequency Vocabulary, e.g. to say a dataset is updated quarterly use the value freq:quarterly.
+    comments: The value for this field should be one of the terms from the Dublin Core Frequency Vocabulary, e.g. to say a dataset is updated quarterly use the value freq:quarterly.
     required: true
     range: FrequencyValues
   version:
