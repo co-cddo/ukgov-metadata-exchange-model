@@ -54,6 +54,8 @@ classes:
         range: string
         pattern: ^\S+@[\S+\.]+\S+
         comments: |
+          purpose:
+          Use of contact e-mail, along with contact name, provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use, or in understanding and interpreting the content.
           guidance: 
           Use all lower case letters for the e-mail address.
       telephone:

@@ -47,7 +47,9 @@ URI: {{ gen.uri_link(element) }}
 
 {% set comments_lines = comments.split('\n') %}
 {% for line in comments_lines %}
-{% if line.startswith('distinctFrom:') %}
+{% if line.startswith('purpose:') %}
+### Purpose
+{% elif line.startswith('distinctFrom:') %}
 ### Do not confuse with
 {% elif line.startswith('guidance:') %}
 ### Guidance
