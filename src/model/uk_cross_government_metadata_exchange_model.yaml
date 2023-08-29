@@ -172,6 +172,16 @@ slots:
     recommended: true
     multivalued: true
     range: string
+    role: Using alternative title can assist retrieval and help to distinguish one resource from another, as users may be more familiar with an informal version of a title.
+    comments: |
+      distinctFrom:
+        - [title](/data-catalogue-schemas/title): the name given to the resource and by which the resource is formally known;
+        - Digital filenames or website titles.
+    # comments: |
+    #   ### Distinct From 
+    #     - TITLE the name given to the resource and by which the resource is formally known;
+    #     - ITEM TITLE The formal or informal name given to the particular item (file) being described.
+    #     - Digital filenames or website titles.
   byteSize:
     slot_uri: dcat:byteSize
     description: The size of the distribution in bytes.

@@ -41,6 +41,23 @@ URI: {{ gen.uri_link(element) }}
 * Mixin: {{ element.mixin }}
 {% endif -%}
 
+## Usage Notes
+
+{% set comments = element.comments | join('') %}
+
+{% set comments_lines = comments.split('\n') %}
+{% for line in comments_lines %}
+{% if line.startswith('distinctFrom:') -%}
+### Do not confuse with
+{% else -%}
+{{ line }}
+{% endif -%}
+{% endfor %}
+
+<!-- {% for item in element.comments %} -->
+<!-- {{ item }} -->
+<!-- {% endfor %} -->
+
 {% if schemaview.slot_parents(element.name) or schemaview.slot_children(element.name, mixins=False) %}
 
 ## Inheritance
