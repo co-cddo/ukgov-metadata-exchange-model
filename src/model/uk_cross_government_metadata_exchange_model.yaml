@@ -177,8 +177,9 @@ slots:
     recommended: true
     multivalued: true
     range: string
-    role: Using alternative title can assist retrieval and help to distinguish one resource from another, as users may be more familiar with an informal version of a title.
     comments: |
+      purpose: 
+      Using alternative title can assist retrieval and help to distinguish one resource from another, as users may be more familiar with an informal version of a title.
       distinctFrom:
         - [title](/data-catalogue-schemas/title): the name given to the resource and by which the resource is formally known;
         - Digital filenames or website titles.
