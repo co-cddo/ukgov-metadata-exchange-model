@@ -49,7 +49,7 @@ classes:
         range: string
       email:
         slot_uri: vcard:hasEmail
-        description: Team email address
+        description: The e-mail address to be used to contact the organisational contact for the resource as listed in the [contact name](/data-catalogue-schemas/contactName).
         required: true
         range: string
         pattern: ^\S+@[\S+\.]+\S+
