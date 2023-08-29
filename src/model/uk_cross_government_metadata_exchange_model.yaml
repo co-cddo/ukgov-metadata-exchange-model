@@ -53,6 +53,9 @@ classes:
         required: true
         range: string
         pattern: ^\S+@[\S+\.]+\S+
+        comments: |
+          guidance: 
+          Use all lower case letters for the e-mail address.
       telephone:
         slot_uri: vcard:hasTelephone
         description: Telephone number for the contact team
