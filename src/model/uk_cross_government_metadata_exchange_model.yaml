@@ -177,11 +177,6 @@ slots:
       distinctFrom:
         - [title](/data-catalogue-schemas/title): the name given to the resource and by which the resource is formally known;
         - Digital filenames or website titles.
-    # comments: |
-    #   ### Distinct From 
-    #     - TITLE the name given to the resource and by which the resource is formally known;
-    #     - ITEM TITLE The formal or informal name given to the particular item (file) being described.
-    #     - Digital filenames or website titles.
   byteSize:
     slot_uri: dcat:byteSize
     description: The size of the distribution in bytes.
