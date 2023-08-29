@@ -177,6 +177,23 @@ slots:
       distinctFrom:
         - [title](/data-catalogue-schemas/title): the name given to the resource and by which the resource is formally known;
         - Digital filenames or website titles.
+      guidance:
+      Use alternative title for commonly-used titles of a resource other than the title. This could include title abbreviations, title aliases, assigned titles, or names by which a resource is commonly or informally known.
+
+      Alternative titles should be derived from the content of the resource, with special attention paid to the title page, and reflect how users would search for a resource.
+
+      Examples: 
+      1. Worth Report  
+          - Title: A future of choices, a choice of futures: report of the Commission on Education planning  
+          - Alternative Title: Worth Report (named after the head of the commission which wrote the report)
+      2. Assured Income  
+          - Title: Assured Income for the Severely Handicapped Regulations  
+          - Alternative Title: AISH Regulations
+      3. Family Size  
+          - Title (for a dataset): Family Size, UK, England and Wales, 2011  
+          - Alternative Title: Family Size
+
+      Include special characters such as quotations marks, apostrophes, and accented characters, e.g. Métis.
   byteSize:
     slot_uri: dcat:byteSize
     description: The size of the distribution in bytes.
