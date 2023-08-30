@@ -105,6 +105,9 @@ test-invalid: src/model/uk_cross_government_metadata_exchange_model.yaml
 
 ###########################################################
 # DOCUMENTATION
+#
+# Any changes to the documentation process need to be 
+# reflected in the Dockerfile as well
 ###########################################################
 
 # Run documentation locally
