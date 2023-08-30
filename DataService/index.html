@@ -380,7 +380,7 @@
 </tr>
 <tr>
 <td><a href="../accessRights/">accessRights</a></td>
-<td>0..1 <br/> <a href="../AccessRightsValues/">AccessRightsValues</a></td>
+<td>1..1 <br/> <a href="../AccessRightsValues/">AccessRightsValues</a></td>
 <td>A rights statement that concerns how the distribution is accessed</td>
 <td><a href="../DataResource/">DataResource</a></td>
 </tr>
@@ -653,6 +653,7 @@ attributes:
     - DataResource
     - Distribution
     range: AccessRightsValues
+    required: true
   alternativeTitle:
     name: alternativeTitle
     description: An alternative name used as a substitute or additional access point

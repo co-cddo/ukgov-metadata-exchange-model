@@ -278,7 +278,7 @@
 <tbody>
 <tr>
 <td><a href="../accessRights/">accessRights</a></td>
-<td>0..1 <br/> <a href="../AccessRightsValues/">AccessRightsValues</a></td>
+<td>1..1 <br/> <a href="../AccessRightsValues/">AccessRightsValues</a></td>
 <td>A rights statement that concerns how the distribution is accessed</td>
 <td>direct</td>
 </tr>
@@ -444,6 +444,12 @@ slots:
 - theme
 - version
 slot_usage:
+  accessRights:
+    name: accessRights
+    domain_of:
+    - DataResource
+    - Distribution
+    required: true
   description:
     name: description
     domain_of:
@@ -466,6 +472,12 @@ class_uri: dcat:Resource
 from_schema: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model
 abstract: true
 slot_usage:
+  accessRights:
+    name: accessRights
+    domain_of:
+    - DataResource
+    - Distribution
+    required: true
   description:
     name: description
     domain_of:
@@ -491,6 +503,7 @@ attributes:
     - DataResource
     - Distribution
     range: AccessRightsValues
+    required: true
   alternativeTitle:
     name: alternativeTitle
     description: An alternative name used as a substitute or additional access point
