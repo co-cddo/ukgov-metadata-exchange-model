@@ -233,8 +233,34 @@ slots:
     #   - range: ContactPoint
   created:
     slot_uri: dct:created
-    description: The date, or date and time, on which the content of an information resource is created or compiled.
+    description: |
+      The date, or date and time, on which the content of an information resource is created or compiled. 
+      
+      __When used on a metadata record__ The date and time on which an information resource is made available through the catalogue.
     range: date
+    comments: |
+      purpose:
+      The use of `created` helps users assess the relevance of the content to their information needs, and allows users to distinguish between when the content of an information resource was created or compiled and when the resource was publicly released.
+      __When used for a catalogue record__
+      Use of `created` allows users to distinguish between the date a resource was published and the date it was included in the Government Data Catalogue. It also allows users to locate resources recently added to the Government Data Catalogue.
+      distinctFrom:
+      `created` applied to a catalogue record: the date the resource was first added to the Government Data Catalogue.
+      `issued`: the date the resource was originally published or otherwise made publicly available for the first time, which may have been prior to its inclusion in the catalogue.
+      __When used for a catalogue record__
+      `created` applied to a data asset: the date the intellectual content of the resource was completed or compiled in the form in which it was approved for and eventually released.
+      [issued](/data-catalogue-schemas/issued): the date a resource was originally published or otherwise made publicly available for the first time. Date Issued and Date Added to Catalogue might be, but do not have to be, the same date.
+      [modified](/data-catalogue-schemas/modified): the date on which the content of a resource was changed, or when a new issue of a serial resource was added to the metadata record.
+      guidance:
+      Systems tend to identify the “date created” of a resource as the date on which it is captured into a repository. The actual creation of a resource and its capture frequently do take place on the same date, but this is not always the case, for example:
+      - Disseminating a resource sometime after its date created;
+      - Capturing metadata about a resource into a repository that does not contain the resources itself.
+      `created` should reflect the date the intellectual content of the resource was completed or compiled in the form in which it was eventually released.
+      Be as specific as possible, including month and day as well as year, if known. 
+      Some scenarios might be:
+      - A dataset compiled in April 2015 published on July 2015 (`created` is `2015-04`);
+      - A report completed in September 2015 but publicly released in January 2016 (`created` is `2015-09`);
+      __When used for a catalogue record__
+      `created` will be the date the metadata record was first “published” within the Government Data Catalogue environment.
   creator:
     slot_uri: dct:creator
     description: The business entity responsible for creating or compiling the original content of an information resource.
