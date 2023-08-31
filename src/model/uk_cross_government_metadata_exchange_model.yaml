@@ -244,8 +244,8 @@ slots:
       __When used for a catalogue record__
       Use of `created` allows users to distinguish between the date a resource was published and the date it was included in the Government Data Catalogue. It also allows users to locate resources recently added to the Government Data Catalogue.
       distinctFrom:
-      `created` applied to a catalogue record: the date the resource was first added to the Government Data Catalogue.
-      `issued`: the date the resource was originally published or otherwise made publicly available for the first time, which may have been prior to its inclusion in the catalogue.
+      - [`created`](/data-catalogue-schemas/created/) applied to a catalogue record: the date the resource was first added to the Government Data Catalogue.
+      - [`issued`](/data-catalogue-schemas/issued/): the date the resource was originally published or otherwise made publicly available for the first time, which may have been prior to its inclusion in the catalogue.
       __When used for a catalogue record__
       `created` applied to a data asset: the date the intellectual content of the resource was completed or compiled in the form in which it was approved for and eventually released.
       [issued](/data-catalogue-schemas/issued): the date a resource was originally published or otherwise made publicly available for the first time. Date Issued and Date Added to Catalogue might be, but do not have to be, the same date.
@@ -320,8 +320,27 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: uriorcurie
   issued:
     slot_uri: dct:issued
-    description: Date of formal issuance (e.g., publication) of the distribution.
+    description: The date, or date and time, on which an information resource was originally published or otherwise made publicly available for the first time.
+
+      Date of formal issuance (e.g., publication) of the distribution.
     range: date
+    comments: |
+      purpose:
+      Use of `issued` allows users to determine the currency of the described resource. It also helps the user to distinguish between the date the described resource was created, the date it was first made publicly available, and the date it was added to the Government Data Catalogue.
+      distinctFrom:
+      - DATE ADDED TO CATALOGUE: the date on which the resource was included in the Government Data Catalogue.
+      - METADATA RECORD CREATION DATE: the date on which a new Government Data Catalogue metadata record is created.
+      - [`modified`](/data-catalogue-schemas/modified/): the date on which the content of an information resource was changed, or when a new issue of a serial resource was added to the metadata record
+      guidance:
+      The issued date should indicate the date on which the described resource was first published or otherwise released to the public.
+      Be as specific as possible, including month and day as well as year, if known.
+      If the resource was never publicly released before inclusion in the Government Data Catalogue, the DATE ISSUED and DATE ADDED TO CATALOGUE would be the same.
+      Some scenarios might be:
+      - A dataset compiled in April 2015 published on July 2015 (`issued` is `2015-07`);
+      - A report completed in September 2015 but publicly released in January 2016 (`issued` is `2016-01`);
+    todos:
+      - Refine guidance text inline with dates actually available in the metadata model
+      - Add distinctFrom for all the different date types
   keyword:
     slot_uri: dcat:keyword
     description: Uncontrolled terms (words or phrases) assigned to describe an information resource.
