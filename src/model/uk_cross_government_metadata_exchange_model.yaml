@@ -105,6 +105,8 @@ classes:
       - theme
       - version
     slot_usage:
+      accessRights:
+        required: true
       description:
         required: true
       modified:
