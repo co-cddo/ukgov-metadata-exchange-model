@@ -365,8 +365,24 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: uri
   modified:
     slot_uri: dct:modified
-    description: Most recent date on which the distribution was changed, updated or modified.
+    description: The date, or date and time, on which the content of an information resource is changed.
     range: date
+    comments: |
+      purpose:
+        The use of `modified`:
+        - Helps users assess the relevance of the content to their information needs.
+        - Helps users distinguish when the content of an information resource was changed after it was initially issued.
+        - Provides evidence of accountability and quality control by tracking revisions to the content of an information resource.
+      distinctFrom:
+        - METADATA RECORD UPDATE DATE: the date, or date and time, on which a catalogue record is changed.
+      guidance:
+        The DATE MODIFIED refers to the last date on which the content of an information resource revised. The date of the most recent update is the only date retained.
+        Be as specific as possible, including month and day as well as year, if known.
+        In the case of records which describe an information resource with more than one item (file), such as serial resources or resources with more than one part (eg. book chapters), the DATE MODIFIED should reflect the most recent date that any one item was modified. For example, if a new issue of a serial is added to a record, the DATE MODIFIED should be the date that the new issue was modified.
+        For most publications and many other information resources in the Government Data Catalogue, the DATE CREATED and DATE MODIFIED will be the same and will likely remain the same.
+    todos:
+      - Update distinctFrom to include all date properties
+      - Refresh guidance to reflect updated thinking around marketplace
   publisher:
     slot_uri: dct:publisher
     description: The business entity responsible for making an information resource publicly available.
