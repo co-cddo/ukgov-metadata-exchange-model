@@ -348,10 +348,26 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: uri
   identifier:
     slot_uri: dct:identifier
-    description: A unique identifier of the resource being described or cataloged.
+    description: |
+      A unique number, code, or reference value assigned to an information resource within a given context.
+      A unique identifier of the resource being described or catalogued.
     identifier: true
     required: true
     range: uriorcurie
+    comments: |
+      purpose: 
+        Use of `identifier` supports unambiguous identification of resources, helps to prevent duplication, allows for interoperability with other metadata management systems, and facilitates retrieval, as users may retrieve resources by specific identifiers.
+      guidance:
+        As a best practice, all known unique identifiers should be included.
+        IDENTIFIER (OTHER) is a container element with sub-elements. Metadata values are contained in the sub-elements.
+        Each IDENTIFIER (OTHER) element has two mandatory sub-elements
+        - Identifier (Other) Type
+        - The formal name given to the type of identifier – Choose from a controlled vocabulary. See Appendix B for a list of current Identifier (Other) types. If the type of identifier is not available and the option "local identifier" is not suitable, contact the Government Data Catalogue administrator team to add the identifier type to the controlled vocabulary. E.g. ISBN (print) or ISSN (online).
+        - Identifier Value
+        - The unique value of the identifier for the specific identifier type.
+        For ISBNs, enter the complete ISBN without hyphens. For all other identifiers, enter as they appear in the described resource.
+    todos:
+      - Update guidance based on how identifier is being used in the model
   issued:
     slot_uri: dct:issued
     description: The date, or date and time, on which an information resource was originally published or otherwise made publicly available for the first time.
