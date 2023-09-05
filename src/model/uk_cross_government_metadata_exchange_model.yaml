@@ -290,8 +290,24 @@ slots:
       - Decide what to do about `contributor`
   description:
     slot_uri: dct:description
-    description: A free-text account of the distribution.
+    description: |
+      A concise narrative of the content of an information resource.
+      A free-text account of the distribution.
     range: string
+    comments: |
+      purpose:
+        Use of DESCRIPTION provides an explanation of the contents of a resource to assist in retrieval and to help users determine if a resource is relevant to their needs. The description can also describe the purpose of an information resource (what it was intended to accomplish), what the resource "is" or what it measures, its function and potential uses.
+      distinctFrom: 
+        - ITEM DESCRIPTION: A concise narrative of the content of the particular item (file) being described. For resources that contain multiple components or files with different intellectual content, there may be both a Description that applies to the resource as a whole, and item descriptions which apply to each individual component.
+      guidance:
+        The DESCRIPTION must be concise as well as informative. Do not repeat the Title or Alternative Tile in the Description field.
+        The DESCRIPTION should consist of complete sentences, written in an easily understandable manner. It could cover aspects such as:
+        - the purpose and function of a resource: what it was intended to accomplish;
+        - what a resource "is", such as "... the results of a comprehensive survey about persons who ....";
+        - a resource’s place in a continuum, e.g. "It was preceded by...; It grew out of...; It expands on earlier data collected by... for....";
+        - potential uses for the resource, e.g. "To plan programs and services for...; As a base for analyzing...; To forecast volumes of...; To determine requirements for..."
+        - Other useful information not captured in other metadata elements.
+        Include special characters such as quotation marks, apostrophes, and accented characters, e.g. Métis if applicable.
   distribution:
     slot_uri: dcat:distribution
     description: An available distribution of the dataset.
