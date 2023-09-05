@@ -447,6 +447,15 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     description: The business entity responsible for making an information resource publicly available.
     required: true
     range: OrganisationValues
+    comments: |
+      purpose:
+        In the context of the Government Data Catalogue, the `publisher` is the department or other organisational entity responsible for the public release of the resource. Use of `publisher` supports the assignment of accountability for accuracy of the resource, quality assurance and timeliness, as well as related quality control and life cycle management processes.
+      distinctFrom:
+        - [`contactPoint`](/data-catalogue-schemas/contactPoint): provides an avenue for users to obtain further information or provide feedback about the described resource or its metadata. It might or might not be the same entity as the issuing body.
+        - [`creator`](/data-catalogue-schemas/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
+      guidance:
+        The `publisher` is responsible for the quality and timeliness of the content of the described resource. Publishers may include provincial departments, agencies, boards, commissions, or delegated administrative organisations. In the Government Data Catalogue context, [`creator`](/data-catalogue-schemas/creator) and `publisher` may be the same organisation, but this may not always be the case.
+        If the information product has more than one publisher, choose the first one listed. When there is more than one publisher and they are not listed on the resource, choose the body which comes first alphabetically.
   relatedResource:
     slot_uri: dct:relation
     description: A resource that bears a close relationship to the described resource.
