@@ -50,17 +50,17 @@ classes:
         range: string
         comments: |
           purpose:
-          Use of `contactName` provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use or in understanding and interpreting the content.
+            Use of `contactName` provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use or in understanding and interpreting the content.
           distinctFrom:
-          - contributor: a person or organisation responsible for making significant contributions to the content of the described resource.
-          - [creator](/data-catalogue-schemas/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
-          - issuing body: the department, agency, board or commission responsible for making the described resource publicly available.
+            - contributor: a person or organisation responsible for making significant contributions to the content of the described resource.
+            - [creator](/data-catalogue-schemas/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
+            - issuing body: the department, agency, board or commission responsible for making the described resource publicly available.
           guidance:
-          Contact information should be included for all new information resources that are added to the Government Data Catalogue. Generally, `contactName` will be a support or branch unit that will either respond to the user or refer the inquiry to a subject matter expert.
-          
-          Because the Government Data Catalogue may include historical resources for which there is no longer a suitable contact point, this element has not been made mandatory.
-          
-          When a `contactName` is provided for an information resource, it should be combined with a [`email`](/data-catalogue-schemas/email).
+            Contact information should be included for all new information resources that are added to the Government Data Catalogue. Generally, `contactName` will be a support or branch unit that will either respond to the user or refer the inquiry to a subject matter expert.
+            
+            Because the Government Data Catalogue may include historical resources for which there is no longer a suitable contact point, this element has not been made mandatory.
+            
+            When a `contactName` is provided for an information resource, it should be combined with a [`email`](/data-catalogue-schemas/email).
       email:
         slot_uri: vcard:hasEmail
         description: The e-mail address to be used to contact the organisational contact for the resource as listed in the [contact name](/data-catalogue-schemas/contactName).
