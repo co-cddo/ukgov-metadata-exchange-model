@@ -392,9 +392,20 @@ Note that there could be a security risk in sharing the endpoint URL for interna
         # - range: DataShareAgreement
   mediaType:
     slot_uri: dcat:mediaType
-    description: The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
+    description: |
+      The file format or encoding method of the item (file) being described.
+      The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
     required: true
     range: uri
+    comments: |
+      purpose:
+        Use of `mediaType` supports retrieval, as well as control, storage, preservation and access management of resources through time. It can alert users to the existence of requirements for software, hardware or equipment other than a web browser to display, use, or manage a resource.
+      distinctFrom:
+        - AVAILABILITY: used when the described resource is available in print or in another digital format through another government or non-government source.
+        - TYPE: describes the business structure of the content of a resource, e.g. fact sheet, policy, report, guide, statistics.
+      guidance:
+        `mediaType` refers to the encoding method used to store digital resource and convert it into human-accessible form.
+        A resource with identical or near-identical intellectual content may have multiple formats. For example, a resource may be available for download in html, pdf and docx formats.
   modified:
     slot_uri: dct:modified
     description: The date, or date and time, on which the content of an information resource is changed.
