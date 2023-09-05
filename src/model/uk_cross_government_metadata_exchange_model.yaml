@@ -499,10 +499,22 @@ Note that there could be a security risk in sharing the endpoint URL for interna
   updateFrequency:
     slot_uri: dct:accrualPeriodicity
     description: |
+      The time interval at which new or updated versions of an information resource are issued.
+
       The frequency at which a dataset is published.	
       
       An available distribution of the dataset. If the frequency is unknown then use the value `freq:irregular`.
-    comments: The value for this field should be one of the terms from the Dublin Core Frequency Vocabulary, e.g. to say a dataset is updated quarterly use the value freq:quarterly.
+    comments: |
+      purpose:
+        Documenting the periods at which new or updated versions or issues of a resource are released can help users understand the context, availability and relevance of its content. FREQUENCY also is a component in managing the publication process.
+      guidance:
+        The value for this field should be one of the terms from the Dublin Core Frequency Vocabulary, e.g. to say a dataset is updated quarterly use the value freq:quarterly.
+
+        Select "Once" if the resource is not expected to be updated or serially produced. Later versions of a resource with a FREQUENCY of "once" should be entered as a new resource with its own catalogue record, and the relationship between the resources should be identified with the RELATED RESOURCE element.
+        Select "Other" if the described resource is issued at a regular time interval not included in the controlled vocabulary.
+        If the frequency with which the described resource changes (e.g. A quarterly publication is changed to a monthly publication) update the frequency metadata element to reflect the new frequency. A note can be added under the ADDITIONAL INFORMATION metadata element to mark the change in frequency.
+    todos:
+      - Update guidance to be consistent with controlled vocabulary
     required: true
     range: FrequencyValues
   version:
