@@ -333,8 +333,15 @@ slots:
     # range: Dataset
   downloadURL:
     slot_uri: dcat:downloadURL
-    description: The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType.
+    description: |
+      The electronic location where the item (file) being described can be found.
+      The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's `dcterms:format` and/or `dcat:mediaType`.
     range: uri
+    comments: |
+      purpose: 
+        `downloadURL` provides the access point to the electronic file being described.
+      guidance:
+        The `downloadURL` will be system-generated and will provide the access point for the item.
   endpointDescription:
     slot_uri: dcat:endpointDescription
     description: A description of the services available via the end-points, including their operations, parameters etc.
