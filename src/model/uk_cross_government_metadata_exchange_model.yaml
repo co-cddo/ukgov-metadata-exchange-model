@@ -218,7 +218,9 @@ slots:
         Include special characters such as quotations marks, apostrophes, and accented characters, e.g. Métis.
   byteSize:
     slot_uri: dcat:byteSize
-    description: The size of the distribution in bytes.
+    description: |
+      The filesize of the item (file) being described.
+      The size of the distribution in bytes.
     recommended: true
     range: integer
     minimum_value: 1
