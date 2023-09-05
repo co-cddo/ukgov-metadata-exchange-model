@@ -403,6 +403,24 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     description: Uncontrolled terms (words or phrases) assigned to describe an information resource.
     multivalued: true
     range: string
+    comments: |
+      purpose:
+        Keywords can serve as additional access points to assist discovery and retrieval.
+      distinctFrom:
+        - [`description`](/data-catalogue-schemas/description): a narrative account about resource content.
+        - [`theme`](/data-catalogue-schemas/theme): controlled terms that describe the topic(s) of the content.
+      guidance:
+        Keywords are used to:
+        - Improve search results by providing words that may be used to look for a resource but which do not appear in the title, description, or other metadata fields. This might include acronyms and subject synonyms.
+        - Group together resources with similar subject matter. In the Government Data Catalogue, keywords appear as clickable links that, when clicked, will retrieve all other records that contain the same keyword.
+        - Keywords should be entered in the plural form, except for abstract concepts or entities that cannot be counted. (E.g. exports, royalties, births, trade)
+        - Do not enter variant spellings of a word as keywords. Only the accepted spelling of a word should be included. 
+        - Do not use abbreviations; spell out the keyword in full.
+        - If entering acronyms, also include the full form of the acronym as a keyword (e.g. OHS, Occupational Health and Safety).
+        - Enter keywords in lower case, except for proper nouns (e.g. public libraries, Calgary Public Library).
+        - Do not use ampersands in keywords; use the word ‘and’ instead.
+        - Nouns and noun phrases are preferred over verbs (e.g. fermentation not fermenting)
+        - Special characters, such as accent marks, should be included as long as they reflect common usage (e.g. Métis).
   licence:
     slot_uri: dct:license
     description: A legal document under which the distribution is made available.
