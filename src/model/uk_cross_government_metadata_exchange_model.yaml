@@ -423,7 +423,9 @@ Note that there could be a security risk in sharing the endpoint URL for interna
         - Special characters, such as accent marks, should be included as long as they reflect common usage (e.g. Métis).
   licence:
     slot_uri: dct:license
-    description: A legal document under which the distribution is made available.
+    description: |
+      Reference to the legal document outlining access and usage rights for an information resource.
+      A legal document under which the distribution is made available.
     required: true
     # range: uriorcurie
     any_of:
@@ -431,6 +433,11 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       - range: string
         pattern: DATA_SHARE_AGREEMENT
         # - range: DataShareAgreement
+    comments: |
+      purpose:
+        Including the licence applicable to the described resources allows the user to understand what rights and obligations he or she has when accessing and using the resource.
+      guidance:
+        Rules as per Open Data Policy, all information and data that is made publicly available by HMG is likely to be released under the Open Government licence unless it is exempt under specific conditions. Any other applicable licences should be explicitly stated.
   mediaType:
     slot_uri: dcat:mediaType
     description: |
