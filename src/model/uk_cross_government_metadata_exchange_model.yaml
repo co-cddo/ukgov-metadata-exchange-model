@@ -618,9 +618,30 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       - Indicate vocabularies to be used
   title:
     slot_uri: dct:title
-    description: A name given to the distribution.
+    description: |
+      The full and formal name given to an information resource.
+      A name given to the distribution.
     required: true
     range: string
+    comments: |
+      purpose:
+        A meaningful title describes the content of a resource concisely, and supports access, speed of identification, and control of content.
+      distinctFrom:
+        - [`alternativeTitle`](/data-catalogue-schemas/alternativeTitle): any form of a title used as a substitute or additional access point to the title of the resource.
+        - [`identifier`](/data-catalogue-schemas/identifier): a unique number or code that unambiguously identifies the described resource.
+        - SERIES TITLE: A distinctive collective title applied to an information resource and one or more other resources that also have their own separate titles.
+        - Digital file name assigned by a user to an electronic file such as a web page or desktop document, e.g. "www.saintranet.gov.ab.ca/7.htm" or "specifications.doc".
+      guidance:
+        Useful titles distinguish one resource from another, so organisations should establish consistent naming practices for all forms of information resources.
+        For resources with existing titles, the title should be taken as it appears in the content of the described resource. If multiple forms of titles appear in the resource, choose the title as it appears on the title page of the resource, if applicable.
+        If no title appears within the described resource or within metadata provided by the creator of the resource, a title will have to be created. Use the following guidelines in creating titles when necessary:
+        - Create a brief and meaningful title to convey its topic or purpose;
+        - Place important words near the beginning of the title;
+        -  Ensure that the title is in the same language as the resource;
+        - Minimizing the use of abbreviations and acronyms;
+        - Add values to a title such as a version number, status or version date if a resource is one of many with the same or similar titles. For example, "Submission guide 2003", "Submission guide 2007".
+        Titles should be entered in sentence case. Only the first word and proper nouns should be capitalized.
+        Separate titles and subtitles by a colon preceded and followed by a space.
   type:
     slot_uri: rdf:type
     designates_type: true
