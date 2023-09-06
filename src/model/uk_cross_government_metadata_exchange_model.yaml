@@ -525,6 +525,16 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     description: An information security designation that identifies the minimum level of protection assigned to an information resource.
     required: true
     range: SecurityClassificationValues
+    comments: |
+      purpose:
+        Use of `securityClassification` promotes the broad distribution of non-sensitive resources. Only resources with a security classification of "OFFICIAL" will be included in the Government Data Catalogue. The purpose of including this metadata element is to ensure that the resource has been reviewed and cleared as unrestricted before being included in the Government Data Catalogue, and to align with the [UK Government's Security Classifications](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).
+      distinctFrom:
+        - [`accessRights`](/data-catalogue-schemas/accessRights): to capture whether the data is openly avaialble or for internal use only
+        - [`licence`](/data-catalogue-schemas/licence): to capture the conditions of use
+      guidance:
+        An information security classification establishes sensitivity categories for resources based on the value of the information they contain and the potential adverse consequences from loss of information confidentiality, integrity or availability.
+        For more information, see the [UK Government Information Security guidelines](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).
+        All resources added to the Government Data Catalogue must have a SECURITY CLASSIFICATION value of [`OFFICIAL`](/data-catalogue-schemas/SecurityClassificationValues/).
   servesData:
     slot_uri: dcat:servesData
     description: A collection of data that this data service can distribute.
