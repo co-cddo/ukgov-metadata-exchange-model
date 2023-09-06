@@ -497,6 +497,30 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     # any_of:
     #   - range: uriorcurie
     #   - range: DataService
+    comments: |
+      purpose: 
+        To aid discovery of closely-related information resources and to make apparent the relationship between these resources.
+      guidance:
+        Use to identify:
+        - resources which are closely related by their source material, such as a report and its underlying data, or a report and fact sheets derived from information in the report, or an open dataset and its original source.
+        - resources which support the interpretation/understanding of the described resource, such as information that helps interpret the data presented in a dataset.
+        - the Act, regulation or other policy instrument which authorizes the program, policy, directive, order, etc. in the described resource
+        - a resource and its translations.
+        - the sequential relationship between two resources (such as when one resource supersedes an earlier resource).
+        DO NOT use to relate resources that deal with similar subject matter but that are based on different source material. Use the subject and keywords elements to establish this relationship.
+        RELATED RESOURCE is a container element with sub-elements. Metadata values are contained in the sub-elements.
+        Each RELATED RESOURCE element has four mandatory sub-elements:
+        - Related Resource – Title
+          The title of the related resource – use the TITLE element of the related resource in the Government Data Catalogue (if available). If too long, the subtitle may be omitted.
+        - Related Resource – URL
+          The URL of the metadata record for the related resource in the Government Data Catalogue.
+        - Related Resource – Type
+          The TYPE element of the related resource in the Government Data Catalogue, if available. If the related resource has more than one type, choose the type that is most relevant to the relationship between the two resources.
+        - Related Resource – Relationship Type
+          The nature of the relationship between the described resource and the referenced resource. Choose from a controlled vocabulary. See Appendix B for the complete Relationship Type vocabulary.
+        PLEASE NOTE: If the “Related Resource” field is used, each sub-element field is mandatory
+    todos:
+    - Update guidance so that `relatedResource` links to the identifier of related items
   securityClassification:
     description: An information security designation that identifies the minimum level of protection assigned to an information resource.
     required: true
