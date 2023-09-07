@@ -23,7 +23,7 @@ Key directories and files are highlighted here:
   * [data/](src/data/) - example data by class with subfolders for valid and invalid examples
   * [docs/](src/docs/) - static documentation files and assets to be included in the generated documentation site
   * [model](src/model/) - [LinkML](https://linkml.io) specification of the metadata model – edit these files
-* [mkdocs.yml] - MkDocs configuration file
+* [mkdocs.yml](mkdocs.yml) - MkDocs configuration file
 
 
 ## Developer Documentation
