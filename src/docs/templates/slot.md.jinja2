@@ -2,7 +2,7 @@
 <!-- This file should be periodically checked against the original source -->
 <!-- Last check 25 August 2023 -->
 
-# Slot: {{ gen.name(element) }}
+# Property: {{ gen.name(element) }}
 
 {%- if header -%}
 {{header}}
@@ -17,28 +17,32 @@
 
 URI: {{ gen.uri_link(element) }}
 
-## Properties
+Range: {{gen.link(element.range)}}
 
-* Range: {{gen.link(element.range)}}
 {% if element.multivalued %}
-* Multivalued: {{ element.multivalued }}
+Multivalued: {{ element.multivalued }}
 {% endif -%}
+
 {% if element.required %}
-* Required: {{ element.required }}
+Required: {{ element.required }}
 {% elif element.recommended %}
-* Recommended: {{ element.recommended }}
+Recommended: {{ element.recommended }}
 {% endif -%}
+
 {% if element.minimum_value is not none %}
-* Minimum Value: {{ element.minimum_value|int }}
+Minimum Value: {{ element.minimum_value|int }}
 {% endif -%}
+
 {% if element.maximum_value is not none %}
-* Maximum Value: {{ element.maximum_value|int }}
+Maximum Value: {{ element.maximum_value|int }}
 {% endif -%}
+
 {% if element.pattern %}
-* Regex pattern: {{ '`' }}{{  element.pattern }}{{ '`' }}
+Regex pattern: {{ '`' }}{{  element.pattern }}{{ '`' }}
 {% endif -%}
+
 {% if schemaview.is_mixin(element.name) %}
-* Mixin: {{ element.mixin }}
+Mixin: {{ element.mixin }}
 {% endif -%}
 
 ## Usage Notes
@@ -52,7 +56,7 @@ URI: {{ gen.uri_link(element) }}
 {% elif line.startswith('distinctFrom:') %}
 ### Do not confuse with
 {% elif line.startswith('guidance:') %}
-### Guidance
+### Guidelines
 {% else %}
 {{ line }}
 {% endif %}
@@ -71,7 +75,7 @@ URI: {{ gen.uri_link(element) }}
 
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
+| Name | Description | Modifies Property |
 | --- | --- | --- |
 {% for c in schemaview.get_classes_by_slot(element, include_induced=True) -%}
 {{ gen.link(c) }} | {{ schemaview.get_class(c).description|enshorten }} | {% if c in schemaview.get_classes_modifying_slot(element) %} yes {% else %} no {% endif %} |

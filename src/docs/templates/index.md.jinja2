@@ -33,9 +33,9 @@ Name: {{ schema.name }}
 {% endfor %}
 {% endif %}
 
-## Slots
+## Properties
 
-| Slot | Description |
+| Property | Description |
 | --- | --- |
 {% for s in gen.all_slot_objects()|sort(attribute=sort_by) -%}
 | {{gen.link(s)}} | {{s.description|enshorten}} |

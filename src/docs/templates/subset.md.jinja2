@@ -83,9 +83,9 @@ URI: {{ gen.uri_link(element) }}
 
 
 {% if slots_in_subset %}
-## Slots in subset
+## Properties in subset
 
-| Slot | Description |
+| Property | Description |
 | --- | --- |
 {% for s in slots_in_subset|sort(attribute=sort_by) -%}
 {%- if element.name in s.in_subset -%}
