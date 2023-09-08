@@ -24,7 +24,7 @@ prefixes:
   schema: http://schema.org/
   vcard: http://www.w3.org/2006/vcard/ns#
 
-default_prefix: uk_cross_government_metadata_exchange_model
+default_prefix: ukgov_metadata
 default_range: string
 
 imports:
@@ -46,7 +46,7 @@ classes:
     attributes: 
       contactName:
         slot_uri: vcard:fn
-        alias: Team name
+        aliases: Team name
         description: The organisational contact to obtain further information or provide feedback about an information resource.
         required: true 
         range: string
