@@ -1,5 +1,5 @@
 ---
-site_name: "UK Cross-Government Metadata Model"
+site_name: "UK Cross-Government Metadata Exchange Model"
 docs_dir: docs
 theme:
   name: tech_docs_template
