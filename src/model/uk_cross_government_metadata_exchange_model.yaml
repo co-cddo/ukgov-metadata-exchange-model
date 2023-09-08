@@ -9,7 +9,7 @@ description: |
   A metadata model for describing data assets for exchanging between UK government organisations.
 license: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 see_also:
-  - https://co-cddo.github.io/data-catalogue-schemas
+  - https://co-cddo.github.io/ukgov-metadata-exchange-model
 
 prefixes:
   ukgov_metadata: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
