@@ -10,7 +10,7 @@ This repository uses:
 
 The website is automatically deployed when a new commit is made to the `main` branch using the `.github/workflows/deploy-docs.yaml` action. The website is available from:
 
-[https://co-cddo.github.io/uk-cross-government-metadata-exchange-model](https://co-cddo.github.io/uk-cross-government-metadata-exchange-model)
+[https://co-cddo.github.io/ukgov-metadata-exchange-model/](https://co-cddo.github.io/ukgov-metadata-exchange-model/)
 
 ## Documentation site
 
