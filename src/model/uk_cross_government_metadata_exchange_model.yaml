@@ -1,5 +1,5 @@
 ---
-id: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model
+id: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
 name: uk-cross-government-metadata-exchange-model
 title: UK Cross-Government Metadata Exchange Model
 description: |
@@ -12,7 +12,7 @@ see_also:
   - https://co-cddo.github.io/data-catalogue-schemas
 
 prefixes:
-  uk_cross_government_metadata_exchange_model: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model/
+  ukgov_metadata: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
   linkml: https://w3id.org/linkml/
   adms: https://www.w3.org/ns/adms#
   dcat: http://www.w3.org/ns/dcat#
