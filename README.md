@@ -12,7 +12,20 @@ The website is automatically deployed when a new commit is made to the `main` br
 
 [https://co-cddo.github.io/uk-cross-government-metadata-exchange-model](https://co-cddo.github.io/uk-cross-government-metadata-exchange-model)
 
-> :warning: repository still needs to be configured to deploy GitHub pages
+## Documentation site
+
+The documentation site is hosted as a github pages site. See repo configuration for details.
+
+The layout of pages have been overridden from the base jinja templates provided by LinkML. This is to allow renaming of pages elements, e.g. slots are displayed as properties, and for customising where elements appear on the page. The custom jinja templates can be found in [`src/docs/templates`](/src/docs/templates/).
+
+The `Usage Notes` section of a property page is generated from the `comments:` property. The rendering relies on structure of the comments property as shown below.
+
+```yaml
+comments: |
+      purpose:
+      distinctFrom:
+      guidance:
+```
 
 ## Repository Structure
 
