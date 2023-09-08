@@ -41,6 +41,7 @@ imports:
 classes:
   ContactPoint:
     class_uri: vcard:Kind
+    description: Contact information
     attributes: 
       contactName:
         slot_uri: vcard:fn
@@ -84,6 +85,7 @@ classes:
   DataResource:
     abstract: true
     class_uri: dcat:Resource
+    description: Resource published or curated by a single agent.
     slots:
       - accessRights
       - alternativeTitle
@@ -115,6 +117,7 @@ classes:
   DataService:
     is_a: DataResource
     class_uri: dcat:DataService
+    description: A collection of operations that provides access to one or more datasets or data processing functions.
     slots:
       - endpointDescription
       - endpointURL
@@ -130,6 +133,7 @@ classes:
   Dataset:
     is_a: DataResource
     class_uri: dcat:Dataset
+    description: A collection of data, published or curated by a single agent, and available for access or download in one or more representations.
     slots:
       - distribution
       - updateFrequency
@@ -139,6 +143,7 @@ classes:
     
   Distribution:
     class_uri: dcat:Distribution
+    description: A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).
     slots:
       - accessRights
       - accessService
