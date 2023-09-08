@@ -1,332 +1,332 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/AccessRightsValues/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/AccessRightsValues/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Boolean/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Boolean/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/ContactPoint/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/ContactPoint/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Curie/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Curie/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/DataResource/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/DataResource/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/DataService/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/DataService/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Dataset/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Dataset/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Date/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Date/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/DateOrDatetime/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/DateOrDatetime/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Datetime/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Datetime/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Decimal/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Decimal/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Distribution/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Distribution/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Double/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Double/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Float/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Float/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/FrequencyValues/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/FrequencyValues/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Integer/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Integer/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/LICENSE/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/LICENSE/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Ncname/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Ncname/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Nodeidentifier/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Nodeidentifier/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Objectidentifier/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Objectidentifier/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Organisation/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Organisation/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/OrganisationValues/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/OrganisationValues/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/SecurityClassificationValues/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/SecurityClassificationValues/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/ServiceStatusValues/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/ServiceStatusValues/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/ServiceTypeValues/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/ServiceTypeValues/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/String/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/String/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Time/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Time/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Uri/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Uri/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/Uriorcurie/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/Uriorcurie/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/about/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/about/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/accessRights/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/accessRights/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/accessService/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/accessService/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/address/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/address/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/alternativeTitle/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/alternativeTitle/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/byteSize/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/byteSize/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/contactName/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/contactName/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/contactPoint/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/contactPoint/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/created/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/created/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/creator/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/creator/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/description/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/description/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/distribution/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/distribution/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/downloadURL/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/downloadURL/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/email/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/email/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/endpointDescription/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/endpointDescription/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/endpointURL/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/endpointURL/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/identifier/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/identifier/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/issued/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/issued/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/keyword/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/keyword/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/licence/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/licence/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/mediaType/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/mediaType/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/modified/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/modified/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/publisher/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/publisher/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/relatedResource/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/relatedResource/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/securityClassification/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/securityClassification/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/servesData/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/servesData/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/serviceStatus/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/serviceStatus/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/serviceType/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/serviceType/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/summary/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/summary/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/telephone/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/telephone/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/theme/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/theme/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/title/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/title/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/type/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/type/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/uk-cross-government-metadata-exchange-model/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/uk-cross-government-metadata-exchange-model/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/updateFrequency/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/updateFrequency/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://co-cddo.github.io/data-catalogue-schemas/version/</loc>
+         <loc>https://co-cddo.github.io/ukgov-metadata-exchange-model/version/</loc>
          <lastmod>2023-09-08</lastmod>
          <changefreq>daily</changefreq>
     </url>

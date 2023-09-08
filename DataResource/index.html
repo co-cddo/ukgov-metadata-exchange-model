@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://co-cddo.github.io/data-catalogue-schemas/DataResource/" rel="canonical"/>
+<link href="https://co-cddo.github.io/ukgov-metadata-exchange-model/DataResource/" rel="canonical"/>
 <link href="../assets/favicons/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-9.2.3" name="generator"/>
+<meta content="mkdocs-1.5.2, mkdocs-material-9.2.8" name="generator"/>
 <title>DataResource - UK Cross-Government Metadata Exchange Model</title>
-<link href="../assets/stylesheets/main.0e669242.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.046329b4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/extra.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -53,7 +53,7 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/data-catalogue-schemas" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/ukgov-metadata-exchange-model" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
@@ -78,7 +78,7 @@
     UK Cross-Government Metadata Exchange Model
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/data-catalogue-schemas" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/ukgov-metadata-exchange-model" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
@@ -542,7 +542,7 @@ attributes:
     comments:
     - "purpose: \n  Using alternative title can assist retrieval and help to distinguish\
       \ one resource from another, as users may be more familiar with an informal\
-      \ version of a title.\ndistinctFrom:\n  - [title](/data-catalogue-schemas/title):\
+      \ version of a title.\ndistinctFrom:\n  - [title](/ukgov-metadata-exchange-model/title):\
       \ the name given to the resource and by which the resource is formally known;\n\
       \  - Digital filenames or website titles.\nguidance:\n  Use alternative title\
       \ for commonly-used titles of a resource other than the title. This could include\
@@ -595,17 +595,17 @@ attributes:
       \ allows users to distinguish between the date a resource was published and\
       \ the date it was included in the Government Data Catalogue. It also allows\
       \ users to locate resources recently added to the Government Data Catalogue.\n\
-      distinctFrom:\n  - [`created`](/data-catalogue-schemas/created/) applied to\
-      \ a catalogue record: the date the resource was first added to the Government\
-      \ Data Catalogue.\n  - [`issued`](/data-catalogue-schemas/issued/): the date\
-      \ the resource was originally published or otherwise made publicly available\
+      distinctFrom:\n  - [`created`](/ukgov-metadata-exchange-model/created/) applied\
+      \ to a catalogue record: the date the resource was first added to the Government\
+      \ Data Catalogue.\n  - [`issued`](/ukgov-metadata-exchange-model/issued/): the\
+      \ date the resource was originally published or otherwise made publicly available\
       \ for the first time, which may have been prior to its inclusion in the catalogue.\n\
       \  __When used for a catalogue record__\n  `created` applied to a data asset:\
       \ the date the intellectual content of the resource was completed or compiled\
-      \ in the form in which it was approved for and eventually released.\n  [issued](/data-catalogue-schemas/issued):\
+      \ in the form in which it was approved for and eventually released.\n  [issued](/ukgov-metadata-exchange-model/issued):\
       \ the date a resource was originally published or otherwise made publicly available\
       \ for the first time. Date Issued and Date Added to Catalogue might be, but\
-      \ do not have to be, the same date.\n  [modified](/data-catalogue-schemas/modified):\
+      \ do not have to be, the same date.\n  [modified](/ukgov-metadata-exchange-model/modified):\
       \ the date on which the content of a resource was changed, or when a new issue\
       \ of a serial resource was added to the metadata record.\nguidance:\n  Systems\
       \ tend to identify the “date created” of a resource as the date on which it\
@@ -642,7 +642,7 @@ attributes:
     - "purpose: \n  Provides context and identifies the defined authority responsible\
       \ for the accuracy and timeliness of an information resource, thus supporting\
       \ quality assurance of content and accountability for information resources.\n\
-      distinctFrom:\n  - [contact](/data-catalogue-schemas/contactName): provides\
+      distinctFrom:\n  - [contact](/ukgov-metadata-exchange-model/contactName): provides\
       \ a contact point to obtain further information or provide feedback about a\
       \ resource or its metadata.\n  - contributor: makes a contribution to the content\
       \ of a resource, but does not have primary responsibility.\n  - issuing body:\
@@ -751,9 +751,9 @@ attributes:
       - METADATA RECORD CREATION DATE: the date on which a new Government Data Catalogue
       metadata record is created.
 
-      - [`modified`](/data-catalogue-schemas/modified/): the date on which the content
-      of an information resource was changed, or when a new issue of a serial resource
-      was added to the metadata record
+      - [`modified`](/ukgov-metadata-exchange-model/modified/): the date on which
+      the content of an information resource was changed, or when a new issue of a
+      serial resource was added to the metadata record
 
       guidance:
 
@@ -788,8 +788,8 @@ attributes:
       resource.
     comments:
     - "purpose:\n  Keywords can serve as additional access points to assist discovery\
-      \ and retrieval.\ndistinctFrom:\n  - [`description`](/data-catalogue-schemas/description):\
-      \ a narrative account about resource content.\n  - [`theme`](/data-catalogue-schemas/theme):\
+      \ and retrieval.\ndistinctFrom:\n  - [`description`](/ukgov-metadata-exchange-model/description):\
+      \ a narrative account about resource content.\n  - [`theme`](/ukgov-metadata-exchange-model/theme):\
       \ controlled terms that describe the topic(s) of the content.\nguidance:\n \
       \ Keywords are used to:\n  - Improve search results by providing words that\
       \ may be used to look for a resource but which do not appear in the title, description,\
@@ -870,20 +870,20 @@ attributes:
       \ release of the resource. Use of `publisher` supports the assignment of accountability\
       \ for accuracy of the resource, quality assurance and timeliness, as well as\
       \ related quality control and life cycle management processes.\ndistinctFrom:\n\
-      \  - [`contactPoint`](/data-catalogue-schemas/contactPoint): provides an avenue\
-      \ for users to obtain further information or provide feedback about the described\
-      \ resource or its metadata. It might or might not be the same entity as the\
-      \ issuing body.\n  - [`creator`](/data-catalogue-schemas/creator): the business\
-      \ entity (department, agency, board, commission, etc.) primarily responsible\
-      \ for the creation of the content of the resource.\nguidance:\n  The `publisher`\
-      \ is responsible for the quality and timeliness of the content of the described\
-      \ resource. Publishers may include provincial departments, agencies, boards,\
-      \ commissions, or delegated administrative organisations. In the Government\
-      \ Data Catalogue context, [`creator`](/data-catalogue-schemas/creator) and `publisher`\
-      \ may be the same organisation, but this may not always be the case.\n  If the\
-      \ information product has more than one publisher, choose the first one listed.\
-      \ When there is more than one publisher and they are not listed on the resource,\
-      \ choose the body which comes first alphabetically.\n"
+      \  - [`contactPoint`](/ukgov-metadata-exchange-model/contactPoint): provides\
+      \ an avenue for users to obtain further information or provide feedback about\
+      \ the described resource or its metadata. It might or might not be the same\
+      \ entity as the issuing body.\n  - [`creator`](/ukgov-metadata-exchange-model/creator):\
+      \ the business entity (department, agency, board, commission, etc.) primarily\
+      \ responsible for the creation of the content of the resource.\nguidance:\n\
+      \  The `publisher` is responsible for the quality and timeliness of the content\
+      \ of the described resource. Publishers may include provincial departments,\
+      \ agencies, boards, commissions, or delegated administrative organisations.\
+      \ In the Government Data Catalogue context, [`creator`](/ukgov-metadata-exchange-model/creator)\
+      \ and `publisher` may be the same organisation, but this may not always be the\
+      \ case.\n  If the information product has more than one publisher, choose the\
+      \ first one listed. When there is more than one publisher and they are not listed\
+      \ on the resource, choose the body which comes first alphabetically.\n"
     from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
     rank: 1000
     slot_uri: dct:publisher
@@ -949,16 +949,16 @@ attributes:
       \ of including this metadata element is to ensure that the resource has been\
       \ reviewed and cleared as unrestricted before being included in the Government\
       \ Data Catalogue, and to align with the [UK Government's Security Classifications](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).\n\
-      distinctFrom:\n  - [`accessRights`](/data-catalogue-schemas/accessRights): to\
-      \ capture whether the data is openly avaialble or for internal use only\n  -\
-      \ [`licence`](/data-catalogue-schemas/licence): to capture the conditions of\
-      \ use\nguidance:\n  An information security classification establishes sensitivity\
+      distinctFrom:\n  - [`accessRights`](/ukgov-metadata-exchange-model/accessRights):\
+      \ to capture whether the data is openly avaialble or for internal use only\n\
+      \  - [`licence`](/ukgov-metadata-exchange-model/licence): to capture the conditions\
+      \ of use\nguidance:\n  An information security classification establishes sensitivity\
       \ categories for resources based on the value of the information they contain\
       \ and the potential adverse consequences from loss of information confidentiality,\
       \ integrity or availability.\n  For more information, see the [UK Government\
       \ Information Security guidelines](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).\n\
       \  All resources added to the Government Data Catalogue must have a SECURITY\
-      \ CLASSIFICATION value of [`OFFICIAL`](/data-catalogue-schemas/SecurityClassificationValues/).\n"
+      \ CLASSIFICATION value of [`OFFICIAL`](/ukgov-metadata-exchange-model/SecurityClassificationValues/).\n"
     from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
     rank: 1000
     alias: securityClassification
@@ -993,31 +993,31 @@ attributes:
     comments:
     - "purpose:\n  A meaningful title describes the content of a resource concisely,\
       \ and supports access, speed of identification, and control of content.\ndistinctFrom:\n\
-      \  - [`alternativeTitle`](/data-catalogue-schemas/alternativeTitle): any form\
-      \ of a title used as a substitute or additional access point to the title of\
-      \ the resource.\n  - [`identifier`](/data-catalogue-schemas/identifier): a unique\
-      \ number or code that unambiguously identifies the described resource.\n  -\
-      \ SERIES TITLE: A distinctive collective title applied to an information resource\
-      \ and one or more other resources that also have their own separate titles.\n\
-      \  - Digital file name assigned by a user to an electronic file such as a web\
-      \ page or desktop document, e.g. \"www.saintranet.gov.ab.ca/7.htm\" or \"specifications.doc\"\
-      .\nguidance:\n  Useful titles distinguish one resource from another, so organisations\
-      \ should establish consistent naming practices for all forms of information\
-      \ resources.\n  For resources with existing titles, the title should be taken\
-      \ as it appears in the content of the described resource. If multiple forms\
-      \ of titles appear in the resource, choose the title as it appears on the title\
-      \ page of the resource, if applicable.\n  If no title appears within the described\
-      \ resource or within metadata provided by the creator of the resource, a title\
-      \ will have to be created. Use the following guidelines in creating titles when\
-      \ necessary:\n  - Create a brief and meaningful title to convey its topic or\
-      \ purpose;\n  - Place important words near the beginning of the title;\n  -\
-      \  Ensure that the title is in the same language as the resource;\n  - Minimizing\
-      \ the use of abbreviations and acronyms;\n  - Add values to a title such as\
-      \ a version number, status or version date if a resource is one of many with\
-      \ the same or similar titles. For example, \"Submission guide 2003\", \"Submission\
-      \ guide 2007\".\n  Titles should be entered in sentence case. Only the first\
-      \ word and proper nouns should be capitalized.\n  Separate titles and subtitles\
-      \ by a colon preceded and followed by a space.\n"
+      \  - [`alternativeTitle`](/ukgov-metadata-exchange-model/alternativeTitle):\
+      \ any form of a title used as a substitute or additional access point to the\
+      \ title of the resource.\n  - [`identifier`](/ukgov-metadata-exchange-model/identifier):\
+      \ a unique number or code that unambiguously identifies the described resource.\n\
+      \  - SERIES TITLE: A distinctive collective title applied to an information\
+      \ resource and one or more other resources that also have their own separate\
+      \ titles.\n  - Digital file name assigned by a user to an electronic file such\
+      \ as a web page or desktop document, e.g. \"www.saintranet.gov.ab.ca/7.htm\"\
+      \ or \"specifications.doc\".\nguidance:\n  Useful titles distinguish one resource\
+      \ from another, so organisations should establish consistent naming practices\
+      \ for all forms of information resources.\n  For resources with existing titles,\
+      \ the title should be taken as it appears in the content of the described resource.\
+      \ If multiple forms of titles appear in the resource, choose the title as it\
+      \ appears on the title page of the resource, if applicable.\n  If no title appears\
+      \ within the described resource or within metadata provided by the creator of\
+      \ the resource, a title will have to be created. Use the following guidelines\
+      \ in creating titles when necessary:\n  - Create a brief and meaningful title\
+      \ to convey its topic or purpose;\n  - Place important words near the beginning\
+      \ of the title;\n  -  Ensure that the title is in the same language as the resource;\n\
+      \  - Minimizing the use of abbreviations and acronyms;\n  - Add values to a\
+      \ title such as a version number, status or version date if a resource is one\
+      \ of many with the same or similar titles. For example, \"Submission guide 2003\"\
+      , \"Submission guide 2007\".\n  Titles should be entered in sentence case. Only\
+      \ the first word and proper nouns should be capitalized.\n  Separate titles\
+      \ and subtitles by a colon preceded and followed by a space.\n"
     from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
     rank: 1000
     slot_uri: dct:title
@@ -1070,12 +1070,12 @@ attributes:
       \ efficiently, and provides access to related resources across the Government\
       \ Data Catalogue and the Data Marketplace.\ndistinctFrom:\n  Subject\n  - TOPIC:\
       \ provides a higher-level subject description of the content of a resource using\
-      \ a controlled vocabulary developed or adopted for the catalogue .\n  - [`description`](/data-catalogue-schemas/description):\
-      \ a concise narrative of the content of the resource.\n  - [`keyword`](/data-catalogue-schemas/keyword):\
+      \ a controlled vocabulary developed or adopted for the catalogue .\n  - [`description`](/ukgov-metadata-exchange-model/description):\
+      \ a concise narrative of the content of the resource.\n  - [`keyword`](/ukgov-metadata-exchange-model/keyword):\
       \ uncontrolled words or phrases assigned to the resource to assist discovery\
       \ and retrieval.\n  - TYPE: the business structure of the content of a resource,\
-      \ e.g. fact sheet, policy, report, guide, statistics.\n  Topic\n  - [`description`](/data-catalogue-schemas/description):\
-      \ a concise narrative of the content of the resource.\n  - [`keyword`](/data-catalogue-schemas/keyword):\
+      \ e.g. fact sheet, policy, report, guide, statistics.\n  Topic\n  - [`description`](/ukgov-metadata-exchange-model/description):\
+      \ a concise narrative of the content of the resource.\n  - [`keyword`](/ukgov-metadata-exchange-model/keyword):\
       \ uncontrolled words or phrases assigned to the resource to assist discovery\
       \ and retrieval.\n  - SPATIAL COVERAGE: the geographical area or spatial extent\
       \ covered by the content of a resource.\n  - SUBJECT: a term taken from an external\
@@ -1168,7 +1168,7 @@ class_uri: dcat:Resource
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+<script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
 <script src="../search/main.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

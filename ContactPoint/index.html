@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://co-cddo.github.io/data-catalogue-schemas/ContactPoint/" rel="canonical"/>
+<link href="https://co-cddo.github.io/ukgov-metadata-exchange-model/ContactPoint/" rel="canonical"/>
 <link href="../assets/favicons/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-9.2.3" name="generator"/>
+<meta content="mkdocs-1.5.2, mkdocs-material-9.2.8" name="generator"/>
 <title>ContactPoint - UK Cross-Government Metadata Exchange Model</title>
-<link href="../assets/stylesheets/main.0e669242.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.046329b4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/extra.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -53,7 +53,7 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/data-catalogue-schemas" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/ukgov-metadata-exchange-model" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
@@ -78,7 +78,7 @@
     UK Cross-Government Metadata Exchange Model
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/data-catalogue-schemas" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/ukgov-metadata-exchange-model" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
@@ -350,7 +350,7 @@ attributes:
       \ or request additional information about a resource to assist in determining\
       \ its relevance and potential use or in understanding and interpreting the content.\n\
       distinctFrom:\n  - contributor: a person or organisation responsible for making\
-      \ significant contributions to the content of the described resource.\n  - [creator](/data-catalogue-schemas/creator):\
+      \ significant contributions to the content of the described resource.\n  - [creator](/ukgov-metadata-exchange-model/creator):\
       \ the business entity (department, agency, board, commission, etc.) primarily\
       \ responsible for the creation of the content of the resource.\n  - issuing\
       \ body: the department, agency, board or commission responsible for making the\
@@ -361,7 +361,7 @@ attributes:
       \ expert.\n  \n  Because the Government Data Catalogue may include historical\
       \ resources for which there is no longer a suitable contact point, this element\
       \ has not been made mandatory.\n  \n  When a `contactName` is provided for an\
-      \ information resource, it should be combined with a [`email`](/data-catalogue-schemas/email).\n"
+      \ information resource, it should be combined with a [`email`](/ukgov-metadata-exchange-model/email).\n"
     from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
     aliases:
     - Team name
@@ -372,7 +372,7 @@ attributes:
   email:
     name: email
     description: The e-mail address to be used to contact the organisational contact
-      for the resource as listed in the [contact name](/data-catalogue-schemas/contactName).
+      for the resource as listed in the [contact name](/ukgov-metadata-exchange-model/contactName).
     comments:
     - "purpose:\n  Use of contact e-mail, along with contact name, provides an avenue\
       \ for users to provide feedback or request additional information about a resource\
@@ -418,7 +418,7 @@ attributes:
       \ or request additional information about a resource to assist in determining\
       \ its relevance and potential use or in understanding and interpreting the content.\n\
       distinctFrom:\n  - contributor: a person or organisation responsible for making\
-      \ significant contributions to the content of the described resource.\n  - [creator](/data-catalogue-schemas/creator):\
+      \ significant contributions to the content of the described resource.\n  - [creator](/ukgov-metadata-exchange-model/creator):\
       \ the business entity (department, agency, board, commission, etc.) primarily\
       \ responsible for the creation of the content of the resource.\n  - issuing\
       \ body: the department, agency, board or commission responsible for making the\
@@ -429,7 +429,7 @@ attributes:
       \ expert.\n  \n  Because the Government Data Catalogue may include historical\
       \ resources for which there is no longer a suitable contact point, this element\
       \ has not been made mandatory.\n  \n  When a `contactName` is provided for an\
-      \ information resource, it should be combined with a [`email`](/data-catalogue-schemas/email).\n"
+      \ information resource, it should be combined with a [`email`](/ukgov-metadata-exchange-model/email).\n"
     from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
     aliases:
     - Team name
@@ -444,7 +444,7 @@ attributes:
   email:
     name: email
     description: The e-mail address to be used to contact the organisational contact
-      for the resource as listed in the [contact name](/data-catalogue-schemas/contactName).
+      for the resource as listed in the [contact name](/ukgov-metadata-exchange-model/contactName).
     comments:
     - "purpose:\n  Use of contact e-mail, along with contact name, provides an avenue\
       \ for users to provide feedback or request additional information about a resource\
@@ -523,7 +523,7 @@ class_uri: vcard:Kind
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+<script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
 <script src="../search/main.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

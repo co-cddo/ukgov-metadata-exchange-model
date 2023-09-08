@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://co-cddo.github.io/data-catalogue-schemas/Organisation/" rel="canonical"/>
+<link href="https://co-cddo.github.io/ukgov-metadata-exchange-model/Organisation/" rel="canonical"/>
 <link href="../assets/favicons/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.5.2, mkdocs-material-9.2.3" name="generator"/>
+<meta content="mkdocs-1.5.2, mkdocs-material-9.2.8" name="generator"/>
 <title>Organisation - UK Cross-Government Metadata Exchange Model</title>
-<link href="../assets/stylesheets/main.0e669242.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.046329b4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/extra.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -53,7 +53,7 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/data-catalogue-schemas" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/ukgov-metadata-exchange-model" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
@@ -78,7 +78,7 @@
     UK Cross-Government Metadata Exchange Model
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/data-catalogue-schemas" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/co-cddo/ukgov-metadata-exchange-model" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
@@ -350,31 +350,31 @@ attributes:
     comments:
     - "purpose:\n  A meaningful title describes the content of a resource concisely,\
       \ and supports access, speed of identification, and control of content.\ndistinctFrom:\n\
-      \  - [`alternativeTitle`](/data-catalogue-schemas/alternativeTitle): any form\
-      \ of a title used as a substitute or additional access point to the title of\
-      \ the resource.\n  - [`identifier`](/data-catalogue-schemas/identifier): a unique\
-      \ number or code that unambiguously identifies the described resource.\n  -\
-      \ SERIES TITLE: A distinctive collective title applied to an information resource\
-      \ and one or more other resources that also have their own separate titles.\n\
-      \  - Digital file name assigned by a user to an electronic file such as a web\
-      \ page or desktop document, e.g. \"www.saintranet.gov.ab.ca/7.htm\" or \"specifications.doc\"\
-      .\nguidance:\n  Useful titles distinguish one resource from another, so organisations\
-      \ should establish consistent naming practices for all forms of information\
-      \ resources.\n  For resources with existing titles, the title should be taken\
-      \ as it appears in the content of the described resource. If multiple forms\
-      \ of titles appear in the resource, choose the title as it appears on the title\
-      \ page of the resource, if applicable.\n  If no title appears within the described\
-      \ resource or within metadata provided by the creator of the resource, a title\
-      \ will have to be created. Use the following guidelines in creating titles when\
-      \ necessary:\n  - Create a brief and meaningful title to convey its topic or\
-      \ purpose;\n  - Place important words near the beginning of the title;\n  -\
-      \  Ensure that the title is in the same language as the resource;\n  - Minimizing\
-      \ the use of abbreviations and acronyms;\n  - Add values to a title such as\
-      \ a version number, status or version date if a resource is one of many with\
-      \ the same or similar titles. For example, \"Submission guide 2003\", \"Submission\
-      \ guide 2007\".\n  Titles should be entered in sentence case. Only the first\
-      \ word and proper nouns should be capitalized.\n  Separate titles and subtitles\
-      \ by a colon preceded and followed by a space.\n"
+      \  - [`alternativeTitle`](/ukgov-metadata-exchange-model/alternativeTitle):\
+      \ any form of a title used as a substitute or additional access point to the\
+      \ title of the resource.\n  - [`identifier`](/ukgov-metadata-exchange-model/identifier):\
+      \ a unique number or code that unambiguously identifies the described resource.\n\
+      \  - SERIES TITLE: A distinctive collective title applied to an information\
+      \ resource and one or more other resources that also have their own separate\
+      \ titles.\n  - Digital file name assigned by a user to an electronic file such\
+      \ as a web page or desktop document, e.g. \"www.saintranet.gov.ab.ca/7.htm\"\
+      \ or \"specifications.doc\".\nguidance:\n  Useful titles distinguish one resource\
+      \ from another, so organisations should establish consistent naming practices\
+      \ for all forms of information resources.\n  For resources with existing titles,\
+      \ the title should be taken as it appears in the content of the described resource.\
+      \ If multiple forms of titles appear in the resource, choose the title as it\
+      \ appears on the title page of the resource, if applicable.\n  If no title appears\
+      \ within the described resource or within metadata provided by the creator of\
+      \ the resource, a title will have to be created. Use the following guidelines\
+      \ in creating titles when necessary:\n  - Create a brief and meaningful title\
+      \ to convey its topic or purpose;\n  - Place important words near the beginning\
+      \ of the title;\n  -  Ensure that the title is in the same language as the resource;\n\
+      \  - Minimizing the use of abbreviations and acronyms;\n  - Add values to a\
+      \ title such as a version number, status or version date if a resource is one\
+      \ of many with the same or similar titles. For example, \"Submission guide 2003\"\
+      , \"Submission guide 2007\".\n  Titles should be entered in sentence case. Only\
+      \ the first word and proper nouns should be capitalized.\n  Separate titles\
+      \ and subtitles by a colon preceded and followed by a space.\n"
     from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
     rank: 1000
     slot_uri: dct:title
@@ -426,7 +426,7 @@ class_uri: foaf:Organization
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+<script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
 <script src="../search/main.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>
