@@ -23,8 +23,8 @@ nav:
     - Distribution: Distribution.md
   - About: about.md
   - License: LICENSE.md
-site_url: https://co-cddo.github.io/data-catalogue-schemas
-repo_url: https://github.com/co-cddo/data-catalogue-schemas
+site_url: https://co-cddo.github.io/ukgov-metadata-exchange-model
+repo_url: https://github.com/co-cddo/ukgov-metadata-exchange-model
 dev_addr: '0.0.0.0:8080'
 
 # Uncomment this block to enable use of Google Analytics.
