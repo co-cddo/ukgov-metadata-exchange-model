@@ -55,17 +55,17 @@ classes:
             Use of `contactName` provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use or in understanding and interpreting the content.
           distinctFrom:
             - contributor: a person or organisation responsible for making significant contributions to the content of the described resource.
-            - [creator](/data-catalogue-schemas/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
+            - [creator](/ukgov-metadata-exchange-model/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
             - issuing body: the department, agency, board or commission responsible for making the described resource publicly available.
           guidance:
             Contact information should be included for all new information resources that are added to the Government Data Catalogue. Generally, `contactName` will be a support or branch unit that will either respond to the user or refer the inquiry to a subject matter expert.
             
             Because the Government Data Catalogue may include historical resources for which there is no longer a suitable contact point, this element has not been made mandatory.
             
-            When a `contactName` is provided for an information resource, it should be combined with a [`email`](/data-catalogue-schemas/email).
+            When a `contactName` is provided for an information resource, it should be combined with a [`email`](/ukgov-metadata-exchange-model/email).
       email:
         slot_uri: vcard:hasEmail
-        description: The e-mail address to be used to contact the organisational contact for the resource as listed in the [contact name](/data-catalogue-schemas/contactName).
+        description: The e-mail address to be used to contact the organisational contact for the resource as listed in the [contact name](/ukgov-metadata-exchange-model/contactName).
         required: true
         range: string
         pattern: ^\S+@[\S+\.]+\S+
@@ -195,7 +195,7 @@ slots:
       purpose: 
         Using alternative title can assist retrieval and help to distinguish one resource from another, as users may be more familiar with an informal version of a title.
       distinctFrom:
-        - [title](/data-catalogue-schemas/title): the name given to the resource and by which the resource is formally known;
+        - [title](/ukgov-metadata-exchange-model/title): the name given to the resource and by which the resource is formally known;
         - Digital filenames or website titles.
       guidance:
         Use alternative title for commonly-used titles of a resource other than the title. This could include title abbreviations, title aliases, assigned titles, or names by which a resource is commonly or informally known.
@@ -260,12 +260,12 @@ slots:
         __When used for a catalogue record__
         Use of `created` allows users to distinguish between the date a resource was published and the date it was included in the Government Data Catalogue. It also allows users to locate resources recently added to the Government Data Catalogue.
       distinctFrom:
-        - [`created`](/data-catalogue-schemas/created/) applied to a catalogue record: the date the resource was first added to the Government Data Catalogue.
-        - [`issued`](/data-catalogue-schemas/issued/): the date the resource was originally published or otherwise made publicly available for the first time, which may have been prior to its inclusion in the catalogue.
+        - [`created`](/ukgov-metadata-exchange-model/created/) applied to a catalogue record: the date the resource was first added to the Government Data Catalogue.
+        - [`issued`](/ukgov-metadata-exchange-model/issued/): the date the resource was originally published or otherwise made publicly available for the first time, which may have been prior to its inclusion in the catalogue.
         __When used for a catalogue record__
         `created` applied to a data asset: the date the intellectual content of the resource was completed or compiled in the form in which it was approved for and eventually released.
-        [issued](/data-catalogue-schemas/issued): the date a resource was originally published or otherwise made publicly available for the first time. Date Issued and Date Added to Catalogue might be, but do not have to be, the same date.
-        [modified](/data-catalogue-schemas/modified): the date on which the content of a resource was changed, or when a new issue of a serial resource was added to the metadata record.
+        [issued](/ukgov-metadata-exchange-model/issued): the date a resource was originally published or otherwise made publicly available for the first time. Date Issued and Date Added to Catalogue might be, but do not have to be, the same date.
+        [modified](/ukgov-metadata-exchange-model/modified): the date on which the content of a resource was changed, or when a new issue of a serial resource was added to the metadata record.
       guidance:
         Systems tend to identify the “date created” of a resource as the date on which it is captured into a repository. The actual creation of a resource and its capture frequently do take place on the same date, but this is not always the case, for example:
         - Disseminating a resource sometime after its date created;
@@ -287,7 +287,7 @@ slots:
       purpose: 
         Provides context and identifies the defined authority responsible for the accuracy and timeliness of an information resource, thus supporting quality assurance of content and accountability for information resources.
       distinctFrom:
-        - [contact](/data-catalogue-schemas/contactName): provides a contact point to obtain further information or provide feedback about a resource or its metadata.
+        - [contact](/ukgov-metadata-exchange-model/contactName): provides a contact point to obtain further information or provide feedback about a resource or its metadata.
         - contributor: makes a contribution to the content of a resource, but does not have primary responsibility.
         - issuing body: the business entity (department, agency, board, commission, etc.) responsible for making the resource publicly available.
       guidance:
@@ -385,7 +385,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       distinctFrom:
       - DATE ADDED TO CATALOGUE: the date on which the resource was included in the Government Data Catalogue.
       - METADATA RECORD CREATION DATE: the date on which a new Government Data Catalogue metadata record is created.
-      - [`modified`](/data-catalogue-schemas/modified/): the date on which the content of an information resource was changed, or when a new issue of a serial resource was added to the metadata record
+      - [`modified`](/ukgov-metadata-exchange-model/modified/): the date on which the content of an information resource was changed, or when a new issue of a serial resource was added to the metadata record
       guidance:
       The issued date should indicate the date on which the described resource was first published or otherwise released to the public.
       Be as specific as possible, including month and day as well as year, if known.
@@ -405,8 +405,8 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       purpose:
         Keywords can serve as additional access points to assist discovery and retrieval.
       distinctFrom:
-        - [`description`](/data-catalogue-schemas/description): a narrative account about resource content.
-        - [`theme`](/data-catalogue-schemas/theme): controlled terms that describe the topic(s) of the content.
+        - [`description`](/ukgov-metadata-exchange-model/description): a narrative account about resource content.
+        - [`theme`](/ukgov-metadata-exchange-model/theme): controlled terms that describe the topic(s) of the content.
       guidance:
         Keywords are used to:
         - Improve search results by providing words that may be used to look for a resource but which do not appear in the title, description, or other metadata fields. This might include acronyms and subject synonyms.
@@ -481,10 +481,10 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       purpose:
         In the context of the Government Data Catalogue, the `publisher` is the department or other organisational entity responsible for the public release of the resource. Use of `publisher` supports the assignment of accountability for accuracy of the resource, quality assurance and timeliness, as well as related quality control and life cycle management processes.
       distinctFrom:
-        - [`contactPoint`](/data-catalogue-schemas/contactPoint): provides an avenue for users to obtain further information or provide feedback about the described resource or its metadata. It might or might not be the same entity as the issuing body.
-        - [`creator`](/data-catalogue-schemas/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
+        - [`contactPoint`](/ukgov-metadata-exchange-model/contactPoint): provides an avenue for users to obtain further information or provide feedback about the described resource or its metadata. It might or might not be the same entity as the issuing body.
+        - [`creator`](/ukgov-metadata-exchange-model/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
       guidance:
-        The `publisher` is responsible for the quality and timeliness of the content of the described resource. Publishers may include provincial departments, agencies, boards, commissions, or delegated administrative organisations. In the Government Data Catalogue context, [`creator`](/data-catalogue-schemas/creator) and `publisher` may be the same organisation, but this may not always be the case.
+        The `publisher` is responsible for the quality and timeliness of the content of the described resource. Publishers may include provincial departments, agencies, boards, commissions, or delegated administrative organisations. In the Government Data Catalogue context, [`creator`](/ukgov-metadata-exchange-model/creator) and `publisher` may be the same organisation, but this may not always be the case.
         If the information product has more than one publisher, choose the first one listed. When there is more than one publisher and they are not listed on the resource, choose the body which comes first alphabetically.
   relatedResource:
     slot_uri: dct:relation
@@ -527,12 +527,12 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       purpose:
         Use of `securityClassification` promotes the broad distribution of non-sensitive resources. Only resources with a security classification of "OFFICIAL" will be included in the Government Data Catalogue. The purpose of including this metadata element is to ensure that the resource has been reviewed and cleared as unrestricted before being included in the Government Data Catalogue, and to align with the [UK Government's Security Classifications](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).
       distinctFrom:
-        - [`accessRights`](/data-catalogue-schemas/accessRights): to capture whether the data is openly avaialble or for internal use only
-        - [`licence`](/data-catalogue-schemas/licence): to capture the conditions of use
+        - [`accessRights`](/ukgov-metadata-exchange-model/accessRights): to capture whether the data is openly avaialble or for internal use only
+        - [`licence`](/ukgov-metadata-exchange-model/licence): to capture the conditions of use
       guidance:
         An information security classification establishes sensitivity categories for resources based on the value of the information they contain and the potential adverse consequences from loss of information confidentiality, integrity or availability.
         For more information, see the [UK Government Information Security guidelines](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).
-        All resources added to the Government Data Catalogue must have a SECURITY CLASSIFICATION value of [`OFFICIAL`](/data-catalogue-schemas/SecurityClassificationValues/).
+        All resources added to the Government Data Catalogue must have a SECURITY CLASSIFICATION value of [`OFFICIAL`](/ukgov-metadata-exchange-model/SecurityClassificationValues/).
   servesData:
     slot_uri: dcat:servesData
     description: A collection of data that this data service can distribute.
@@ -587,12 +587,12 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       distinctFrom:
         Subject
         - TOPIC: provides a higher-level subject description of the content of a resource using a controlled vocabulary developed or adopted for the catalogue .
-        - [`description`](/data-catalogue-schemas/description): a concise narrative of the content of the resource.
-        - [`keyword`](/data-catalogue-schemas/keyword): uncontrolled words or phrases assigned to the resource to assist discovery and retrieval.
+        - [`description`](/ukgov-metadata-exchange-model/description): a concise narrative of the content of the resource.
+        - [`keyword`](/ukgov-metadata-exchange-model/keyword): uncontrolled words or phrases assigned to the resource to assist discovery and retrieval.
         - TYPE: the business structure of the content of a resource, e.g. fact sheet, policy, report, guide, statistics.
         Topic
-        - [`description`](/data-catalogue-schemas/description): a concise narrative of the content of the resource.
-        - [`keyword`](/data-catalogue-schemas/keyword): uncontrolled words or phrases assigned to the resource to assist discovery and retrieval.
+        - [`description`](/ukgov-metadata-exchange-model/description): a concise narrative of the content of the resource.
+        - [`keyword`](/ukgov-metadata-exchange-model/keyword): uncontrolled words or phrases assigned to the resource to assist discovery and retrieval.
         - SPATIAL COVERAGE: the geographical area or spatial extent covered by the content of a resource.
         - SUBJECT: a term taken from an external controlled vocabulary which generally describes a resource at a more specific level.
         - TEMPORAL COVERAGE: the time frame covered by the content of the resource.
@@ -625,8 +625,8 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       purpose:
         A meaningful title describes the content of a resource concisely, and supports access, speed of identification, and control of content.
       distinctFrom:
-        - [`alternativeTitle`](/data-catalogue-schemas/alternativeTitle): any form of a title used as a substitute or additional access point to the title of the resource.
-        - [`identifier`](/data-catalogue-schemas/identifier): a unique number or code that unambiguously identifies the described resource.
+        - [`alternativeTitle`](/ukgov-metadata-exchange-model/alternativeTitle): any form of a title used as a substitute or additional access point to the title of the resource.
+        - [`identifier`](/ukgov-metadata-exchange-model/identifier): a unique number or code that unambiguously identifies the described resource.
         - SERIES TITLE: A distinctive collective title applied to an information resource and one or more other resources that also have their own separate titles.
         - Digital file name assigned by a user to an electronic file such as a web page or desktop document, e.g. "www.saintranet.gov.ab.ca/7.htm" or "specifications.doc".
       guidance:
