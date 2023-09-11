@@ -128,8 +128,6 @@ classes:
     slot_usage:
       issued:
         recommended: true
-      type:
-        pattern: "dcat:DataService"
 
   Dataset:
     is_a: DataResource
@@ -137,10 +135,7 @@ classes:
     description: A collection of data, published or curated by a single agent, and available for access or download in one or more representations.
     slots:
       - distribution
-      - updateFrequency
-    slot_usage:
-      type:
-        pattern: "dcat:Dataset"
+      - updateFrequency 
     
   Distribution:
     class_uri: dcat:Distribution
@@ -161,8 +156,6 @@ classes:
     slot_usage:
       modified:
         recommended: true
-      type:
-        pattern: "dcat:Distribution"
 
   Organisation:
     class_uri: foaf:Organization
