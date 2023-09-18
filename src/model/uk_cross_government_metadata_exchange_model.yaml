@@ -534,7 +534,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
         For more information, see the [UK Government Information Security guidelines](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).
         All resources added to the Government Data Catalogue must have a SECURITY CLASSIFICATION value of [`OFFICIAL`](/ukgov-metadata-exchange-model/SecurityClassificationValues/).
   servesData:
-    slot_uri: dcat:servesData
+    slot_uri: dcat:servesDataset
     description: A collection of data that this data service can distribute.
     recommended: true
     multivalued: true
@@ -542,6 +542,11 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     # any_of:
     #   - range: uriorcurie
     #   - range: Dataset
+    comments: |
+      purpose:
+        Use `servesData` to link the data service to the dataset that is made available through the service.
+      guidance:
+        The value of the `servesData` property should be the URI that identifies a dataset.
   serviceStatus:
     slot_uri: adms:status
     description: |
