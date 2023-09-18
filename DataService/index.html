@@ -632,9 +632,13 @@ attributes:
   servesData:
     name: servesData
     description: A collection of data that this data service can distribute.
+    comments:
+    - "purpose:\n  Use `servesData` to link the data service to the dataset that is\
+      \ made available through the service.\nguidance:\n  The value of the `servesData`\
+      \ property should be the URI that identifies a dataset.\n"
     from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
     rank: 1000
-    slot_uri: dcat:servesData
+    slot_uri: dcat:servesDataset
     multivalued: true
     alias: servesData
     owner: DataService
