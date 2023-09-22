@@ -535,13 +535,6 @@ is_a: DataResource
 slots:
 - distribution
 - updateFrequency
-slot_usage:
-  type:
-    name: type
-    domain_of:
-    - DataResource
-    - Distribution
-    pattern: dcat:Dataset
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -553,13 +546,6 @@ description: A collection of data, published or curated by a single agent, and a
   for access or download in one or more representations.
 from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
 is_a: DataResource
-slot_usage:
-  type:
-    name: type
-    domain_of:
-    - DataResource
-    - Distribution
-    pattern: dcat:Dataset
 attributes:
   distribution:
     name: distribution
@@ -1129,7 +1115,6 @@ attributes:
     - Distribution
     range: uriorcurie
     required: true
-    pattern: dcat:Dataset
   theme:
     name: theme
     description: 'Topic
