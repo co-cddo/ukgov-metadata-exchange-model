@@ -1,5 +1,5 @@
 ---
-id: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model
+id: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
 name: uk-cross-government-metadata-exchange-model
 title: UK Cross-Government Metadata Exchange Model
 description: |
@@ -9,21 +9,22 @@ description: |
   A metadata model for describing data assets for exchanging between UK government organisations.
 license: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 see_also:
-  - https://co-cddo.github.io/data-catalogue-schemas
+  - https://co-cddo.github.io/ukgov-metadata-exchange-model
 
 prefixes:
-  uk_cross_government_metadata_exchange_model: https://w3id.org/co-cddo/uk-cross-government-metadata-exchange-model/
+  ukgov_metadata: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
   linkml: https://w3id.org/linkml/
   adms: https://www.w3.org/ns/adms#
   dcat: http://www.w3.org/ns/dcat#
   dct: http://purl.org/dc/terms/
+  foaf: http://xmlns.com/foaf/0.1/
   freq: http://purl.org/cld/freq/
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   schema: http://schema.org/
   vcard: http://www.w3.org/2006/vcard/ns#
 
-default_prefix: uk_cross_government_metadata_exchange_model
+default_prefix: ukgov_metadata
 default_range: string
 
 imports:
@@ -41,18 +42,38 @@ imports:
 classes:
   ContactPoint:
     class_uri: vcard:Kind
+    description: Contact information
     attributes: 
       contactName:
         slot_uri: vcard:fn
-        description: Team name
+        aliases: Team name
+        description: The organisational contact to obtain further information or provide feedback about an information resource.
         required: true 
         range: string
+        comments: |
+          purpose:
+            Use of `contactName` provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use or in understanding and interpreting the content.
+          distinctFrom:
+            - contributor: a person or organisation responsible for making significant contributions to the content of the described resource.
+            - [creator](/ukgov-metadata-exchange-model/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
+            - issuing body: the department, agency, board or commission responsible for making the described resource publicly available.
+          guidance:
+            Contact information should be included for all new information resources that are added to the Government Data Catalogue. Generally, `contactName` will be a support or branch unit that will either respond to the user or refer the inquiry to a subject matter expert.
+            
+            Because the Government Data Catalogue may include historical resources for which there is no longer a suitable contact point, this element has not been made mandatory.
+            
+            When a `contactName` is provided for an information resource, it should be combined with a [`email`](/ukgov-metadata-exchange-model/email).
       email:
         slot_uri: vcard:hasEmail
-        description: Team email address
+        description: The e-mail address to be used to contact the organisational contact for the resource as listed in the [contact name](/ukgov-metadata-exchange-model/contactName).
         required: true
         range: string
         pattern: ^\S+@[\S+\.]+\S+
+        comments: |
+          purpose:
+            Use of contact e-mail, along with contact name, provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use, or in understanding and interpreting the content.
+          guidance: 
+            Use all lower case letters for the e-mail address.
       telephone:
         slot_uri: vcard:hasTelephone
         description: Telephone number for the contact team
@@ -65,6 +86,7 @@ classes:
   DataResource:
     abstract: true
     class_uri: dcat:Resource
+    description: Resource published or curated by a single agent.
     slots:
       - accessRights
       - alternativeTitle
@@ -86,6 +108,8 @@ classes:
       - theme
       - version
     slot_usage:
+      accessRights:
+        required: true
       description:
         required: true
       modified:
@@ -94,6 +118,7 @@ classes:
   DataService:
     is_a: DataResource
     class_uri: dcat:DataService
+    description: A collection of operations that provides access to one or more datasets or data processing functions.
     slots:
       - endpointDescription
       - endpointURL
@@ -103,21 +128,18 @@ classes:
     slot_usage:
       issued:
         recommended: true
-      type:
-        pattern: "dcat:DataService"
 
   Dataset:
     is_a: DataResource
     class_uri: dcat:Dataset
+    description: A collection of data, published or curated by a single agent, and available for access or download in one or more representations.
     slots:
       - distribution
-      - updateFrequency
-    slot_usage:
-      type:
-        pattern: "dcat:Dataset"
+      - updateFrequency 
     
   Distribution:
     class_uri: dcat:Distribution
+    description: A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).
     slots:
       - accessRights
       - accessService
@@ -134,30 +156,20 @@ classes:
     slot_usage:
       modified:
         recommended: true
-      type:
-        pattern: "dcat:Distribution"
 
   Organisation:
+    class_uri: foaf:Organization
     description: >-
       Represents an Organisation
     slots:
       - identifier
       - title
 
-  OrganisationCollection:
-    description: >-
-      A holder for Organisation objects
-    attributes:
-      entries:
-        range: Organisation
-        multivalued: true
-        inlined: true
-
 slots:
   accessService:
     slot_uri: dcat:accessService
     description: A data service that gives access to the distribution of the dataset.
-    notes: Only required if applicable
+    comments: Only required if applicable
     recommended: true 
     multivalued: true
     range: uriorcurie
@@ -172,14 +184,53 @@ slots:
     recommended: true
     multivalued: true
     range: string
+    comments: |
+      purpose: 
+        Using alternative title can assist retrieval and help to distinguish one resource from another, as users may be more familiar with an informal version of a title.
+      distinctFrom:
+        - [title](/ukgov-metadata-exchange-model/title): the name given to the resource and by which the resource is formally known;
+        - Digital filenames or website titles.
+      guidance:
+        Use alternative title for commonly-used titles of a resource other than the title. This could include title abbreviations, title aliases, assigned titles, or names by which a resource is commonly or informally known.
+
+        Alternative titles should be derived from the content of the resource, with special attention paid to the title page, and reflect how users would search for a resource.
+
+        Examples: 
+        1. Worth Report  
+            - Title: A future of choices, a choice of futures: report of the Commission on Education planning  
+            - Alternative Title: Worth Report (named after the head of the commission which wrote the report)
+        2. Assured Income  
+            - Title: Assured Income for the Severely Handicapped Regulations  
+            - Alternative Title: AISH Regulations
+        3. Family Size  
+            - Title (for a dataset): Family Size, UK, England and Wales, 2011  
+            - Alternative Title: Family Size
+
+        Include special characters such as quotations marks, apostrophes, and accented characters, e.g. Métis.
   byteSize:
     slot_uri: dcat:byteSize
-    description: The size of the distribution in bytes.
+    description: |
+      The filesize of the item (file) being described.
+      The size of the distribution in bytes.
     recommended: true
     range: integer
     minimum_value: 1
     examples:
       - value: 1024
+    comments: |
+      purpose:
+        FILESIZE information can help users decide whether or not to commit to downloading the described item (file) by providing information on the amount of physical or digital storage space that it requires and an estimate of the length of time it might take to download.
+      distinctFrom:
+        - EXTENT: The size or duration of the item being described.
+      guidance:
+        This number may be auto-generated by the system software. If not, or if the item being described is hosted somewhere other than in the Government Data Catalogue, manually enter the filesize here.
+        When recording FILESIZE, abbreviate the unit of measurement (eg. kb for kilobytes, mb for megabytes, gb for gigabytes). Include a space between the value and the unit of measurement.
+        Examples:
+        - 24 mb
+        - 3.4 gb
+        - 546 kb
+    todos:
+      - Update guidance to state that values should be in bytes so that we have a consistent unit that can then be interpreted and presented as per user requirements
   contactPoint:
     slot_uri: dcat:contactPoint
     description: The e-mail address to be used to contact the organisational contact for the resource as listed in the Contact Name.
@@ -191,18 +242,79 @@ slots:
     #   - range: ContactPoint
   created:
     slot_uri: dct:created
-    description: The date, or date and time, on which the content of an information resource is created or compiled.
+    description: |
+      The date, or date and time, on which the content of an information resource is created or compiled. 
+      
+      __When used on a metadata record__ The date and time on which an information resource is made available through the catalogue.
     range: date
+    comments: |
+      purpose:
+        The use of `created` helps users assess the relevance of the content to their information needs, and allows users to distinguish between when the content of an information resource was created or compiled and when the resource was publicly released.
+        __When used for a catalogue record__
+        Use of `created` allows users to distinguish between the date a resource was published and the date it was included in the Government Data Catalogue. It also allows users to locate resources recently added to the Government Data Catalogue.
+      distinctFrom:
+        - [`created`](/ukgov-metadata-exchange-model/created/) applied to a catalogue record: the date the resource was first added to the Government Data Catalogue.
+        - [`issued`](/ukgov-metadata-exchange-model/issued/): the date the resource was originally published or otherwise made publicly available for the first time, which may have been prior to its inclusion in the catalogue.
+        __When used for a catalogue record__
+        `created` applied to a data asset: the date the intellectual content of the resource was completed or compiled in the form in which it was approved for and eventually released.
+        [issued](/ukgov-metadata-exchange-model/issued): the date a resource was originally published or otherwise made publicly available for the first time. Date Issued and Date Added to Catalogue might be, but do not have to be, the same date.
+        [modified](/ukgov-metadata-exchange-model/modified): the date on which the content of a resource was changed, or when a new issue of a serial resource was added to the metadata record.
+      guidance:
+        Systems tend to identify the “date created” of a resource as the date on which it is captured into a repository. The actual creation of a resource and its capture frequently do take place on the same date, but this is not always the case, for example:
+        - Disseminating a resource sometime after its date created;
+        - Capturing metadata about a resource into a repository that does not contain the resources itself.
+        `created` should reflect the date the intellectual content of the resource was completed or compiled in the form in which it was eventually released.
+        Be as specific as possible, including month and day as well as year, if known. 
+        Some scenarios might be:
+        - A dataset compiled in April 2015 published on July 2015 (`created` is `2015-04`);
+        - A report completed in September 2015 but publicly released in January 2016 (`created` is `2015-09`);
+        __When used for a catalogue record__
+        `created` will be the date the metadata record was first “published” within the Government Data Catalogue environment.
   creator:
     slot_uri: dct:creator
     description: The business entity responsible for creating or compiling the original content of an information resource.
     required: true
     multivalued: true
     range: OrganisationValues
+    comments: |
+      purpose: 
+        Provides context and identifies the defined authority responsible for the accuracy and timeliness of an information resource, thus supporting quality assurance of content and accountability for information resources.
+      distinctFrom:
+        - [contact](/ukgov-metadata-exchange-model/contactName): provides a contact point to obtain further information or provide feedback about a resource or its metadata.
+        - contributor: makes a contribution to the content of a resource, but does not have primary responsibility.
+        - issuing body: the business entity (department, agency, board, commission, etc.) responsible for making the resource publicly available.
+      guidance:
+        A `creator` is almost always an organisation, not an individual. The `contributor` element can be used to identify specific individuals involved in the creation of the described resource. However, there may be rare occasions where the `creator` is an individual.
+
+        `creator` may be a department, agency, board, commission, or other entity of the UK Government, or a non-government entity under contract to the Government. The organisation name should be the official name, not an abbreviation or acronym. Do not include the names of organisation units such as divisions and/or branches.
+
+        `creator` is repeatable if more than one government department, agency, board, commission or other entity shared primary responsibility for the creation of the resource.
+
+        In the Government Data Catalogue context, `creator` and issuing body may be the same organisation but this may not always be the case.
+    todos:
+      - Update guidance to use organisation slugs
+      - Decide what to do about issuing body
+      - Decide what to do about `contributor`
   description:
     slot_uri: dct:description
-    description: A free-text account of the distribution.
+    description: |
+      A concise narrative of the content of an information resource.
+      A free-text account of the distribution.
     range: string
+    comments: |
+      purpose:
+        Use of DESCRIPTION provides an explanation of the contents of a resource to assist in retrieval and to help users determine if a resource is relevant to their needs. The description can also describe the purpose of an information resource (what it was intended to accomplish), what the resource "is" or what it measures, its function and potential uses.
+      distinctFrom: 
+        - ITEM DESCRIPTION: A concise narrative of the content of the particular item (file) being described. For resources that contain multiple components or files with different intellectual content, there may be both a Description that applies to the resource as a whole, and item descriptions which apply to each individual component.
+      guidance:
+        The DESCRIPTION must be concise as well as informative. Do not repeat the Title or Alternative Tile in the Description field.
+        The DESCRIPTION should consist of complete sentences, written in an easily understandable manner. It could cover aspects such as:
+        - the purpose and function of a resource: what it was intended to accomplish;
+        - what a resource "is", such as "... the results of a comprehensive survey about persons who ....";
+        - a resource’s place in a continuum, e.g. "It was preceded by...; It grew out of...; It expands on earlier data collected by... for....";
+        - potential uses for the resource, e.g. "To plan programs and services for...; As a base for analyzing...; To forecast volumes of...; To determine requirements for..."
+        - Other useful information not captured in other metadata elements.
+        Include special characters such as quotation marks, apostrophes, and accented characters, e.g. Métis if applicable.
   distribution:
     slot_uri: dcat:distribution
     description: An available distribution of the dataset.
@@ -212,8 +324,15 @@ slots:
     # range: Dataset
   downloadURL:
     slot_uri: dcat:downloadURL
-    description: The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType.
+    description: |
+      The electronic location where the item (file) being described can be found.
+      The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's `dcterms:format` and/or `dcat:mediaType`.
     range: uri
+    comments: |
+      purpose: 
+        `downloadURL` provides the access point to the electronic file being described.
+      guidance:
+        The `downloadURL` will be system-generated and will provide the access point for the item.
   endpointDescription:
     slot_uri: dcat:endpointDescription
     description: A description of the services available via the end-points, including their operations, parameters etc.
@@ -227,22 +346,77 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: uri
   identifier:
     slot_uri: dct:identifier
-    description: A unique identifier of the resource being described or cataloged.
+    description: |
+      A unique number, code, or reference value assigned to an information resource within a given context.
+      A unique identifier of the resource being described or catalogued.
     identifier: true
     required: true
     range: uriorcurie
+    comments: |
+      purpose: 
+        Use of `identifier` supports unambiguous identification of resources, helps to prevent duplication, allows for interoperability with other metadata management systems, and facilitates retrieval, as users may retrieve resources by specific identifiers.
+      guidance:
+        As a best practice, all known unique identifiers should be included.
+        IDENTIFIER (OTHER) is a container element with sub-elements. Metadata values are contained in the sub-elements.
+        Each IDENTIFIER (OTHER) element has two mandatory sub-elements
+        - Identifier (Other) Type
+        - The formal name given to the type of identifier – Choose from a controlled vocabulary. See Appendix B for a list of current Identifier (Other) types. If the type of identifier is not available and the option "local identifier" is not suitable, contact the Government Data Catalogue administrator team to add the identifier type to the controlled vocabulary. E.g. ISBN (print) or ISSN (online).
+        - Identifier Value
+        - The unique value of the identifier for the specific identifier type.
+        For ISBNs, enter the complete ISBN without hyphens. For all other identifiers, enter as they appear in the described resource.
+    todos:
+      - Update guidance based on how identifier is being used in the model
   issued:
     slot_uri: dct:issued
-    description: Date of formal issuance (e.g., publication) of the distribution.
+    description: The date, or date and time, on which an information resource was originally published or otherwise made publicly available for the first time.
+
+      Date of formal issuance (e.g., publication) of the distribution.
     range: date
+    comments: |
+      purpose:
+      Use of `issued` allows users to determine the currency of the described resource. It also helps the user to distinguish between the date the described resource was created, the date it was first made publicly available, and the date it was added to the Government Data Catalogue.
+      distinctFrom:
+      - DATE ADDED TO CATALOGUE: the date on which the resource was included in the Government Data Catalogue.
+      - METADATA RECORD CREATION DATE: the date on which a new Government Data Catalogue metadata record is created.
+      - [`modified`](/ukgov-metadata-exchange-model/modified/): the date on which the content of an information resource was changed, or when a new issue of a serial resource was added to the metadata record
+      guidance:
+      The issued date should indicate the date on which the described resource was first published or otherwise released to the public.
+      Be as specific as possible, including month and day as well as year, if known.
+      If the resource was never publicly released before inclusion in the Government Data Catalogue, the DATE ISSUED and DATE ADDED TO CATALOGUE would be the same.
+      Some scenarios might be:
+      - A dataset compiled in April 2015 published on July 2015 (`issued` is `2015-07`);
+      - A report completed in September 2015 but publicly released in January 2016 (`issued` is `2016-01`);
+    todos:
+      - Refine guidance text inline with dates actually available in the metadata model
+      - Add distinctFrom for all the different date types
   keyword:
     slot_uri: dcat:keyword
     description: Uncontrolled terms (words or phrases) assigned to describe an information resource.
     multivalued: true
     range: string
+    comments: |
+      purpose:
+        Keywords can serve as additional access points to assist discovery and retrieval.
+      distinctFrom:
+        - [`description`](/ukgov-metadata-exchange-model/description): a narrative account about resource content.
+        - [`theme`](/ukgov-metadata-exchange-model/theme): controlled terms that describe the topic(s) of the content.
+      guidance:
+        Keywords are used to:
+        - Improve search results by providing words that may be used to look for a resource but which do not appear in the title, description, or other metadata fields. This might include acronyms and subject synonyms.
+        - Group together resources with similar subject matter. In the Government Data Catalogue, keywords appear as clickable links that, when clicked, will retrieve all other records that contain the same keyword.
+        - Keywords should be entered in the plural form, except for abstract concepts or entities that cannot be counted. (E.g. exports, royalties, births, trade)
+        - Do not enter variant spellings of a word as keywords. Only the accepted spelling of a word should be included. 
+        - Do not use abbreviations; spell out the keyword in full.
+        - If entering acronyms, also include the full form of the acronym as a keyword (e.g. OHS, Occupational Health and Safety).
+        - Enter keywords in lower case, except for proper nouns (e.g. public libraries, Calgary Public Library).
+        - Do not use ampersands in keywords; use the word ‘and’ instead.
+        - Nouns and noun phrases are preferred over verbs (e.g. fermentation not fermenting)
+        - Special characters, such as accent marks, should be included as long as they reflect common usage (e.g. Métis).
   licence:
     slot_uri: dct:license
-    description: A legal document under which the distribution is made available.
+    description: |
+      Reference to the legal document outlining access and usage rights for an information resource.
+      A legal document under which the distribution is made available.
     required: true
     # range: uriorcurie
     any_of:
@@ -250,20 +424,61 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       - range: string
         pattern: DATA_SHARE_AGREEMENT
         # - range: DataShareAgreement
+    comments: |
+      purpose:
+        Including the licence applicable to the described resources allows the user to understand what rights and obligations he or she has when accessing and using the resource.
+      guidance:
+        Rules as per Open Data Policy, all information and data that is made publicly available by HMG is likely to be released under the Open Government licence unless it is exempt under specific conditions. Any other applicable licences should be explicitly stated.
   mediaType:
     slot_uri: dcat:mediaType
-    description: The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
+    description: |
+      The file format or encoding method of the item (file) being described.
+      The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
     required: true
     range: uri
+    comments: |
+      purpose:
+        Use of `mediaType` supports retrieval, as well as control, storage, preservation and access management of resources through time. It can alert users to the existence of requirements for software, hardware or equipment other than a web browser to display, use, or manage a resource.
+      distinctFrom:
+        - AVAILABILITY: used when the described resource is available in print or in another digital format through another government or non-government source.
+        - TYPE: describes the business structure of the content of a resource, e.g. fact sheet, policy, report, guide, statistics.
+      guidance:
+        `mediaType` refers to the encoding method used to store digital resource and convert it into human-accessible form.
+        A resource with identical or near-identical intellectual content may have multiple formats. For example, a resource may be available for download in html, pdf and docx formats.
   modified:
     slot_uri: dct:modified
-    description: Most recent date on which the distribution was changed, updated or modified.
+    description: The date, or date and time, on which the content of an information resource is changed.
     range: date
+    comments: |
+      purpose:
+        The use of `modified`:
+        - Helps users assess the relevance of the content to their information needs.
+        - Helps users distinguish when the content of an information resource was changed after it was initially issued.
+        - Provides evidence of accountability and quality control by tracking revisions to the content of an information resource.
+      distinctFrom:
+        - METADATA RECORD UPDATE DATE: the date, or date and time, on which a catalogue record is changed.
+      guidance:
+        The DATE MODIFIED refers to the last date on which the content of an information resource revised. The date of the most recent update is the only date retained.
+        Be as specific as possible, including month and day as well as year, if known.
+        In the case of records which describe an information resource with more than one item (file), such as serial resources or resources with more than one part (eg. book chapters), the DATE MODIFIED should reflect the most recent date that any one item was modified. For example, if a new issue of a serial is added to a record, the DATE MODIFIED should be the date that the new issue was modified.
+        For most publications and many other information resources in the Government Data Catalogue, the DATE CREATED and DATE MODIFIED will be the same and will likely remain the same.
+    todos:
+      - Update distinctFrom to include all date properties
+      - Refresh guidance to reflect updated thinking around marketplace
   publisher:
     slot_uri: dct:publisher
     description: The business entity responsible for making an information resource publicly available.
     required: true
     range: OrganisationValues
+    comments: |
+      purpose:
+        In the context of the Government Data Catalogue, the `publisher` is the department or other organisational entity responsible for the public release of the resource. Use of `publisher` supports the assignment of accountability for accuracy of the resource, quality assurance and timeliness, as well as related quality control and life cycle management processes.
+      distinctFrom:
+        - [`contactPoint`](/ukgov-metadata-exchange-model/contactPoint): provides an avenue for users to obtain further information or provide feedback about the described resource or its metadata. It might or might not be the same entity as the issuing body.
+        - [`creator`](/ukgov-metadata-exchange-model/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
+      guidance:
+        The `publisher` is responsible for the quality and timeliness of the content of the described resource. Publishers may include provincial departments, agencies, boards, commissions, or delegated administrative organisations. In the Government Data Catalogue context, [`creator`](/ukgov-metadata-exchange-model/creator) and `publisher` may be the same organisation, but this may not always be the case.
+        If the information product has more than one publisher, choose the first one listed. When there is more than one publisher and they are not listed on the resource, choose the body which comes first alphabetically.
   relatedResource:
     slot_uri: dct:relation
     description: A resource that bears a close relationship to the described resource.
@@ -273,12 +488,46 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     # any_of:
     #   - range: uriorcurie
     #   - range: DataService
+    comments: |
+      purpose: 
+        To aid discovery of closely-related information resources and to make apparent the relationship between these resources.
+      guidance:
+        Use to identify:
+        - resources which are closely related by their source material, such as a report and its underlying data, or a report and fact sheets derived from information in the report, or an open dataset and its original source.
+        - resources which support the interpretation/understanding of the described resource, such as information that helps interpret the data presented in a dataset.
+        - the Act, regulation or other policy instrument which authorizes the program, policy, directive, order, etc. in the described resource
+        - a resource and its translations.
+        - the sequential relationship between two resources (such as when one resource supersedes an earlier resource).
+        DO NOT use to relate resources that deal with similar subject matter but that are based on different source material. Use the subject and keywords elements to establish this relationship.
+        RELATED RESOURCE is a container element with sub-elements. Metadata values are contained in the sub-elements.
+        Each RELATED RESOURCE element has four mandatory sub-elements:
+        - Related Resource – Title
+          The title of the related resource – use the TITLE element of the related resource in the Government Data Catalogue (if available). If too long, the subtitle may be omitted.
+        - Related Resource – URL
+          The URL of the metadata record for the related resource in the Government Data Catalogue.
+        - Related Resource – Type
+          The TYPE element of the related resource in the Government Data Catalogue, if available. If the related resource has more than one type, choose the type that is most relevant to the relationship between the two resources.
+        - Related Resource – Relationship Type
+          The nature of the relationship between the described resource and the referenced resource. Choose from a controlled vocabulary. See Appendix B for the complete Relationship Type vocabulary.
+        PLEASE NOTE: If the “Related Resource” field is used, each sub-element field is mandatory
+    todos:
+    - Update guidance so that `relatedResource` links to the identifier of related items
   securityClassification:
     description: An information security designation that identifies the minimum level of protection assigned to an information resource.
     required: true
     range: SecurityClassificationValues
+    comments: |
+      purpose:
+        Use of `securityClassification` promotes the broad distribution of non-sensitive resources. Only resources with a security classification of "OFFICIAL" will be included in the Government Data Catalogue. The purpose of including this metadata element is to ensure that the resource has been reviewed and cleared as unrestricted before being included in the Government Data Catalogue, and to align with the [UK Government's Security Classifications](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).
+      distinctFrom:
+        - [`accessRights`](/ukgov-metadata-exchange-model/accessRights): to capture whether the data is openly avaialble or for internal use only
+        - [`licence`](/ukgov-metadata-exchange-model/licence): to capture the conditions of use
+      guidance:
+        An information security classification establishes sensitivity categories for resources based on the value of the information they contain and the potential adverse consequences from loss of information confidentiality, integrity or availability.
+        For more information, see the [UK Government Information Security guidelines](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).
+        All resources added to the Government Data Catalogue must have a SECURITY CLASSIFICATION value of [`OFFICIAL`](/ukgov-metadata-exchange-model/SecurityClassificationValues/).
   servesData:
-    slot_uri: dcat:servesData
+    slot_uri: dcat:servesDataset
     description: A collection of data that this data service can distribute.
     recommended: true
     multivalued: true
@@ -286,6 +535,11 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     # any_of:
     #   - range: uriorcurie
     #   - range: Dataset
+    comments: |
+      purpose:
+        Use `servesData` to link the data service to the dataset that is made available through the service.
+      guidance:
+        The value of the `servesData` property should be the URI that identifies a dataset.
   serviceStatus:
     slot_uri: adms:status
     description: |
@@ -314,15 +568,76 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: string
   theme:
     slot_uri: dcat:theme
-    description: A controlled term that expresses the broad topical content of an information resource./A controlled term that expresses a topic of the intellectual content of an information resource.
+    description: |
+      Topic
+      A controlled term that expresses the broad topical content of an information resource.
+      Subject
+      A controlled term that expresses a topic of the intellectual content of an information resource.
     recommended: true
     multivalued: true
     range: uriorcurie
+    comments: |
+      purpose:
+        Subject
+        Assigning subjects enables users to find resources on the same topic consistently and efficiently. Using a controlled vocabulary external to the catalogue allows users to find related resources across jurisdictions and catalogues. These vocabularies also generally allow for more precise description of the subject matter of a resource than is possible with the TOPIC element.
+        Topic
+        Enables users to find resources on the same topic consistently and efficiently, and provides access to related resources across the Government Data Catalogue and the Data Marketplace.
+      distinctFrom:
+        Subject
+        - TOPIC: provides a higher-level subject description of the content of a resource using a controlled vocabulary developed or adopted for the catalogue .
+        - [`description`](/ukgov-metadata-exchange-model/description): a concise narrative of the content of the resource.
+        - [`keyword`](/ukgov-metadata-exchange-model/keyword): uncontrolled words or phrases assigned to the resource to assist discovery and retrieval.
+        - TYPE: the business structure of the content of a resource, e.g. fact sheet, policy, report, guide, statistics.
+        Topic
+        - [`description`](/ukgov-metadata-exchange-model/description): a concise narrative of the content of the resource.
+        - [`keyword`](/ukgov-metadata-exchange-model/keyword): uncontrolled words or phrases assigned to the resource to assist discovery and retrieval.
+        - SPATIAL COVERAGE: the geographical area or spatial extent covered by the content of a resource.
+        - SUBJECT: a term taken from an external controlled vocabulary which generally describes a resource at a more specific level.
+        - TEMPORAL COVERAGE: the time frame covered by the content of the resource.
+        - TYPE: the business structure of the content of a resource, e.g. fact sheet, policy, report, guide, statistics.
+      guidance:
+        Subject
+        A SUBJECT describes what a resource is "about". For example:
+        - "Maps" is a subject value if a resource is about map-making, but not if it "is" a map;
+        - "Claims" is a subject value if a resource is about making claims, but not if it "is' a claim.
+        SUBJECT is a container element with two sub-elements. Metadata values are contained in the sub-elements.
+        Each SUBJECT element has two mandatory sub-elements:
+        - Subject vocabulary: The controlled vocabulary being used to describe the information resource. This will be chosen from a menu. If the controlled vocabulary you wish is not available, contact the Government Data Catalogue administrator team to discuss the possibility of adding the vocabulary.
+        - Subject term: The unique subject term chose from the controlled vocabulary identified in the subject vocabulary field.
+        Many resources will be "about" more than one topic, so more than one subject will often be assigned to provide multiple access points to a particular resource. Do not assign Subjects to which the resource is only peripherally related.
+        Topic
+        TOPICS are chosen from a controlled vocabulary developed or adopted for the Government Data Catalogue. The intent of the vocabulary is to provide a limited list of broad terms that cover all the different subject matter of the information resources contained in the Government Data Catalogue.
+        A TOPIC describes what a resource is "about". Assign at least one TOPIC to a resource, reflecting the most significant facet of its content. Many resources will be "about" more than one topic, so assign as many TOPICS as applicable to provide substantial value for finding resources about a topic. Do not assign TOPICS to which the resource is only peripherally related.
+    todos: 
+      - Remove duplication of subject and topic guidance
+      - Remove idea of being a container
+      - Indicate vocabularies to be used
   title:
     slot_uri: dct:title
-    description: A name given to the distribution.
+    description: |
+      The full and formal name given to an information resource.
+      A name given to the distribution.
     required: true
     range: string
+    comments: |
+      purpose:
+        A meaningful title describes the content of a resource concisely, and supports access, speed of identification, and control of content.
+      distinctFrom:
+        - [`alternativeTitle`](/ukgov-metadata-exchange-model/alternativeTitle): any form of a title used as a substitute or additional access point to the title of the resource.
+        - [`identifier`](/ukgov-metadata-exchange-model/identifier): a unique number or code that unambiguously identifies the described resource.
+        - SERIES TITLE: A distinctive collective title applied to an information resource and one or more other resources that also have their own separate titles.
+        - Digital file name assigned by a user to an electronic file such as a web page or desktop document, e.g. "www.saintranet.gov.ab.ca/7.htm" or "specifications.doc".
+      guidance:
+        Useful titles distinguish one resource from another, so organisations should establish consistent naming practices for all forms of information resources.
+        For resources with existing titles, the title should be taken as it appears in the content of the described resource. If multiple forms of titles appear in the resource, choose the title as it appears on the title page of the resource, if applicable.
+        If no title appears within the described resource or within metadata provided by the creator of the resource, a title will have to be created. Use the following guidelines in creating titles when necessary:
+        - Create a brief and meaningful title to convey its topic or purpose;
+        - Place important words near the beginning of the title;
+        -  Ensure that the title is in the same language as the resource;
+        - Minimizing the use of abbreviations and acronyms;
+        - Add values to a title such as a version number, status or version date if a resource is one of many with the same or similar titles. For example, "Submission guide 2003", "Submission guide 2007".
+        Titles should be entered in sentence case. Only the first word and proper nouns should be capitalized.
+        Separate titles and subtitles by a colon preceded and followed by a space.
   type:
     slot_uri: rdf:type
     designates_type: true
@@ -332,10 +647,22 @@ Note that there could be a security risk in sharing the endpoint URL for interna
   updateFrequency:
     slot_uri: dct:accrualPeriodicity
     description: |
+      The time interval at which new or updated versions of an information resource are issued.
+
       The frequency at which a dataset is published.	
       
       An available distribution of the dataset. If the frequency is unknown then use the value `freq:irregular`.
-    notes: The value for this field should be one of the terms from the Dublin Core Frequency Vocabulary, e.g. to say a dataset is updated quarterly use the value freq:quarterly.
+    comments: |
+      purpose:
+        Documenting the periods at which new or updated versions or issues of a resource are released can help users understand the context, availability and relevance of its content. FREQUENCY also is a component in managing the publication process.
+      guidance:
+        The value for this field should be one of the terms from the Dublin Core Frequency Vocabulary, e.g. to say a dataset is updated quarterly use the value freq:quarterly.
+
+        Select "Once" if the resource is not expected to be updated or serially produced. Later versions of a resource with a FREQUENCY of "once" should be entered as a new resource with its own catalogue record, and the relationship between the resources should be identified with the RELATED RESOURCE element.
+        Select "Other" if the described resource is issued at a regular time interval not included in the controlled vocabulary.
+        If the frequency with which the described resource changes (e.g. A quarterly publication is changed to a monthly publication) update the frequency metadata element to reflect the new frequency. A note can be added under the ADDITIONAL INFORMATION metadata element to mark the change in frequency.
+    todos:
+      - Update guidance to be consistent with controlled vocabulary
     required: true
     range: FrequencyValues
   version:

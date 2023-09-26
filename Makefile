@@ -117,6 +117,9 @@ test-invalid: src/model/uk_cross_government_metadata_exchange_model.yaml
 
 ###########################################################
 # DOCUMENTATION
+#
+# Any changes to the documentation process need to be 
+# reflected in the Dockerfile as well
 ###########################################################
 
 # Run documentation locally
@@ -131,6 +134,7 @@ gendoc: gen-examples
 	cp LICENSE.md $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR) \
 		--example-directory $(DOCDIR)/$(EXAMPLEDIR) \
+		--template-directory src/docs/templates \
 		src/model/uk_cross_government_metadata_exchange_model.yaml
 
 MKDOCS = $(RUN) mkdocs
