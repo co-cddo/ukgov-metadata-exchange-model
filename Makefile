@@ -86,7 +86,18 @@ Dataset*.yaml:
 			$${file} ; \
 	done
 
-gen-examples: $(DOCDIR) ContactPoint*.yaml DataService*.yaml Dataset*.yaml
+Distribution*.yaml:
+	echo "Processing Dataset examples"
+	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/Distribution*.yaml) ; do \
+		linkml-convert \
+			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
+			-o $${file}.json \
+			-t json \
+			-C Distribution \
+			$${file} ; \
+	done
+
+gen-examples: $(DOCDIR) ContactPoint*.yaml DataService*.yaml Dataset*.yaml Distribution*.yaml
 
 # TODO: Extend tests to lint schema to ensure elements are correctly described, see https://linkml.io/linkml/schemas/linter.html
 
