@@ -53,22 +53,29 @@ gen-project:
 # Examples and Tests
 ###########################################################
 
-gen-examples: $(DOCDIR)
-	cp src/data/README.md $(DOCDIR)/$(EXAMPLEDIR)
-	# TODO: Convert to JSON for the example directory
-	cp src/data/*/valid/* $(DOCDIR)/$(EXAMPLEDIR)
-	linkml-convert \
-		-s src/model/uk_cross_government_metadata_exchange_model.yaml \
-		-o $(DOCDIR)/$(EXAMPLEDIR)/ContactPoint-fsa-minimal.json \
-		-t json \
-		-C ContactPoint \
-		$(DOCDIR)/$(EXAMPLEDIR)/ContactPoint-fsa-minimal.yaml
-	linkml-convert \
-		-s src/model/uk_cross_government_metadata_exchange_model.yaml \
-		-o $(DOCDIR)/$(EXAMPLEDIR)/DataService-dwp-address-lookup.json \
-		-t json \
-		-C DataService \
-		$(DOCDIR)/$(EXAMPLEDIR)/DataService-dwp-address-lookup.yaml
+ContactPoint*.yaml:
+	echo "Processing ContactPoint examples"
+	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/ContactPoint*.yaml) ; do \
+		linkml-convert \
+			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
+			-o $${file}.json \
+			-t json \
+			-C ContactPoint \
+			$${file} ; \
+	done
+
+DataService*.yaml:
+	echo "Processing DataService examples"
+	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/DataService*.yaml) ; do \
+		linkml-convert \
+			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
+			-o $${file}.json \
+			-t json \
+			-C DataService \
+			$${file} ; \
+	done
+
+gen-examples: $(DOCDIR) ContactPoint*.yaml DataService*.yaml
 
 # TODO: Extend tests to lint schema to ensure elements are correctly described, see https://linkml.io/linkml/schemas/linter.html
 
@@ -128,6 +135,8 @@ serve: mkd-serve
 
 $(DOCDIR):
 	mkdir -p $(DOCDIR)/$(EXAMPLEDIR)
+	cp src/data/README.md $(DOCDIR)/$(EXAMPLEDIR)
+	cp src/data/*/valid/* $(DOCDIR)/$(EXAMPLEDIR)
 
 gendoc: gen-examples
 	cp src/docs/*.md $(DOCDIR)
