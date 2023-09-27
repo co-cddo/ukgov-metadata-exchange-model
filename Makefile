@@ -56,7 +56,7 @@ gen-project:
 ContactPoint*.yaml:
 	echo "Processing ContactPoint examples"
 	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/ContactPoint*.yaml) ; do \
-		linkml-convert \
+		$(RUN) linkml-convert \
 			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
 			-o $${file}.json \
 			-t json \
@@ -67,7 +67,7 @@ ContactPoint*.yaml:
 DataService*.yaml:
 	echo "Processing DataService examples"
 	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/DataService*.yaml) ; do \
-		linkml-convert \
+		$(RUN) linkml-convert \
 			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
 			-o $${file}.json \
 			-t json \
@@ -78,7 +78,7 @@ DataService*.yaml:
 Dataset*.yaml:
 	echo "Processing Dataset examples"
 	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/Dataset*.yaml) ; do \
-		linkml-convert \
+		$(RUN) linkml-convert \
 			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
 			-o $${file}.json \
 			-t json \
@@ -89,7 +89,7 @@ Dataset*.yaml:
 Distribution*.yaml:
 	echo "Processing Dataset examples"
 	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/Distribution*.yaml) ; do \
-		linkml-convert \
+		$(RUN) linkml-convert \
 			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
 			-o $${file}.json \
 			-t json \
