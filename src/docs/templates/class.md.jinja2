@@ -101,27 +101,6 @@ URI: {{ gen.uri_link(element) }}
 {% endfor %}
 {% endif %}
 
-
-## LinkML Source
-
-<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
-
-### Direct
-
-<details>
-```yaml
-{{gen.yaml(element)}}
-```
-</details>
-
-### Induced
-
-<details>
-```yaml
-{{gen.yaml(element, inferred=True)}}
-```
-</details>
-
 {%- if footer -%}
 {{footer}}
 {%- endif -%}
