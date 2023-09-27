@@ -3,7 +3,8 @@ FROM python:3.10
 COPY ./pyproject.toml ./mkdocs.yml /
 # Copy license file
 COPY ./LICENSE.md ./src/docs/ /docs/
-##TODO: Copy across examples
+##TODO: Copy across examples and convert to JSON
+## Examples won't show until the above is done!
 # Copy source files for model
 COPY ./src/ /src/
 RUN pip install poetry

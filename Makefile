@@ -53,10 +53,51 @@ gen-project:
 # Examples and Tests
 ###########################################################
 
-gen-examples: $(DOCDIR)
-	cp src/data/README.md $(DOCDIR)/$(EXAMPLEDIR)
-	# TODO: Convert to JSON for the example directory
-	cp src/data/*/valid/* $(DOCDIR)/$(EXAMPLEDIR)
+ContactPoint*.yaml:
+	echo "Processing ContactPoint examples"
+	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/ContactPoint*.yaml) ; do \
+		$(RUN) linkml-convert \
+			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
+			-o $${file}.json \
+			-t json \
+			-C ContactPoint \
+			$${file} ; \
+	done
+
+DataService*.yaml:
+	echo "Processing DataService examples"
+	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/DataService*.yaml) ; do \
+		$(RUN) linkml-convert \
+			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
+			-o $${file}.json \
+			-t json \
+			-C DataService \
+			$${file} ; \
+	done
+
+Dataset*.yaml:
+	echo "Processing Dataset examples"
+	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/Dataset*.yaml) ; do \
+		$(RUN) linkml-convert \
+			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
+			-o $${file}.json \
+			-t json \
+			-C Dataset \
+			$${file} ; \
+	done
+
+Distribution*.yaml:
+	echo "Processing Dataset examples"
+	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/Distribution*.yaml) ; do \
+		$(RUN) linkml-convert \
+			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
+			-o $${file}.json \
+			-t json \
+			-C Distribution \
+			$${file} ; \
+	done
+
+gen-examples: $(DOCDIR) ContactPoint*.yaml DataService*.yaml Dataset*.yaml Distribution*.yaml
 
 # TODO: Extend tests to lint schema to ensure elements are correctly described, see https://linkml.io/linkml/schemas/linter.html
 
@@ -116,11 +157,14 @@ serve: mkd-serve
 
 $(DOCDIR):
 	mkdir -p $(DOCDIR)/$(EXAMPLEDIR)
+	cp src/data/README.md $(DOCDIR)/$(EXAMPLEDIR)
+	cp src/data/*/valid/* $(DOCDIR)/$(EXAMPLEDIR)
 
-gendoc: $(DOCDIR)
+gendoc: gen-examples
 	cp src/docs/*.md $(DOCDIR)
 	cp LICENSE.md $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR) \
+		--example-directory $(DOCDIR)/$(EXAMPLEDIR) \
 		--template-directory src/docs/templates \
 		src/model/uk_cross_government_metadata_exchange_model.yaml
 
