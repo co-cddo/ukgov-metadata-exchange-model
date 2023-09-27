@@ -424,13 +424,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -509,43 +502,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: contactName
-description: The organisational contact to obtain further information or provide feedback
-  about an information resource.
-comments:
-- &quot;purpose:\n  Use of `contactName` provides an avenue for users to provide feedback\
-  \ or request additional information about a resource to assist in determining its\
-  \ relevance and potential use or in understanding and interpreting the content.\n\
-  distinctFrom:\n  - contributor: a person or organisation responsible for making\
-  \ significant contributions to the content of the described resource.\n  - [creator](/ukgov-metadata-exchange-model/creator):\
-  \ the business entity (department, agency, board, commission, etc.) primarily responsible\
-  \ for the creation of the content of the resource.\n  - issuing body: the department,\
-  \ agency, board or commission responsible for making the described resource publicly\
-  \ available.\nguidance:\n  Contact information should be included for all new information\
-  \ resources that are added to the Government Data Catalogue. Generally, `contactName`\
-  \ will be a support or branch unit that will either respond to the user or refer\
-  \ the inquiry to a subject matter expert.\n  \n  Because the Government Data Catalogue\
-  \ may include historical resources for which there is no longer a suitable contact\
-  \ point, this element has not been made mandatory.\n  \n  When a `contactName` is\
-  \ provided for an information resource, it should be combined with a [`email`](/ukgov-metadata-exchange-model/email).\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-aliases:
-- Team name
-rank: 1000
-slot_uri: vcard:fn
-alias: contactName
-owner: ContactPoint
-domain_of:
-- ContactPoint
-range: string
-required: true
-
-</code></pre>
-
-</details>
 
 
 

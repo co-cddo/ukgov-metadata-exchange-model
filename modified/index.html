@@ -424,13 +424,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -528,45 +521,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: modified
-description: The date, or date and time, on which the content of an information resource
-  is changed.
-todos:
-- Update distinctFrom to include all date properties
-- Refresh guidance to reflect updated thinking around marketplace
-comments:
-- &quot;purpose:\n  The use of `modified`:\n  - Helps users assess the relevance of the\
-  \ content to their information needs.\n  - Helps users distinguish when the content\
-  \ of an information resource was changed after it was initially issued.\n  - Provides\
-  \ evidence of accountability and quality control by tracking revisions to the content\
-  \ of an information resource.\ndistinctFrom:\n  - METADATA RECORD UPDATE DATE: the\
-  \ date, or date and time, on which a catalogue record is changed.\nguidance:\n \
-  \ The DATE MODIFIED refers to the last date on which the content of an information\
-  \ resource revised. The date of the most recent update is the only date retained.\n\
-  \  Be as specific as possible, including month and day as well as year, if known.\n\
-  \  In the case of records which describe an information resource with more than\
-  \ one item (file), such as serial resources or resources with more than one part\
-  \ (eg. book chapters), the DATE MODIFIED should reflect the most recent date that\
-  \ any one item was modified. For example, if a new issue of a serial is added to\
-  \ a record, the DATE MODIFIED should be the date that the new issue was modified.\n\
-  \  For most publications and many other information resources in the Government\
-  \ Data Catalogue, the DATE CREATED and DATE MODIFIED will be the same and will likely\
-  \ remain the same.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dct:modified
-alias: modified
-domain_of:
-- DataResource
-- Distribution
-range: date
-
-</code></pre>
-
-</details>
 
 
 

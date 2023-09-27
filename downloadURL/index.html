@@ -410,13 +410,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -477,32 +470,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: downloadURL
-description: 'The electronic location where the item (file) being described can be
-  found.
-
-  The URL of the downloadable file in a given format. E.g., CSV file or RDF file.
-  The format is indicated by the distribution''s `dcterms:format` and/or `dcat:mediaType`.
-
-  '
-comments:
-- &quot;purpose: \n  `downloadURL` provides the access point to the electronic file being\
-  \ described.\nguidance:\n  The `downloadURL` will be system-generated and will provide\
-  \ the access point for the item.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dcat:downloadURL
-alias: downloadURL
-domain_of:
-- Distribution
-range: uri
-
-</code></pre>
-
-</details>
 
 
 

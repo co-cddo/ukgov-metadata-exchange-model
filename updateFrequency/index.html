@@ -417,13 +417,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -493,44 +486,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: updateFrequency
-description: &quot;The time interval at which new or updated versions of an information\
-  \ resource are issued.\n\nThe frequency at which a dataset is published.\t\n\nAn\
-  \ available distribution of the dataset. If the frequency is unknown then use the\
-  \ value `freq:irregular`.\n&quot;
-todos:
-- Update guidance to be consistent with controlled vocabulary
-comments:
-- &quot;purpose:\n  Documenting the periods at which new or updated versions or issues\
-  \ of a resource are released can help users understand the context, availability\
-  \ and relevance of its content. FREQUENCY also is a component in managing the publication\
-  \ process.\nguidance:\n  The value for this field should be one of the terms from\
-  \ the Dublin Core Frequency Vocabulary, e.g. to say a dataset is updated quarterly\
-  \ use the value freq:quarterly.\n\n  Select \&quot;Once\&quot; if the resource is not expected\
-  \ to be updated or serially produced. Later versions of a resource with a FREQUENCY\
-  \ of \&quot;once\&quot; should be entered as a new resource with its own catalogue record,\
-  \ and the relationship between the resources should be identified with the RELATED\
-  \ RESOURCE element.\n  Select \&quot;Other\&quot; if the described resource is issued at a\
-  \ regular time interval not included in the controlled vocabulary.\n  If the frequency\
-  \ with which the described resource changes (e.g. A quarterly publication is changed\
-  \ to a monthly publication) update the frequency metadata element to reflect the\
-  \ new frequency. A note can be added under the ADDITIONAL INFORMATION metadata element\
-  \ to mark the change in frequency.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dct:accrualPeriodicity
-alias: updateFrequency
-domain_of:
-- Dataset
-range: FrequencyValues
-required: true
-
-</code></pre>
-
-</details>
 
 
 

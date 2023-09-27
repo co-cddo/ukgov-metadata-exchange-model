@@ -410,13 +410,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -493,40 +486,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: licence
-description: 'Reference to the legal document outlining access and usage rights for
-  an information resource.
-
-  A legal document under which the distribution is made available.
-
-  '
-comments:
-- &quot;purpose:\n  Including the licence applicable to the described resources allows\
-  \ the user to understand what rights and obligations he or she has when accessing\
-  \ and using the resource.\nguidance:\n  Rules as per Open Data Policy, all information\
-  \ and data that is made publicly available by HMG is likely to be released under\
-  \ the Open Government licence unless it is exempt under specific conditions. Any\
-  \ other applicable licences should be explicitly stated.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dct:license
-alias: licence
-domain_of:
-- DataResource
-- Distribution
-range: string
-required: true
-any_of:
-- range: uriorcurie
-- range: string
-  pattern: DATA_SHARE_AGREEMENT
-
-</code></pre>
-
-</details>
 
 
 

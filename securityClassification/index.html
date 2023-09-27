@@ -417,13 +417,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -505,40 +498,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: securityClassification
-description: An information security designation that identifies the minimum level
-  of protection assigned to an information resource.
-comments:
-- &quot;purpose:\n  Use of `securityClassification` promotes the broad distribution of\
-  \ non-sensitive resources. Only resources with a security classification of \&quot;OFFICIAL\&quot;\
-  \ will be included in the Government Data Catalogue. The purpose of including this\
-  \ metadata element is to ensure that the resource has been reviewed and cleared\
-  \ as unrestricted before being included in the Government Data Catalogue, and to\
-  \ align with the [UK Government's Security Classifications](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).\n\
-  distinctFrom:\n  - [`accessRights`](/ukgov-metadata-exchange-model/accessRights):\
-  \ to capture whether the data is openly avaialble or for internal use only\n  -\
-  \ [`licence`](/ukgov-metadata-exchange-model/licence): to capture the conditions\
-  \ of use\nguidance:\n  An information security classification establishes sensitivity\
-  \ categories for resources based on the value of the information they contain and\
-  \ the potential adverse consequences from loss of information confidentiality, integrity\
-  \ or availability.\n  For more information, see the [UK Government Information Security\
-  \ guidelines](https://www.gov.uk/government/publications/security-policy-framework/hmg-security-policy-framework#information-security).\n\
-  \  All resources added to the Government Data Catalogue must have a SECURITY CLASSIFICATION\
-  \ value of [`OFFICIAL`](/ukgov-metadata-exchange-model/SecurityClassificationValues/).\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-alias: securityClassification
-domain_of:
-- DataResource
-range: SecurityClassificationValues
-required: true
-
-</code></pre>
-
-</details>
 
 
 

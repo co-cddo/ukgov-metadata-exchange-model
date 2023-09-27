@@ -417,13 +417,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -535,45 +528,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: keyword
-description: Uncontrolled terms (words or phrases) assigned to describe an information
-  resource.
-comments:
-- &quot;purpose:\n  Keywords can serve as additional access points to assist discovery\
-  \ and retrieval.\ndistinctFrom:\n  - [`description`](/ukgov-metadata-exchange-model/description):\
-  \ a narrative account about resource content.\n  - [`theme`](/ukgov-metadata-exchange-model/theme):\
-  \ controlled terms that describe the topic(s) of the content.\nguidance:\n  Keywords\
-  \ are used to:\n  - Improve search results by providing words that may be used to\
-  \ look for a resource but which do not appear in the title, description, or other\
-  \ metadata fields. This might include acronyms and subject synonyms.\n  - Group\
-  \ together resources with similar subject matter. In the Government Data Catalogue,\
-  \ keywords appear as clickable links that, when clicked, will retrieve all other\
-  \ records that contain the same keyword.\n  - Keywords should be entered in the\
-  \ plural form, except for abstract concepts or entities that cannot be counted.\
-  \ (E.g. exports, royalties, births, trade)\n  - Do not enter variant spellings of\
-  \ a word as keywords. Only the accepted spelling of a word should be included. \n\
-  \  - Do not use abbreviations; spell out the keyword in full.\n  - If entering acronyms,\
-  \ also include the full form of the acronym as a keyword (e.g. OHS, Occupational\
-  \ Health and Safety).\n  - Enter keywords in lower case, except for proper nouns\
-  \ (e.g. public libraries, Calgary Public Library).\n  - Do not use ampersands in\
-  \ keywords; use the word ‘and’ instead.\n  - Nouns and noun phrases are preferred\
-  \ over verbs (e.g. fermentation not fermenting)\n  - Special characters, such as\
-  \ accent marks, should be included as long as they reflect common usage (e.g. Métis).\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dcat:keyword
-multivalued: true
-alias: keyword
-domain_of:
-- DataResource
-range: string
-
-</code></pre>
-
-</details>
 
 
 

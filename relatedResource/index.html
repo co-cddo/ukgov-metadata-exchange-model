@@ -417,13 +417,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -538,53 +531,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: relatedResource
-description: A resource that bears a close relationship to the described resource.
-todos:
-- Update guidance so that `relatedResource` links to the identifier of related items
-comments:
-- &quot;purpose: \n  To aid discovery of closely-related information resources and to make\
-  \ apparent the relationship between these resources.\nguidance:\n  Use to identify:\n\
-  \  - resources which are closely related by their source material, such as a report\
-  \ and its underlying data, or a report and fact sheets derived from information\
-  \ in the report, or an open dataset and its original source.\n  - resources which\
-  \ support the interpretation/understanding of the described resource, such as information\
-  \ that helps interpret the data presented in a dataset.\n  - the Act, regulation\
-  \ or other policy instrument which authorizes the program, policy, directive, order,\
-  \ etc. in the described resource\n  - a resource and its translations.\n  - the\
-  \ sequential relationship between two resources (such as when one resource supersedes\
-  \ an earlier resource).\n  DO NOT use to relate resources that deal with similar\
-  \ subject matter but that are based on different source material. Use the subject\
-  \ and keywords elements to establish this relationship.\n  RELATED RESOURCE is a\
-  \ container element with sub-elements. Metadata values are contained in the sub-elements.\n\
-  \  Each RELATED RESOURCE element has four mandatory sub-elements:\n  - Related Resource\
-  \ – Title\n    The title of the related resource – use the TITLE element of the\
-  \ related resource in the Government Data Catalogue (if available). If too long,\
-  \ the subtitle may be omitted.\n  - Related Resource – URL\n    The URL of the metadata\
-  \ record for the related resource in the Government Data Catalogue.\n  - Related\
-  \ Resource – Type\n    The TYPE element of the related resource in the Government\
-  \ Data Catalogue, if available. If the related resource has more than one type,\
-  \ choose the type that is most relevant to the relationship between the two resources.\n\
-  \  - Related Resource – Relationship Type\n    The nature of the relationship between\
-  \ the described resource and the referenced resource. Choose from a controlled vocabulary.\
-  \ See Appendix B for the complete Relationship Type vocabulary.\n  PLEASE NOTE:\
-  \ If the “Related Resource” field is used, each sub-element field is mandatory\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dct:relation
-multivalued: true
-alias: relatedResource
-domain_of:
-- DataResource
-range: uriorcurie
-recommended: true
-
-</code></pre>
-
-</details>
 
 
 

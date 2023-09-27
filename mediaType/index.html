@@ -417,13 +417,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -495,39 +488,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: mediaType
-description: 'The file format or encoding method of the item (file) being described.
-
-  The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
-
-  '
-comments:
-- &quot;purpose:\n  Use of `mediaType` supports retrieval, as well as control, storage,\
-  \ preservation and access management of resources through time. It can alert users\
-  \ to the existence of requirements for software, hardware or equipment other than\
-  \ a web browser to display, use, or manage a resource.\ndistinctFrom:\n  - AVAILABILITY:\
-  \ used when the described resource is available in print or in another digital format\
-  \ through another government or non-government source.\n  - TYPE: describes the\
-  \ business structure of the content of a resource, e.g. fact sheet, policy, report,\
-  \ guide, statistics.\nguidance:\n  `mediaType` refers to the encoding method used\
-  \ to store digital resource and convert it into human-accessible form.\n  A resource\
-  \ with identical or near-identical intellectual content may have multiple formats.\
-  \ For example, a resource may be available for download in html, pdf and docx formats.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dcat:mediaType
-alias: mediaType
-domain_of:
-- Distribution
-range: uri
-required: true
-
-</code></pre>
-
-</details>
 
 
 

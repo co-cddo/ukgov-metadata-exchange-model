@@ -424,13 +424,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -523,50 +516,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: creator
-description: The business entity responsible for creating or compiling the original
-  content of an information resource.
-todos:
-- Update guidance to use organisation slugs
-- Decide what to do about issuing body
-- Decide what to do about `contributor`
-comments:
-- &quot;purpose: \n  Provides context and identifies the defined authority responsible\
-  \ for the accuracy and timeliness of an information resource, thus supporting quality\
-  \ assurance of content and accountability for information resources.\ndistinctFrom:\n\
-  \  - [contact](/ukgov-metadata-exchange-model/contactName): provides a contact point\
-  \ to obtain further information or provide feedback about a resource or its metadata.\n\
-  \  - contributor: makes a contribution to the content of a resource, but does not\
-  \ have primary responsibility.\n  - issuing body: the business entity (department,\
-  \ agency, board, commission, etc.) responsible for making the resource publicly\
-  \ available.\nguidance:\n  A `creator` is almost always an organisation, not an\
-  \ individual. The `contributor` element can be used to identify specific individuals\
-  \ involved in the creation of the described resource. However, there may be rare\
-  \ occasions where the `creator` is an individual.\n\n  `creator` may be a department,\
-  \ agency, board, commission, or other entity of the UK Government, or a non-government\
-  \ entity under contract to the Government. The organisation name should be the official\
-  \ name, not an abbreviation or acronym. Do not include the names of organisation\
-  \ units such as divisions and/or branches.\n\n  `creator` is repeatable if more\
-  \ than one government department, agency, board, commission or other entity shared\
-  \ primary responsibility for the creation of the resource.\n\n  In the Government\
-  \ Data Catalogue context, `creator` and issuing body may be the same organisation\
-  \ but this may not always be the case.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dct:creator
-multivalued: true
-alias: creator
-domain_of:
-- DataResource
-range: OrganisationValues
-required: true
-
-</code></pre>
-
-</details>
 
 
 

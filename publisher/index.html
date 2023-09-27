@@ -417,13 +417,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -504,43 +497,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: publisher
-description: The business entity responsible for making an information resource publicly
-  available.
-comments:
-- &quot;purpose:\n  In the context of the Government Data Catalogue, the `publisher` is\
-  \ the department or other organisational entity responsible for the public release\
-  \ of the resource. Use of `publisher` supports the assignment of accountability\
-  \ for accuracy of the resource, quality assurance and timeliness, as well as related\
-  \ quality control and life cycle management processes.\ndistinctFrom:\n  - [`contactPoint`](/ukgov-metadata-exchange-model/contactPoint):\
-  \ provides an avenue for users to obtain further information or provide feedback\
-  \ about the described resource or its metadata. It might or might not be the same\
-  \ entity as the issuing body.\n  - [`creator`](/ukgov-metadata-exchange-model/creator):\
-  \ the business entity (department, agency, board, commission, etc.) primarily responsible\
-  \ for the creation of the content of the resource.\nguidance:\n  The `publisher`\
-  \ is responsible for the quality and timeliness of the content of the described\
-  \ resource. Publishers may include provincial departments, agencies, boards, commissions,\
-  \ or delegated administrative organisations. In the Government Data Catalogue context,\
-  \ [`creator`](/ukgov-metadata-exchange-model/creator) and `publisher` may be the\
-  \ same organisation, but this may not always be the case.\n  If the information\
-  \ product has more than one publisher, choose the first one listed. When there is\
-  \ more than one publisher and they are not listed on the resource, choose the body\
-  \ which comes first alphabetically.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dct:publisher
-alias: publisher
-domain_of:
-- DataResource
-range: OrganisationValues
-required: true
-
-</code></pre>
-
-</details>
 
 
 

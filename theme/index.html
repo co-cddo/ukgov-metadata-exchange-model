@@ -424,13 +424,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -574,82 +567,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: theme
-description: 'Topic
-
-  A controlled term that expresses the broad topical content of an information resource.
-
-  Subject
-
-  A controlled term that expresses a topic of the intellectual content of an information
-  resource.
-
-  '
-todos:
-- Remove duplication of subject and topic guidance
-- Remove idea of being a container
-- Indicate vocabularies to be used
-comments:
-- &quot;purpose:\n  Subject\n  Assigning subjects enables users to find resources on the\
-  \ same topic consistently and efficiently. Using a controlled vocabulary external\
-  \ to the catalogue allows users to find related resources across jurisdictions and\
-  \ catalogues. These vocabularies also generally allow for more precise description\
-  \ of the subject matter of a resource than is possible with the TOPIC element.\n\
-  \  Topic\n  Enables users to find resources on the same topic consistently and efficiently,\
-  \ and provides access to related resources across the Government Data Catalogue\
-  \ and the Data Marketplace.\ndistinctFrom:\n  Subject\n  - TOPIC: provides a higher-level\
-  \ subject description of the content of a resource using a controlled vocabulary\
-  \ developed or adopted for the catalogue .\n  - [`description`](/ukgov-metadata-exchange-model/description):\
-  \ a concise narrative of the content of the resource.\n  - [`keyword`](/ukgov-metadata-exchange-model/keyword):\
-  \ uncontrolled words or phrases assigned to the resource to assist discovery and\
-  \ retrieval.\n  - TYPE: the business structure of the content of a resource, e.g.\
-  \ fact sheet, policy, report, guide, statistics.\n  Topic\n  - [`description`](/ukgov-metadata-exchange-model/description):\
-  \ a concise narrative of the content of the resource.\n  - [`keyword`](/ukgov-metadata-exchange-model/keyword):\
-  \ uncontrolled words or phrases assigned to the resource to assist discovery and\
-  \ retrieval.\n  - SPATIAL COVERAGE: the geographical area or spatial extent covered\
-  \ by the content of a resource.\n  - SUBJECT: a term taken from an external controlled\
-  \ vocabulary which generally describes a resource at a more specific level.\n  -\
-  \ TEMPORAL COVERAGE: the time frame covered by the content of the resource.\n  -\
-  \ TYPE: the business structure of the content of a resource, e.g. fact sheet, policy,\
-  \ report, guide, statistics.\nguidance:\n  Subject\n  A SUBJECT describes what a\
-  \ resource is \&quot;about\&quot;. For example:\n  - \&quot;Maps\&quot; is a subject value if a resource\
-  \ is about map-making, but not if it \&quot;is\&quot; a map;\n  - \&quot;Claims\&quot; is a subject\
-  \ value if a resource is about making claims, but not if it \&quot;is' a claim.\n  SUBJECT\
-  \ is a container element with two sub-elements. Metadata values are contained in\
-  \ the sub-elements.\n  Each SUBJECT element has two mandatory sub-elements:\n  -\
-  \ Subject vocabulary: The controlled vocabulary being used to describe the information\
-  \ resource. This will be chosen from a menu. If the controlled vocabulary you wish\
-  \ is not available, contact the Government Data Catalogue administrator team to\
-  \ discuss the possibility of adding the vocabulary.\n  - Subject term: The unique\
-  \ subject term chose from the controlled vocabulary identified in the subject vocabulary\
-  \ field.\n  Many resources will be \&quot;about\&quot; more than one topic, so more than one\
-  \ subject will often be assigned to provide multiple access points to a particular\
-  \ resource. Do not assign Subjects to which the resource is only peripherally related.\n\
-  \  Topic\n  TOPICS are chosen from a controlled vocabulary developed or adopted\
-  \ for the Government Data Catalogue. The intent of the vocabulary is to provide\
-  \ a limited list of broad terms that cover all the different subject matter of the\
-  \ information resources contained in the Government Data Catalogue.\n  A TOPIC describes\
-  \ what a resource is \&quot;about\&quot;. Assign at least one TOPIC to a resource, reflecting\
-  \ the most significant facet of its content. Many resources will be \&quot;about\&quot; more\
-  \ than one topic, so assign as many TOPICS as applicable to provide substantial\
-  \ value for finding resources about a topic. Do not assign TOPICS to which the resource\
-  \ is only peripherally related.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dcat:theme
-multivalued: true
-alias: theme
-domain_of:
-- DataResource
-range: uriorcurie
-recommended: true
-
-</code></pre>
-
-</details>
 
 
 

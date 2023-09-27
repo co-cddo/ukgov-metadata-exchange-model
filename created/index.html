@@ -417,13 +417,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -530,57 +523,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: created
-description: &quot;The date, or date and time, on which the content of an information resource\
-  \ is created or compiled. \n\n__When used on a metadata record__ The date and time\
-  \ on which an information resource is made available through the catalogue.\n&quot;
-comments:
-- &quot;purpose:\n  The use of `created` helps users assess the relevance of the content\
-  \ to their information needs, and allows users to distinguish between when the content\
-  \ of an information resource was created or compiled and when the resource was publicly\
-  \ released.\n  __When used for a catalogue record__\n  Use of `created` allows users\
-  \ to distinguish between the date a resource was published and the date it was included\
-  \ in the Government Data Catalogue. It also allows users to locate resources recently\
-  \ added to the Government Data Catalogue.\ndistinctFrom:\n  - [`created`](/ukgov-metadata-exchange-model/created/)\
-  \ applied to a catalogue record: the date the resource was first added to the Government\
-  \ Data Catalogue.\n  - [`issued`](/ukgov-metadata-exchange-model/issued/): the date\
-  \ the resource was originally published or otherwise made publicly available for\
-  \ the first time, which may have been prior to its inclusion in the catalogue.\n\
-  \  __When used for a catalogue record__\n  `created` applied to a data asset: the\
-  \ date the intellectual content of the resource was completed or compiled in the\
-  \ form in which it was approved for and eventually released.\n  [issued](/ukgov-metadata-exchange-model/issued):\
-  \ the date a resource was originally published or otherwise made publicly available\
-  \ for the first time. Date Issued and Date Added to Catalogue might be, but do not\
-  \ have to be, the same date.\n  [modified](/ukgov-metadata-exchange-model/modified):\
-  \ the date on which the content of a resource was changed, or when a new issue of\
-  \ a serial resource was added to the metadata record.\nguidance:\n  Systems tend\
-  \ to identify the “date created” of a resource as the date on which it is captured\
-  \ into a repository. The actual creation of a resource and its capture frequently\
-  \ do take place on the same date, but this is not always the case, for example:\n\
-  \  - Disseminating a resource sometime after its date created;\n  - Capturing metadata\
-  \ about a resource into a repository that does not contain the resources itself.\n\
-  \  `created` should reflect the date the intellectual content of the resource was\
-  \ completed or compiled in the form in which it was eventually released.\n  Be as\
-  \ specific as possible, including month and day as well as year, if known. \n  Some\
-  \ scenarios might be:\n  - A dataset compiled in April 2015 published on July 2015\
-  \ (`created` is `2015-04`);\n  - A report completed in September 2015 but publicly\
-  \ released in January 2016 (`created` is `2015-09`);\n  __When used for a catalogue\
-  \ record__\n  `created` will be the date the metadata record was first “published”\
-  \ within the Government Data Catalogue environment.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: dct:created
-alias: created
-domain_of:
-- DataResource
-range: date
-
-</code></pre>
-
-</details>
 
 
 

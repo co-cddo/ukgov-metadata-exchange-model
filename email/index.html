@@ -410,13 +410,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -478,32 +471,6 @@
 <ul>
 <li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
 </ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: email
-description: The e-mail address to be used to contact the organisational contact for
-  the resource as listed in the [contact name](/ukgov-metadata-exchange-model/contactName).
-comments:
-- &quot;purpose:\n  Use of contact e-mail, along with contact name, provides an avenue\
-  \ for users to provide feedback or request additional information about a resource\
-  \ to assist in determining its relevance and potential use, or in understanding\
-  \ and interpreting the content.\nguidance: \n  Use all lower case letters for the\
-  \ e-mail address.\n&quot;
-from_schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/
-rank: 1000
-slot_uri: vcard:hasEmail
-alias: email
-owner: ContactPoint
-domain_of:
-- ContactPoint
-range: string
-required: true
-pattern: ^\S+@[\S+\.]+\S+
-
-</code></pre>
-
-</details>
 
 
 
