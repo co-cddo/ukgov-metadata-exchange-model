@@ -10,7 +10,7 @@ theme:
     - content.tabs.link
   favicon: assets/favicons/favicon.ico
 plugins:
-  - search
+  - material/search
   - mermaid2
 markdown_extensions:
   - admonition
