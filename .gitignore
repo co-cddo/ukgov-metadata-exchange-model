@@ -2,3 +2,4 @@
 /project/
 /venv/
 .install.stamp
+/src/docs/extras/assets/examples/

@@ -1,0 +1,1 @@
+This directory is used by the `tech_docs_template` to serve assets on the live site
