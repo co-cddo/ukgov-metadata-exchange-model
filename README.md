@@ -39,7 +39,7 @@ Key directories and files are highlighted here:
 * [mkdocs.yml](mkdocs.yml) - MkDocs configuration file
 
 
-## Developer Documentation
+## Developer Documentation 
 
 To initialise your environment run
 ```shell
