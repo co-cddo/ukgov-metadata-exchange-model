@@ -35,6 +35,9 @@ imports:
 #   - skos
 #   - xsd
 
+## Classes are the resources on which properties are defined.
+## Classes are defined in alphabetical order
+## Where appropriate, slot overrides are specified in slot_usage
 classes:
   ContactPoint:
     class_uri: vcard:Kind
@@ -127,6 +130,9 @@ classes:
       - identifier
       - title
 
+## Slots are the properties that can be applied to a class
+## All slots are defined in this section in alphabetical order
+## See the repo README on how usage note are structured within the comments key
 slots:
   accessService:
     slot_uri: dcat:accessService
@@ -671,7 +677,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     required: true
     range: string
 
-## Definition of the values that can be used in the accessRights property
+## Definition of enumerations used in the range of some of the slots
 enums:
   AccessRightsValues:
     permissible_values:
