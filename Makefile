@@ -23,7 +23,7 @@ help:
 RUN = $(POETRY) run
 DEST = project
 DOCDIR = docs
-EXAMPLEDIR = examples
+EXAMPLEDIR = src/docs/extras/assets/examples
 
 all: clean gen-project test serve
 
@@ -55,7 +55,7 @@ gen-project:
 
 ContactPoint*.yaml:
 	echo "Processing ContactPoint examples"
-	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/ContactPoint*.yaml) ; do \
+	for file in $(wildcard $(EXAMPLEDIR)/ContactPoint*.yaml) ; do \
 		$(RUN) linkml-convert \
 			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
 			-o $${file}.json \
@@ -66,7 +66,7 @@ ContactPoint*.yaml:
 
 DataService*.yaml:
 	echo "Processing DataService examples"
-	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/DataService*.yaml) ; do \
+	for file in $(wildcard $(EXAMPLEDIR)/DataService*.yaml) ; do \
 		$(RUN) linkml-convert \
 			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
 			-o $${file}.json \
@@ -77,7 +77,7 @@ DataService*.yaml:
 
 Dataset*.yaml:
 	echo "Processing Dataset examples"
-	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/Dataset*.yaml) ; do \
+	for file in $(wildcard $(EXAMPLEDIR)/Dataset*.yaml) ; do \
 		$(RUN) linkml-convert \
 			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
 			-o $${file}.json \
@@ -88,7 +88,7 @@ Dataset*.yaml:
 
 Distribution*.yaml:
 	echo "Processing Dataset examples"
-	for file in $(wildcard $(DOCDIR)/$(EXAMPLEDIR)/Distribution*.yaml) ; do \
+	for file in $(wildcard $(EXAMPLEDIR)/Distribution*.yaml) ; do \
 		$(RUN) linkml-convert \
 			-s src/model/uk_cross_government_metadata_exchange_model.yaml \
 			-o $${file}.json \
@@ -156,15 +156,15 @@ test-invalid: src/model/uk_cross_government_metadata_exchange_model.yaml
 serve: mkd-serve
 
 $(DOCDIR):
-	mkdir -p $(DOCDIR)/$(EXAMPLEDIR)
-	cp src/data/README.md $(DOCDIR)/$(EXAMPLEDIR)
-	cp src/data/*/valid/* $(DOCDIR)/$(EXAMPLEDIR)
+	mkdir -p $(DOCDIR)
+	mkdir -p $(EXAMPLEDIR)
+	cp src/data/*/valid/* $(EXAMPLEDIR)
 
 gendoc: gen-examples
 	cp src/docs/*.md $(DOCDIR)
 	cp LICENSE.md $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR) \
-		--example-directory $(DOCDIR)/$(EXAMPLEDIR) \
+		--example-directory $(EXAMPLEDIR) \
 		--template-directory src/docs/templates \
 		src/model/uk_cross_government_metadata_exchange_model.yaml
 
@@ -186,6 +186,7 @@ docker-serve:
 clean:
 	-rm -r $(DEST)
 	-rm -r $(DOCDIR)
+	-rm -r $(EXAMPLEDIR)
 	-rm -r $(VENV)
 	find . -type d -name "__pycache__" | xargs rm -rf {};
 	rm -rf $(INSTALL_STAMP) .coverage .mypy_cache

@@ -3,12 +3,13 @@ site_name: "UK Cross-Government Metadata Exchange Model"
 docs_dir: docs
 theme:
   name: tech_docs_template
+  custom_dir: 'src/docs/extras/'
   # palette:
   #  scheme: slate
   #  primary: cyan
   features:
     - content.tabs.link
-  favicon: assets/favicons/favicon.ico
+  favicon: 'assets/favicons/favicon.ico'
 plugins:
   - search
   - mermaid2

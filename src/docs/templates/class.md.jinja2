@@ -93,7 +93,7 @@ URI: {{ gen.uri_link(element) }}
 {% if gen.example_object_blobs(element.name) -%}
 ## Examples
 {% for name, blob in gen.example_object_blobs(element.name) -%}
-- [{{name}}](examples/{{name}}.yaml.json)
+- [{{name}}](assets/examples/{{name}}.yaml.json)
 <!-- Commenting out code that displays example inline as a yaml block
 ### Example: {{name}}
 ```yaml
