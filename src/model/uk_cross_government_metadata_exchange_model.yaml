@@ -39,45 +39,11 @@ classes:
   ContactPoint:
     class_uri: vcard:Kind
     description: Contact information
-    attributes: 
-      contactName:
-        slot_uri: vcard:fn
-        aliases: Team name
-        description: The organisational contact to obtain further information or provide feedback about an information resource.
-        required: true 
-        range: string
-        comments: |
-          purpose:
-            Use of `contactName` provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use or in understanding and interpreting the content.
-          distinctFrom:
-            - contributor: a person or organisation responsible for making significant contributions to the content of the described resource.
-            - [creator](/ukgov-metadata-exchange-model/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
-            - issuing body: the department, agency, board or commission responsible for making the described resource publicly available.
-          guidance:
-            Contact information should be included for all new information resources that are added to the Government Data Catalogue. Generally, `contactName` will be a support or branch unit that will either respond to the user or refer the inquiry to a subject matter expert.
-            
-            Because the Government Data Catalogue may include historical resources for which there is no longer a suitable contact point, this element has not been made mandatory.
-            
-            When a `contactName` is provided for an information resource, it should be combined with a [`email`](/ukgov-metadata-exchange-model/email).
-      email:
-        slot_uri: vcard:hasEmail
-        description: The e-mail address to be used to contact the organisational contact for the resource as listed in the [contact name](/ukgov-metadata-exchange-model/contactName).
-        required: true
-        range: string
-        pattern: ^\S+@[\S+\.]+\S+
-        comments: |
-          purpose:
-            Use of contact e-mail, along with contact name, provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use, or in understanding and interpreting the content.
-          guidance: 
-            Use all lower case letters for the e-mail address.
-      telephone:
-        slot_uri: vcard:hasTelephone
-        description: Telephone number for the contact team
-        range: string
-      address:
-        slot_uri: vcard:hasAddress
-        description: Address for the contact team
-        range: string
+    slots:
+      - contactName
+      - email 
+      - telephone
+      - address      
 
   DataResource:
     abstract: true
@@ -174,6 +140,10 @@ slots:
     slot_uri: dct:accessRights
     description: A rights statement that concerns how the distribution is accessed.
     range: AccessRightsValues
+  address:
+    slot_uri: vcard:hasAddress
+    description: Address for the contact team
+    range: string
   alternativeTitle:
     slot_uri: dct:alternative
     description: An alternative name used as a substitute or additional access point for an information resource.
@@ -227,6 +197,25 @@ slots:
         - 546 kb
     todos:
       - Update guidance to state that values should be in bytes so that we have a consistent unit that can then be interpreted and presented as per user requirements
+  contactName:
+    slot_uri: vcard:fn
+    aliases: Team name
+    description: The organisational contact to obtain further information or provide feedback about an information resource.
+    required: true 
+    range: string
+    comments: |
+      purpose:
+        Use of `contactName` provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use or in understanding and interpreting the content.
+      distinctFrom:
+        - contributor: a person or organisation responsible for making significant contributions to the content of the described resource.
+        - [creator](/ukgov-metadata-exchange-model/creator): the business entity (department, agency, board, commission, etc.) primarily responsible for the creation of the content of the resource.
+        - issuing body: the department, agency, board or commission responsible for making the described resource publicly available.
+      guidance:
+        Contact information should be included for all new information resources that are added to the Government Data Catalogue. Generally, `contactName` will be a support or branch unit that will either respond to the user or refer the inquiry to a subject matter expert.
+        
+        Because the Government Data Catalogue may include historical resources for which there is no longer a suitable contact point, this element has not been made mandatory.
+        
+        When a `contactName` is provided for an information resource, it should be combined with a [`email`](/ukgov-metadata-exchange-model/email).
   contactPoint:
     slot_uri: dcat:contactPoint
     description: The e-mail address to be used to contact the organisational contact for the resource as listed in the Contact Name.
@@ -329,6 +318,17 @@ slots:
         `downloadURL` provides the access point to the electronic file being described.
       guidance:
         The `downloadURL` will be system-generated and will provide the access point for the item.
+  email:
+    slot_uri: vcard:hasEmail
+    description: The e-mail address to be used to contact the organisational contact for the resource as listed in the [contact name](/ukgov-metadata-exchange-model/contactName).
+    required: true
+    range: string
+    pattern: ^\S+@[\S+\.]+\S+
+    comments: |
+      purpose:
+        Use of contact e-mail, along with contact name, provides an avenue for users to provide feedback or request additional information about a resource to assist in determining its relevance and potential use, or in understanding and interpreting the content.
+      guidance: 
+        Use all lower case letters for the e-mail address.
   endpointDescription:
     slot_uri: dcat:endpointDescription
     description: A description of the services available via the end-points, including their operations, parameters etc.
@@ -561,6 +561,10 @@ Note that there could be a security risk in sharing the endpoint URL for interna
 
       Usage note: The intended use of this text is in a page containing multiple search results. If omitted, the first part of the description text will be used. This may be up to a certain character count or the detection of a paragraph break."
     recommended: true
+    range: string
+  telephone:
+    slot_uri: vcard:hasTelephone
+    description: Telephone number for the contact team
     range: string
   theme:
     slot_uri: dcat:theme
