@@ -198,6 +198,11 @@
     Mappings
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+    Examples
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -254,6 +259,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#mappings">
     Mappings
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+    Examples
   </a>
 </li>
 </ul>
@@ -415,6 +425,75 @@
 </tr>
 </tbody>
 </table>
+<h2 id="examples">Examples</h2>
+<ul>
+<li><a href="../assets/examples/Distribution-os-postcodes-csv-distribution.yaml.json">Distribution-os-postcodes-csv-distribution</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: Distribution-os-postcodes-csv-distribution
+
+<pre><code class="language-yaml"># Example CSV Distribution description
+# The example corresponds to the CSV distribution of the OS CodePoint data
+---
+identifier: https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&amp;format=CSV&amp;redirect
+type: dcat:Distribution
+title: Code-Point Open - CSV GB
+description: Free and open postcode location data. Can be used for geographical analysis simple route planning asset management and much more.
+licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+accessRights: OPEN
+issued: &quot;2023-02-01&quot;
+modified: &quot;2023-02-01&quot;
+accessService: 
+  - retirement-bereavement-care-address-lookup-location-service-v2.0.0
+byteSize: 14330000
+downloadURL: https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&amp;format=CSV&amp;redirect
+mediaType: text/csv
+</code></pre>
+
+-->
+<ul>
+<li><a href="../assets/examples/Distribution-os-postcodes-csv-distribution-minimal.yaml.json">Distribution-os-postcodes-csv-distribution-minimal</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: Distribution-os-postcodes-csv-distribution-minimal
+
+<pre><code class="language-yaml"># Example CSV Distribution description
+# The example corresponds to the CSV distribution of the OS CodePoint data
+---
+identifier: https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&amp;format=CSV&amp;redirect
+type: dcat:Distribution
+title: Code-Point Open - CSV GB
+licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+mediaType: text/csv
+</code></pre>
+
+-->
+<ul>
+<li><a href="../assets/examples/Distribution-os-postcodes-geopackage-distribution.yaml.json">Distribution-os-postcodes-geopackage-distribution</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: Distribution-os-postcodes-geopackage-distribution
+
+<pre><code class="language-yaml"># Example CSV Distribution description
+# The example corresponds to the Geopackage distribution of the OS CodePoint data
+---
+identifier: https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&amp;format=GeoPackage&amp;redirect
+type: dcat:Distribution
+title: Code-Point® Open - GeoPackage GB
+description: Free and open postcode location data. Can be used for geographical analysis, simple route planning, asset management and much more.
+licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+#version: 2023-02
+accessRights: OPEN
+issued: &quot;2023-02-01&quot;
+modified: &quot;2023-02-01&quot;
+accessService: 
+  - retirement-bereavement-care-address-lookup-location-service-v2.0.0
+byteSize: 55410000
+downloadURL: https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&amp;format=CSV&amp;redirect
+mediaType: application/geopackage+sqlite3
+</code></pre>
+
+-->
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>

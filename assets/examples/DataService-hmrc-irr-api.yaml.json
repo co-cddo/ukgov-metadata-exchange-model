@@ -1,0 +1,25 @@
+{
+  "identifier": "interest-restriction-return",
+  "accessRights": "INTERNAL",
+  "contactPoint": {
+    "contactName": "Software Development Support Team (SDST)",
+    "email": "sdsteam@hmrc.gov.uk",
+    "address": "https://developer.service.hmrc.gov.uk/developer/support"
+  },
+  "creator": [
+    "hm-revenue-customs"
+  ],
+  "description": "## Overview\n\nThe API in its current state supports the following functions:\n\n- Revoke an existing Reporting Company from submitting Interest Restriction Returns\n- Appoint a new Reporting Company for submitting Interest Restriction Returns\n- Submit an Interest Restriction Return (full)\n- Submit an Interest Restriction Return (abbreviated)\n\nThis API uses User Restricted Endpoints. Please find further details on the [Authorisation](https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation) page.\n\nFor more information about how to develop your own client applications, including example clients for this API, see [Tutorials](https://developer.service.hmrc.gov.uk/api-documentation/docs/tutorials).\n\n## Errors\n\nWe use standard HTTP status codes to show whether an API request succeeded or not. They are usually in the range:\n\n- 200 to 299 if it succeeded, including code 202 if it was accepted by an API that needs to wait for further action\n- 400 to 499 if it failed because of a client error by your application\n- 500 to 599 if it failed because of an error on our server\n\nErrors specific to each API are shown in the Endpoints section, under Response. See our [reference guide](https://developer.service.hmrc.gov.uk/api-documentation/docs/reference-guide#errors) for more on errors.\n\n## Testing\n\nYou can use the [HMRC Developer Sandbox](https://developer.service.hmrc.gov.uk/api-documentation/docs/testing) to test the API. The Sandbox is an enhanced testing service that functions as a simulator of HMRC’s production environment.\n\n## Versioning\n\nWhen an API changes in a way that is backwards-incompatible, we increase the version number of the API. See our [reference guide](/api-documentation/docs/reference-guide#versioning) for more on versioning.",
+  "licence": "https://www.apache.org/licenses/LICENSE-2.0",
+  "modified": "2023-08-03",
+  "publisher": "hm-revenue-customs",
+  "securityClassification": "OFFICIAL",
+  "title": "Interest Restriction Return (IRR) API",
+  "type": "dcat:DataService",
+  "version": "v1.0 (Beta)",
+  "endpointDescription": "https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/interest-restriction-return/1.0/oas/page",
+  "serviceStatus": "BETA",
+  "serviceType": "REST",
+  "endpointURL": "https://api.service.hmrc.gov.uk/",
+  "@type": "DataService"
+}

@@ -1,0 +1,42 @@
+{
+  "identifier": "https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir",
+  "accessRights": "INTERNAL",
+  "contactPoint": {
+    "contactName": "nrlnems.ls@nhs.net",
+    "email": "nrlnems.ls@nhs.net"
+  },
+  "creator": [
+    "nhs-digital"
+  ],
+  "description": "Publish or receive messages about changes to a patient's vaccination details.",
+  "licence": "https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir#who-can-use-this",
+  "modified": "2022-10-24",
+  "publisher": "nhs-digital",
+  "securityClassification": "NOT_APPLICABLE",
+  "title": "Vaccination Events - FHIR",
+  "type": "dcat:DataService",
+  "version": "live",
+  "keyword": [
+    "Community of care",
+    "Vaccination",
+    "Community health",
+    "Hospital",
+    "Inpatient",
+    "Outpatient",
+    "GP / Primary Care",
+    "Publish/Subscribe Events",
+    "Internet Facing",
+    "FHIR",
+    "STU3",
+    "MESH",
+    "NEMS"
+  ],
+  "theme": [
+    "http://eurovoc.europa.eu/c_af502da0",
+    "http://eurovoc.europa.eu/4636"
+  ],
+  "endpointDescription": "https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir",
+  "serviceStatus": "LIVE",
+  "serviceType": "EVENT",
+  "@type": "DataService"
+}

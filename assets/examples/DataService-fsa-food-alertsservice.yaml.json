@@ -1,0 +1,38 @@
+{
+  "identifier": "https://data.food.gov.uk/food-alerts/",
+  "accessRights": "OPEN",
+  "contactPoint": {
+    "contactName": "Data Team",
+    "email": "data@food.gov.uk"
+  },
+  "creator": [
+    "food-standards-agency"
+  ],
+  "description": "The FSA Food Alerts API provides access to current and recent Food Alerts: Allergy Alerts (AA), Product Recall Information Notices (PRIN) and Food Alerts for Action (FAFA). It provides applications with the facility to list alerts matching some filter criterion, and to retrieve a description of an alert.",
+  "licence": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "modified": "2018-01-30",
+  "publisher": "food-standards-agency",
+  "securityClassification": "OFFICIAL",
+  "title": "FSA Food Alerts",
+  "type": "dcat:DataService",
+  "version": "0.1",
+  "issued": "2018-01-01",
+  "keyword": [
+    "Alert",
+    "Allergy",
+    "Product Recall",
+    "PRIN",
+    "Food",
+    "FAFA"
+  ],
+  "theme": [
+    "http://eurovoc.europa.eu/c_af502da0",
+    "http://eurovoc.europa.eu/6569",
+    "http://eurovoc.europa.eu/5431"
+  ],
+  "endpointDescription": "http://data.food.gov.uk/food-alerts/ui/reference",
+  "serviceStatus": "BETA",
+  "serviceType": "EVENT",
+  "endpointURL": "http://data.food.gov.uk/food-alerts/",
+  "@type": "DataService"
+}
