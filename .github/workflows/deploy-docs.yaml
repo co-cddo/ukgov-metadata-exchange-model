@@ -31,6 +31,8 @@ jobs:
       - name: Build documentation.
         run: |
           mkdir -p docs
+          mkdir -p src/docs/extras/assets/examples
+          cp src/data/*/valid/* src/docs/extras/assets/examples
           touch docs/.nojekyll
           make gendoc
           make mkd-build
