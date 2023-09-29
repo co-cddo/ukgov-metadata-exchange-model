@@ -1,21 +1,24 @@
 FROM python:3.10
+
 # Install make
 RUN apt update && apt install -y make
 
-# Copy configuration files
-COPY ./pyproject.toml ./mkdocs.yml /
-
-# Copy license file
-COPY ./LICENSE.md ./src/docs/ /docs/
-
-##TODO: Copy across examples and convert to JSON
-## Examples won't show until the above is done!
-# Copy source files for model
-COPY ./ /app
-WORKDIR /app
+# Install poetry
 RUN pip install poetry
+
+# Copy all files to app
+COPY ./ /app
+
+# set working directory
+WORKDIR /app
+
+# Setup environment
 RUN make install
 RUN make update
+
+# make docs
 RUN make doc-setup
+
+# serve docs
 EXPOSE 8080
 CMD make serve
