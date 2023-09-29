@@ -34,6 +34,9 @@ jobs:
           touch docs/.nojekyll
           make gendoc
           make mkd-build
+          ls site
+          ls site/assets
+          ls site/assets/examples
 
       - name: Deploy documentation to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@v4.4.1
