@@ -35,13 +35,4 @@ jobs:
           cp src/data/*/valid/* src/docs/extras/assets/examples
           touch docs/.nojekyll
           make gendoc
-          make mkd-build
-          ls site/assets
-          ls site/assets/examples
-
-      - name: Deploy documentation to gh-pages branch
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
-        with:
-          BRANCH: gh-pages # The branch the action should deploy to.
-          COMMIT-MESSAGE: 'Update documentation'
-          FOLDER: site # The folder the action should deploy.
+          make mkd-gh-deploy
