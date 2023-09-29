@@ -1,6 +1,6 @@
 ## Government Organisations Enumeration
 
-The information about government organisations was extracted from https://www.gov.uk/api/organisations ([docs](https://docs.publishing.service.gov.uk/repos/collections/api.html) on 3 May 2023.
+The information about government organisations was extracted from https://www.gov.uk/api/organisations ([docs](https://docs.publishing.service.gov.uk/repos/collections/api.html)) on 3 May 2023.
 
 For each organisation, the following values were extracted:
 - slug: used as the id for the enumeration item
@@ -11,7 +11,7 @@ For each organisation, the following values were extracted:
 - govuk_status: used for status property
 - content_id: used for contentID property
 
-The extraction was conducted using [OpenRefine](https://openrefine.org/), a data wrangling tool. The following operations were applied
+The extraction was performed using [OpenRefine](https://openrefine.org/), a data wrangling tool. The following operations were applied
 ```json
 [
   {
