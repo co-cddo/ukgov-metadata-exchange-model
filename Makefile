@@ -14,6 +14,7 @@ help:
 	@echo "  clean        remove all temporary files"
 	@echo "  gen-project  generate model constraints in different representations"
 	@echo "  test         run all the tests"
+	@echo "  doc-setup    create folders required for documentation site and copy across content"
 	@echo "  serve        run the documentation locally; need to use ctrl-c to close the documentation server down"
 	@echo "  docker-serve build and run the documentation in a Docker container"
 	@echo "  all          run clean, gen-project, test, and serve"
@@ -97,7 +98,7 @@ Distribution*.yaml:
 			$${file} ; \
 	done
 
-gen-examples: $(DOCDIR) ContactPoint*.yaml DataService*.yaml Dataset*.yaml Distribution*.yaml
+gen-examples: doc-setup ContactPoint*.yaml DataService*.yaml Dataset*.yaml Distribution*.yaml
 
 # TODO: Extend tests to lint schema to ensure elements are correctly described, see https://linkml.io/linkml/schemas/linter.html
 
@@ -155,7 +156,7 @@ test-invalid: src/model/uk_cross_government_metadata_exchange_model.yaml
 # serve will be passed as an argument to mkdocs
 serve: mkd-serve
 
-$(DOCDIR):
+doc-setup:
 	mkdir -p $(DOCDIR)
 	mkdir -p $(EXAMPLEDIR)
 	cp src/data/*/valid/* $(EXAMPLEDIR)

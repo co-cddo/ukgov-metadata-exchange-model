@@ -1,5 +1,5 @@
 ---
-name: Auto-deployment of uk_cross_government_metadata_exchange_model Documentation
+name: Build and deploy docs site
 on:
   push:
     branches: 
@@ -30,7 +30,7 @@ jobs:
 
       - name: Build documentation.
         run: |
-          mkdir -p docs
+          make doc-setup
           touch docs/.nojekyll
           make gendoc
           make mkd-gh-deploy
