@@ -34,7 +34,6 @@ jobs:
           touch docs/.nojekyll
           make gendoc
           make mkd-build
-          ls site
           ls site/assets
           ls site/assets/examples
 
