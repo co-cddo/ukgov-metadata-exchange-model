@@ -70,3 +70,16 @@ To discover what other targets are available run
 ```shell
 make help
 ```
+
+### Dependabot updates
+
+**Do not blindly accept these pull requests!**
+
+The following process should be followed to ensure that everything is working as expected.
+
+1. Switch to the pull request branch
+2. Run `make clean`
+3. Review the pull request details to see if the updated library is one that is listed in [`pyproject.toml`](pyproject.toml). If it is then update the file.
+4. Run `make update`. This will change the [`poetry.lock`](poetry.lock) file
+5. Run `make test serve` and inspect the generated site
+6. If everything has built correctly then commit your changes and accept the pull request
