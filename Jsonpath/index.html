@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://co-cddo.github.io/ukgov-metadata-exchange-model/Float/">
+        <link rel="canonical" href="https://co-cddo.github.io/ukgov-metadata-exchange-model/Jsonpath/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Float - UK Cross-Government Metadata Exchange Model</title>
+        <title>Jsonpath - UK Cross-Government Metadata Exchange Model</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#type-float" class="md-skip">
+        <a href="#type-jsonpath" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Float
+              Jsonpath
             
           </span>
         </div>
@@ -437,15 +437,18 @@
 <!-- This file should be periodically checked against the original source -->
 <!-- Last check 25 August 2023 -->
 
-<h1 id="type-float">Type: Float</h1>
-<p><em>A real number that conforms to the xsd:float specification</em></p>
-<p>URI: <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a></p>
+<h1 id="type-jsonpath">Type: Jsonpath</h1>
+<p><em>A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.</em></p>
+<p>URI: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p>
 <ul>
 <li>
-<p><a href="https://w3id.org/linkml/base">base</a>: float</p>
+<p><a href="https://w3id.org/linkml/base">base</a>: str</p>
 </li>
 <li>
-<p><a href="https://w3id.org/linkml/uri">uri</a>: xsd:float</p>
+<p><a href="https://w3id.org/linkml/uri">uri</a>: xsd:string</p>
+</li>
+<li>
+<p><a href="https://w3id.org/linkml/repr">repr</a>: str</p>
 </li>
 </ul>
 <!-- Jinja2 template based on https://github.com/linkml/linkml/blob/main/linkml/generators/docgen/common_metadata.md.jinja2 -->
