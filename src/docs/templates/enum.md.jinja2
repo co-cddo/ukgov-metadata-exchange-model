@@ -19,7 +19,7 @@ URI: {{ gen.uri_link(element) }}
 | Value | Meaning | Description |
 | --- | --- | --- |
 {% for pv in element.permissible_values.values() -%}
-| {{pv.text}} | {{pv.meaning}} | {{pv.description|enshorten}} |
+| {{pv.text}} | {{pv.meaning}} | {{pv.description}} |
 {% endfor %}
 {% else %}
 _This is a dynamic enum_
