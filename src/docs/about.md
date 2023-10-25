@@ -27,3 +27,14 @@ A __Dataset__ in DCAT is defined as a _"collection of data, published or curated
 A __Data Service__ in DCAT is defined as a _"collection of operations that provides access to one or more datasets or data processing functions."_
 
 A __Distribution__ in DCAT is defined as a _"specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)."_
+
+## Governance
+
+### Metadata Implementation Working Group
+
+The Cross-Government Metadata Exchange Model has been discussed and agreed by the Cross-Government Metadata Implementation Working Group. The working group is coordinated by the [Central Digital and Data Office](https://www.gov.uk/government/organisations/central-digital-and-data-office), and consists of representatives from Government organisations.
+
+The goals of the Metadata Implementation Working Group are
+- To guide the implementation of the Cross-Government Metadata Approach and adoption of the underlying metadata standards via the Metadata Requirements Specification (MRS),
+- To ensure that core/essential metadata is described consistently and available to potential users of data assets within the Government Data Catalogue,
+- To collaborate in developing guidance and share lessons from implementing data catalogues in conformance with Metadata Management best practice.
