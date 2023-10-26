@@ -72,13 +72,6 @@ classes:
       - type
       - theme
       - version
-    slot_usage:
-      accessRights:
-        required: true
-      description:
-        required: true
-      modified:
-        required: true
 
   DataService:
     is_a: DataResource
@@ -119,6 +112,10 @@ classes:
       - title
       - type
     slot_usage:
+      accessRights: 
+        required: false
+      description:
+        required: false
       modified:
         recommended: true
 
@@ -145,6 +142,7 @@ slots:
   accessRights:
     slot_uri: dct:accessRights
     description: A rights statement that concerns how the distribution is accessed.
+    required: true
     range: AccessRightsValues
   address:
     slot_uri: vcard:hasAddress
@@ -291,6 +289,7 @@ slots:
     description: |
       A concise narrative of the content of an information resource.
       A free-text account of the distribution.
+    required: true
     range: string
     comments: |
       purpose:
@@ -450,6 +449,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
   modified:
     slot_uri: dct:modified
     description: The date, or date and time, on which the content of an information resource is changed.
+    required: true
     range: date
     comments: |
       purpose:
@@ -563,11 +563,19 @@ Note that there could be a security risk in sharing the endpoint URL for interna
   summary:
     slot_uri: rdfs:comment
     description: |
-      "A short textual summary of the resource with a maximum length of 250 characters. 
-
-      Usage note: The intended use of this text is in a page containing multiple search results. If omitted, the first part of the description text will be used. This may be up to a certain character count or the detection of a paragraph break."
+      A short textual summary of the resource with a maximum length of 250 characters. 
     recommended: true
     range: string
+    pattern: ^.{1,250}$
+    comments: |
+      purpose:
+        The intended use of this text is in a page containing multiple search results where a short one sentence or so summary is needed. 
+        
+        If omitted, the first part of the description text will be used. This may be up to a certain character count or the detection of a paragraph break, it is up to the application to decide.
+      distinctFrom:
+        - [`description`](/ukgov-metadata-exchange-model/description): to capture a full overview of the data asset
+      guidance:
+        The `summary` will be used where a short text overview of the data asset is required, e.g. in a page of search results. It should provide an idea of what the data asset provides but not give full details. Conciseness is key. 
   telephone:
     slot_uri: vcard:hasTelephone
     description: Telephone number for the contact team
