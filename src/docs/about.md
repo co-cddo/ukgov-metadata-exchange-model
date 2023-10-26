@@ -30,11 +30,5 @@ A __Distribution__ in DCAT is defined as a _"specific representation of a datase
 
 ## Governance
 
-### Metadata Implementation Working Group
+The Cross-Government Metadata Exchange Model has been developed and agreed by the [Cross-Government Metadata Implementation Working Group](miwg.md). The working group is coordinated by the [Central Digital and Data Office](https://www.gov.uk/government/organisations/central-digital-and-data-office), and consists of data professionals in Government Digital and Data functions from across central and local government, devolved administrations, and the wider public sector. The outputs of the working group are reported through the Data Quality Hub and Data Standards Authority Peer Review Group as well as the Data Standards Authority Steering Board.
 
-The Cross-Government Metadata Exchange Model has been discussed and agreed by the Cross-Government Metadata Implementation Working Group. The working group is coordinated by the [Central Digital and Data Office](https://www.gov.uk/government/organisations/central-digital-and-data-office), and consists of representatives from Government organisations.
-
-The goals of the Metadata Implementation Working Group are
-- To guide the implementation of the Cross-Government Metadata Approach and adoption of the underlying metadata standards via the Metadata Requirements Specification (MRS),
-- To ensure that core/essential metadata is described consistently and available to potential users of data assets within the Government Data Catalogue,
-- To collaborate in developing guidance and share lessons from implementing data catalogues in conformance with Metadata Management best practice.
