@@ -32,7 +32,7 @@ A __Distribution__ in DCAT is defined as a _"specific representation of a datase
 
 The Cross-Government Metadata Exchange Model has been developed and agreed by the [Cross-Government Metadata Implementation Working Group](miwg.md). The working group is coordinated by the [Central Digital and Data Office](https://www.gov.uk/government/organisations/central-digital-and-data-office), and consists of data professionals in Government Digital and Data functions from across central and local government, devolved administrations, and the wider public sector. The outputs of the working group are reported through the Data Quality Hub and Data Standards Authority Peer Review Group as well as the Data Standards Authority Steering Board.
 
-### Development
+## Development
 
 These pages are hosted on GitHub. The pages are generated using the [LinkML](https://linkml.io/) framework and the code is managed on [GitHub](https://github.com/co-cddo/ukgov-metadata-exchange-model/). For full details see the [README file](https://github.com/co-cddo/ukgov-metadata-exchange-model#readme).
 
