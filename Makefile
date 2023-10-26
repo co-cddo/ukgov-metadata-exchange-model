@@ -179,7 +179,7 @@ mkd-%: gendoc
 # Needed as macOS does not support multiple entities with the same name but different cases
 docker-serve:
 	docker build -t model-docs .   
-	docker run -p 8080:8080 model-docs
+	docker run --name ukgov-metadata-docs -p 8080:8080 model-docs
 ###########################################################
 # CLEANUP
 ###########################################################
