@@ -12,6 +12,7 @@
 
 ## Goal
 To ensure metadata within the Government Data Marketplace is sufficient to:
+
 - FIND: enable discovery of the data asset, 
 - USE: facilitate an informed decision by the customer as to whether a data asset is fit for purpose and meets their business need, and
 - ACCESS: enable access to the data by ensuring the request is channelled to the right team(s) and by describing the access requirements and restrictions of the data source.
@@ -36,10 +37,12 @@ Through sharing experience, the Working Group aims to enhance the metadata produ
 
 ## Preparation for initial and subsequent meeting sessions
 Members’ are asked to:
+
 - share their experiences of using DCAT, which elements of the specification they may have already adopted, and any areas that are more challenging to implement.
 - complete in advance of the first meeting a short summary of their position on the above to facilitate this discussion. 
 
 In parallel:
+
 - Members will also be given regular updates on progress of the Government Data Marketplace development.
 
 ## Governance
