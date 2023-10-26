@@ -679,6 +679,13 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     description: The version indicator (name or identifier) of a resource.
     required: true
     range: string
+    comments: |
+      purpose:
+        Documenting the version number associated with the data asset.
+      guidance:
+        The value of this field should follow the versioning scheme for the data asset. This could use semantic version or some date based approach.
+
+        If a versioning scheme has not been chosen, or this is the first or only version, put `v1.0` or the date of release in the format `yyyy-mm-dd`.
 
 ## Definition of enumerations used in the range of some of the slots
 enums:
