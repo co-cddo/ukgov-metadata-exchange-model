@@ -530,7 +530,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/co-cddo/ukgov-metadata-exchange-model/</li>
+<li>from schema: https://github.com/co-cddo/ukgov-metadata-exchange-model/blob/main/src/model/uk_cross_government_metadata_exchange_model.yaml</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -552,6 +552,197 @@
 </tbody>
 </table>
 <h2 id="examples">Examples</h2>
+<ul>
+<li><a href="../assets/examples/DataService-nhs-os-places-api.yaml.json">DataService-nhs-os-places-api</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: DataService-nhs-os-places-api
+
+<pre><code class="language-yaml">## NHS Ordnance Survey Places API
+---
+identifier: https://digital.nhs.uk/developer/api-catalogue/ordnance-survey-places-api
+type: dcat:DataService
+serviceType: REST
+title: Ordnance Survey Places API
+description: Identify UK addresses with the OS Places API.
+keyword:
+  - Demographics
+  - Reference Data
+  - API
+  - Central
+  - Internet Facing
+  - REST
+  - Ordnance Survey
+theme: 
+  - http://eurovoc.europa.eu/3460
+licence: https://osdatahub.os.uk/legal/apiTermsConditions
+serviceStatus: LIVE
+securityClassification: NOT_APPLICABLE
+accessRights: OPEN
+version: v1
+contactPoint: 
+  contactName: Support Team
+  email: osdatahubenquiries@os.uk
+modified: &quot;2023-01-20&quot;
+creator: 
+  - ordnance-survey
+publisher: nhs-digital
+endpointURL: https://api.os.uk/search/places/v1/
+endpointDescription: https://osdatahub.os.uk/docs/places/overview
+</code></pre>
+
+-->
+<ul>
+<li><a href="../assets/examples/DataService-hmrc-irr-api.yaml.json">DataService-hmrc-irr-api</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: DataService-hmrc-irr-api
+
+<pre><code class="language-yaml"># Example DataService metadata record
+# The example corresponds to the Interest Restriction Return (IRR) API provided by DWP
+# Values taken from https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/interest-restriction-return/1.0 on 15 August 2023
+---
+identifier: interest-restriction-return
+type: dcat:DataService
+title: Interest Restriction Return (IRR) API
+accessRights: INTERNAL
+contactPoint:
+    contactName: Software Development Support Team (SDST)
+    email: sdsteam@hmrc.gov.uk
+    address: https://developer.service.hmrc.gov.uk/developer/support
+description: |-
+  ## Overview
+
+  The API in its current state supports the following functions:
+
+  - Revoke an existing Reporting Company from submitting Interest Restriction Returns
+  - Appoint a new Reporting Company for submitting Interest Restriction Returns
+  - Submit an Interest Restriction Return (full)
+  - Submit an Interest Restriction Return (abbreviated)
+
+  This API uses User Restricted Endpoints. Please find further details on the [Authorisation](https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation) page.
+
+  For more information about how to develop your own client applications, including example clients for this API, see [Tutorials](https://developer.service.hmrc.gov.uk/api-documentation/docs/tutorials).
+
+  ## Errors
+
+  We use standard HTTP status codes to show whether an API request succeeded or not. They are usually in the range:
+
+  - 200 to 299 if it succeeded, including code 202 if it was accepted by an API that needs to wait for further action
+  - 400 to 499 if it failed because of a client error by your application
+  - 500 to 599 if it failed because of an error on our server
+
+  Errors specific to each API are shown in the Endpoints section, under Response. See our [reference guide](https://developer.service.hmrc.gov.uk/api-documentation/docs/reference-guide#errors) for more on errors.
+
+  ## Testing
+
+  You can use the [HMRC Developer Sandbox](https://developer.service.hmrc.gov.uk/api-documentation/docs/testing) to test the API. The Sandbox is an enhanced testing service that functions as a simulator of HMRC’s production environment.
+
+  ## Versioning
+
+  When an API changes in a way that is backwards-incompatible, we increase the version number of the API. See our [reference guide](/api-documentation/docs/reference-guide#versioning) for more on versioning.
+version: v1.0 (Beta)
+securityClassification: OFFICIAL
+creator: 
+  - hm-revenue-customs
+licence: https://www.apache.org/licenses/LICENSE-2.0
+modified: &quot;2023-08-03&quot;
+publisher: hm-revenue-customs
+endpointDescription: https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/interest-restriction-return/1.0/oas/page
+endpointURL: https://api.service.hmrc.gov.uk/
+serviceStatus: BETA
+serviceType: REST
+</code></pre>
+
+-->
+<ul>
+<li><a href="../assets/examples/DataService-fsa-food-alertsservice.yaml.json">DataService-fsa-food-alertsservice</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: DataService-fsa-food-alertsservice
+
+<pre><code class="language-yaml">## FSA Food Alerts Service
+---
+identifier: https://data.food.gov.uk/food-alerts/
+type: dcat:DataService
+serviceType: EVENT
+title: FSA Food Alerts
+description: &quot;The FSA Food Alerts API provides access to current and recent Food Alerts: Allergy Alerts (AA), Product Recall Information Notices (PRIN) and Food Alerts for Action (FAFA). It provides applications with the facility to list alerts matching some filter criterion, and to retrieve a description of an alert.&quot;
+keyword: 
+  - Alert
+  - Allergy
+  - Product Recall
+  - PRIN
+  - Food
+  - FAFA
+theme: 
+  - http://eurovoc.europa.eu/c_af502da0
+  - http://eurovoc.europa.eu/6569
+  - http://eurovoc.europa.eu/5431
+licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+serviceStatus: BETA
+version: &quot;0.1&quot;
+accessRights: OPEN
+securityClassification: OFFICIAL
+issued: &quot;2018-01-01&quot;
+contactPoint:
+    contactName: Data Team
+    email: data@food.gov.uk
+modified: &quot;2018-01-30&quot;
+creator: 
+  - food-standards-agency
+publisher: food-standards-agency
+endpointURL: http://data.food.gov.uk/food-alerts/
+endpointDescription: http://data.food.gov.uk/food-alerts/ui/reference
+</code></pre>
+
+-->
+<ul>
+<li><a href="../assets/examples/DataService-nhs-vaccination-events.yaml.json">DataService-nhs-vaccination-events</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: DataService-nhs-vaccination-events
+
+<pre><code class="language-yaml">## NHS Vaccination Events
+---
+identifier: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir
+type: dcat:DataService
+serviceType: EVENT
+title: Vaccination Events - FHIR
+description: Publish or receive messages about changes to a patient's vaccination details.
+keyword: 
+  - Community of care
+  - Vaccination
+  - Community health
+  - Hospital
+  - Inpatient
+  - Outpatient
+  - GP / Primary Care
+  - Publish/Subscribe Events
+  - Internet Facing
+  - FHIR
+  - STU3
+  - MESH
+  - NEMS
+theme: 
+  - http://eurovoc.europa.eu/c_af502da0
+  - http://eurovoc.europa.eu/4636
+serviceStatus: LIVE
+accessRights: INTERNAL
+securityClassification: NOT_APPLICABLE
+licence: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir#who-can-use-this
+contactPoint: 
+  contactName: nrlnems.ls@nhs.net
+  email: nrlnems.ls@nhs.net
+modified: &quot;2022-10-24&quot;
+creator: 
+  - nhs-digital
+publisher: nhs-digital
+version: live
+endpointDescription: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir
+</code></pre>
+
+-->
 <ul>
 <li><a href="../assets/examples/DataService-dwp-address-lookup.yaml.json">DataService-dwp-address-lookup</a></li>
 </ul>
@@ -624,197 +815,6 @@ servesData:
   - https://www.data.gov.uk/dataset/03d48dba-529b-4bd5-93a5-6d41d1b20ff9/national-address-gazetteer
   - https://www.data.gov.uk/dataset/92b32629-8ad4-43cb-9952-7d104971fa12/one-scotland-gazetteer
 serviceStatus: LIVE
-serviceType: REST
-</code></pre>
-
--->
-<ul>
-<li><a href="../assets/examples/DataService-fsa-food-alertsservice.yaml.json">DataService-fsa-food-alertsservice</a></li>
-</ul>
-<!-- Commenting out code that displays example inline as a yaml block
-### Example: DataService-fsa-food-alertsservice
-
-<pre><code class="language-yaml">## FSA Food Alerts Service
----
-identifier: https://data.food.gov.uk/food-alerts/
-type: dcat:DataService
-serviceType: EVENT
-title: FSA Food Alerts
-description: &quot;The FSA Food Alerts API provides access to current and recent Food Alerts: Allergy Alerts (AA), Product Recall Information Notices (PRIN) and Food Alerts for Action (FAFA). It provides applications with the facility to list alerts matching some filter criterion, and to retrieve a description of an alert.&quot;
-keyword: 
-  - Alert
-  - Allergy
-  - Product Recall
-  - PRIN
-  - Food
-  - FAFA
-theme: 
-  - http://eurovoc.europa.eu/c_af502da0
-  - http://eurovoc.europa.eu/6569
-  - http://eurovoc.europa.eu/5431
-licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
-serviceStatus: BETA
-version: &quot;0.1&quot;
-accessRights: OPEN
-securityClassification: OFFICIAL
-issued: &quot;2018-01-01&quot;
-contactPoint:
-    contactName: Data Team
-    email: data@food.gov.uk
-modified: &quot;2018-01-30&quot;
-creator: 
-  - food-standards-agency
-publisher: food-standards-agency
-endpointURL: http://data.food.gov.uk/food-alerts/
-endpointDescription: http://data.food.gov.uk/food-alerts/ui/reference
-</code></pre>
-
--->
-<ul>
-<li><a href="../assets/examples/DataService-nhs-os-places-api.yaml.json">DataService-nhs-os-places-api</a></li>
-</ul>
-<!-- Commenting out code that displays example inline as a yaml block
-### Example: DataService-nhs-os-places-api
-
-<pre><code class="language-yaml">## NHS Ordnance Survey Places API
----
-identifier: https://digital.nhs.uk/developer/api-catalogue/ordnance-survey-places-api
-type: dcat:DataService
-serviceType: REST
-title: Ordnance Survey Places API
-description: Identify UK addresses with the OS Places API.
-keyword:
-  - Demographics
-  - Reference Data
-  - API
-  - Central
-  - Internet Facing
-  - REST
-  - Ordnance Survey
-theme: 
-  - http://eurovoc.europa.eu/3460
-licence: https://osdatahub.os.uk/legal/apiTermsConditions
-serviceStatus: LIVE
-securityClassification: NOT_APPLICABLE
-accessRights: OPEN
-version: v1
-contactPoint: 
-  contactName: Support Team
-  email: osdatahubenquiries@os.uk
-modified: &quot;2023-01-20&quot;
-creator: 
-  - ordnance-survey
-publisher: nhs-digital
-endpointURL: https://api.os.uk/search/places/v1/
-endpointDescription: https://osdatahub.os.uk/docs/places/overview
-</code></pre>
-
--->
-<ul>
-<li><a href="../assets/examples/DataService-nhs-vaccination-events.yaml.json">DataService-nhs-vaccination-events</a></li>
-</ul>
-<!-- Commenting out code that displays example inline as a yaml block
-### Example: DataService-nhs-vaccination-events
-
-<pre><code class="language-yaml">## NHS Vaccination Events
----
-identifier: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir
-type: dcat:DataService
-serviceType: EVENT
-title: Vaccination Events - FHIR
-description: Publish or receive messages about changes to a patient's vaccination details.
-keyword: 
-  - Community of care
-  - Vaccination
-  - Community health
-  - Hospital
-  - Inpatient
-  - Outpatient
-  - GP / Primary Care
-  - Publish/Subscribe Events
-  - Internet Facing
-  - FHIR
-  - STU3
-  - MESH
-  - NEMS
-theme: 
-  - http://eurovoc.europa.eu/c_af502da0
-  - http://eurovoc.europa.eu/4636
-serviceStatus: LIVE
-accessRights: INTERNAL
-securityClassification: NOT_APPLICABLE
-licence: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir#who-can-use-this
-contactPoint: 
-  contactName: nrlnems.ls@nhs.net
-  email: nrlnems.ls@nhs.net
-modified: &quot;2022-10-24&quot;
-creator: 
-  - nhs-digital
-publisher: nhs-digital
-version: live
-endpointDescription: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir
-</code></pre>
-
--->
-<ul>
-<li><a href="../assets/examples/DataService-hmrc-irr-api.yaml.json">DataService-hmrc-irr-api</a></li>
-</ul>
-<!-- Commenting out code that displays example inline as a yaml block
-### Example: DataService-hmrc-irr-api
-
-<pre><code class="language-yaml"># Example DataService metadata record
-# The example corresponds to the Interest Restriction Return (IRR) API provided by DWP
-# Values taken from https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/interest-restriction-return/1.0 on 15 August 2023
----
-identifier: interest-restriction-return
-type: dcat:DataService
-title: Interest Restriction Return (IRR) API
-accessRights: INTERNAL
-contactPoint:
-    contactName: Software Development Support Team (SDST)
-    email: sdsteam@hmrc.gov.uk
-    address: https://developer.service.hmrc.gov.uk/developer/support
-description: |-
-  ## Overview
-
-  The API in its current state supports the following functions:
-
-  - Revoke an existing Reporting Company from submitting Interest Restriction Returns
-  - Appoint a new Reporting Company for submitting Interest Restriction Returns
-  - Submit an Interest Restriction Return (full)
-  - Submit an Interest Restriction Return (abbreviated)
-
-  This API uses User Restricted Endpoints. Please find further details on the [Authorisation](https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation) page.
-
-  For more information about how to develop your own client applications, including example clients for this API, see [Tutorials](https://developer.service.hmrc.gov.uk/api-documentation/docs/tutorials).
-
-  ## Errors
-
-  We use standard HTTP status codes to show whether an API request succeeded or not. They are usually in the range:
-
-  - 200 to 299 if it succeeded, including code 202 if it was accepted by an API that needs to wait for further action
-  - 400 to 499 if it failed because of a client error by your application
-  - 500 to 599 if it failed because of an error on our server
-
-  Errors specific to each API are shown in the Endpoints section, under Response. See our [reference guide](https://developer.service.hmrc.gov.uk/api-documentation/docs/reference-guide#errors) for more on errors.
-
-  ## Testing
-
-  You can use the [HMRC Developer Sandbox](https://developer.service.hmrc.gov.uk/api-documentation/docs/testing) to test the API. The Sandbox is an enhanced testing service that functions as a simulator of HMRC’s production environment.
-
-  ## Versioning
-
-  When an API changes in a way that is backwards-incompatible, we increase the version number of the API. See our [reference guide](/api-documentation/docs/reference-guide#versioning) for more on versioning.
-version: v1.0 (Beta)
-securityClassification: OFFICIAL
-creator: 
-  - hm-revenue-customs
-licence: https://www.apache.org/licenses/LICENSE-2.0
-modified: &quot;2023-08-03&quot;
-publisher: hm-revenue-customs
-endpointDescription: https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/interest-restriction-return/1.0/oas/page
-endpointURL: https://api.service.hmrc.gov.uk/
-serviceStatus: BETA
 serviceType: REST
 </code></pre>
 

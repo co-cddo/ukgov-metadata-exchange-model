@@ -350,6 +350,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -359,6 +370,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-catalogue-vocabulary-dcat" class="md-nav__link">
+    Data Catalogue Vocabulary (DCAT)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance" class="md-nav__link">
+    Governance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    Development
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -403,6 +467,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-catalogue-vocabulary-dcat" class="md-nav__link">
+    Data Catalogue Vocabulary (DCAT)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance" class="md-nav__link">
+    Governance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    Development
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -420,7 +526,25 @@
 
 
 <h1 id="uk-cross-government-metadata-exchange-model">UK Cross-Government Metadata Exchange Model</h1>
-<p>A metadata model for describing data assets for exchanging between UK government organisations.</p>
+<p>A metadata model for describing data assets for exchanging between UK government organisations. A primary use case for this model is populating the Cross-Government Data Marketplace with details of data assets provided by UK Government organisations.</p>
+<h2 id="purpose">Purpose</h2>
+<p>This metadata model is focused on the essential attributes needed to describe a critical data asset in the context of a cross-government data share and to facilitate data discoverability in the Government Data Marketplace.</p>
+<p>The metadata model is based in <a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT Working Draft v3</a> itself an extension of <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a> which is a metadata standard already approved by the <a href="https://www.gov.uk/government/groups/open-standards-board">Open Standards Board</a> to <a href="https://www.gov.uk/government/publications/recommended-open-standards-for-government/using-metadata-to-describe-data-shared-within-government">describe data shared in government</a>. It extends the attributes under the <a href="https://www.gov.uk/guidance/record-information-about-data-sets-you-share-with-others">existing guidance</a> and once it is baselined will subsequently update the latter.</p>
+<p>It is designed to add clarification and context to Pillar 1 of the Cross-Government Metadata Approach and endorsed for implementation by the Data Standards Authority Steering Board. Its objective is to present and describe all of the metadata elements that are to be included in a critical data set to be onboarded into the Government Data Catalogue.</p>
+<p>Subsequent iterations will provide more comprehensive descriptions and cover areas which may have additional specific requirements (such as the Health and Geospatial domains) with accompanying guidance to be developed in the form of a playbook for use by relevant DDaT professionals across government and wider public sector, where applicable.</p>
+<p>While this set of attributes is specific to the Government Data Marketplace, it is envisaged that other Data Catalogues, Marketplaces and/or Data Portals will be able to apply this specification within their individual context with little or no modifications, to ensure better interoperability between government information systems.</p>
+<h3 id="data-catalogue-vocabulary-dcat">Data Catalogue Vocabulary (DCAT)</h3>
+<p>DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogues published on the Web and <a href="https://guidance.data.gov.uk/publish_and_manage_data/harvest_or_add_data/harvest_data/dcat/#accepted-dcat-and-data-json-fields">already in use in data.gov.uk</a>. </p>
+<p>DCAT enables a publisher to describe datasets and data services in a catalogue using a standard model and vocabulary that facilitates the consumption and aggregation of metadata from multiple catalogues. This can increase the discoverability of datasets and data services. It also makes it possible to have a decentralised approach to publishing data catalogues and makes federated search for datasets across catalogues in multiple sites possible using the same query mechanism and structure.</p>
+<p>The namespace for DCAT is <a href="http://www.w3.org/ns/dcat#"><code>http://www.w3.org/ns/dcat#</code></a>. However, it should be noted that DCAT makes extensive use of terms from other vocabularies, in particular Dublin Core. DCAT itself defines a minimal set of classes and properties of its own.</p>
+<p>A <strong>Dataset</strong> in DCAT is defined as a <em>"collection of data, published or curated by a single agent, and available for access or download in one or more representations.”</em> A dataset is a conceptual entity which can be represented by one or more distributions that serialise the dataset for transfer. Distributions of a dataset can be provided via data services.</p>
+<p>A <strong>Data Service</strong> in DCAT is defined as a <em>"collection of operations that provides access to one or more datasets or data processing functions."</em></p>
+<p>A <strong>Distribution</strong> in DCAT is defined as a <em>"specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)."</em></p>
+<h2 id="governance">Governance</h2>
+<p>The Cross-Government Metadata Exchange Model has been developed and agreed by the <a href="../miwg/">Cross-Government Metadata Implementation Working Group</a>. The working group is coordinated by the <a href="https://www.gov.uk/government/organisations/central-digital-and-data-office">Central Digital and Data Office</a>, and consists of data professionals in Government Digital and Data functions from across central and local government, devolved administrations, and the wider public sector. The outputs of the working group are reported through the Data Quality Hub and Data Standards Authority Peer Review Group as well as the Data Standards Authority Steering Board.</p>
+<h2 id="development">Development</h2>
+<p>These pages are hosted on GitHub. The pages are generated using the <a href="https://linkml.io/">LinkML</a> framework and the code is managed on <a href="https://github.com/co-cddo/ukgov-metadata-exchange-model/">GitHub</a>. For full details see the <a href="https://github.com/co-cddo/ukgov-metadata-exchange-model#readme">README file</a>.</p>
+<p>Contributions to the model are welcomed. If you spot something wrong or want to make suggestions for improvements to the model, then please <a href="https://github.com/co-cddo/ukgov-metadata-exchange-model/issues/new/choose">create an issue on GitHub</a> (<em>You will need a GitHub account to be able to do this</em>). Please select the appropriate issue type, e.g. Bug report or Feature request, and complete the template as best you can.</p>
 
 
 

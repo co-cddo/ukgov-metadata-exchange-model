@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://co-cddo.github.io/ukgov-metadata-exchange-model/version/">
+        <link rel="canonical" href="https://co-cddo.github.io/ukgov-metadata-exchange-model/miwg/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Version - UK Cross-Government Metadata Exchange Model</title>
+        <title>Metadata Implementation Working Group - UK Cross-Government Metadata Exchange Model</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#property-version" class="md-skip">
+        <a href="#metadata-implementation-working-group" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Version
+              Metadata Implementation Working Group
             
           </span>
         </div>
@@ -396,56 +396,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage-notes" class="md-nav__link">
-    Usage Notes
-  </a>
-  
-    <nav class="md-nav" aria-label="Usage Notes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#purpose" class="md-nav__link">
     Purpose
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#guidelines" class="md-nav__link">
-    Guidelines
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
+  <a href="#audience-and-scope" class="md-nav__link">
+    Audience and Scope
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#identifier-and-mapping-information" class="md-nav__link">
-    Identifier and Mapping Information
-  </a>
-  
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
+  <a href="#goal" class="md-nav__link">
+    Goal
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#desired-outcomes" class="md-nav__link">
+    Desired Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-commitment" class="md-nav__link">
+    Time Commitment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-deliverables" class="md-nav__link">
+    Key Deliverables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation-for-initial-and-subsequent-meeting-sessions" class="md-nav__link">
+    Preparation for initial and subsequent meeting sessions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance" class="md-nav__link">
+    Governance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comms-and-collaboration-space" class="md-nav__link">
+    Comms and Collaboration space
+  </a>
   
 </li>
       
@@ -467,58 +476,66 @@
   
 
 
-<!-- Jinja2 template based on https://github.com/linkml/linkml/blob/main/linkml/generators/docgen/slot.md.jinja2 -->
-<!-- This file should be periodically checked against the original source -->
-<!-- Last check 25 August 2023 -->
-
-<h1 id="property-version">Property: version</h1>
-<p>The version indicator (name or identifier) of a resource.</p>
-<p>URI: <a href="http://www.w3.org/ns/dcat#version">dcat:version</a></p>
-<p>Range: <a href="../String/">String</a></p>
-<p>Required: True</p>
-<h2 id="usage-notes">Usage Notes</h2>
-<h3 id="purpose">Purpose</h3>
-<p>Documenting the version number associated with the data asset.</p>
-<h3 id="guidelines">Guidelines</h3>
-<p>The value of this field should follow the versioning scheme for the data asset. This could use semantic version or some date based approach.</p>
-<p>If a versioning scheme has not been chosen, or this is the first or only version, put <code>v1.0</code> or the date of release in the format <code>yyyy-mm-dd</code>.</p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Modifies Property</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../DataResource/">DataResource</a></td>
-<td>Resource published or curated by a single agent</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DataService/">DataService</a></td>
-<td>A collection of operations that provides access to one or more datasets or da...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Dataset/">Dataset</a></td>
-<td>A collection of data, published or curated by a single agent, and available f...</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<!-- Jinja2 template based on https://github.com/linkml/linkml/blob/main/linkml/generators/docgen/common_metadata.md.jinja2 -->
-<!-- This file should be periodically checked against the original source -->
-<!-- Last check 25 August 2023 -->
-
-<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
+<h1 id="metadata-implementation-working-group">Metadata Implementation Working Group</h1>
+<h2 id="purpose">Purpose</h2>
+<ol>
+<li>To guide the implementation of the Cross-Government Metadata Implementation Approach and adoption of the underlying metadata standards via the Metadata Exchange Model Specification, </li>
+<li>To ensure that core/essential metadata is described consistently and available to potential users of data assets within the Government Data Marketplace,  </li>
+<li>To collaborate in developing guidance and share lessons from implementing data catalogues in conformance with Metadata Management best practice. </li>
+</ol>
+<h2 id="audience-and-scope">Audience and Scope</h2>
 <ul>
-<li>from schema: https://github.com/co-cddo/ukgov-metadata-exchange-model/blob/main/src/model/uk_cross_government_metadata_exchange_model.yaml</li>
+<li>Data professionals in Government Digital and Data functions, such as Data Architects/Modellers, Data Engineers and those in governance roles that broadly map to “Data Owners and Stewards”,</li>
+<li>People across central/local government, as well as the devolved administrations  and the wider public sector, who have a role in owning, developing and/or maintaining metadata for a data asset.</li>
+</ul>
+<h2 id="goal">Goal</h2>
+<p>To ensure metadata within the Government Data Marketplace is sufficient to:</p>
+<ul>
+<li>FIND: enable discovery of the data asset, </li>
+<li>USE: facilitate an informed decision by the customer as to whether a data asset is fit for purpose and meets their business need, and</li>
+<li>ACCESS: enable access to the data by ensuring the request is channelled to the right team(s) and by describing the access requirements and restrictions of the data source.</li>
+</ul>
+<h2 id="desired-outcomes">Desired Outcomes</h2>
+<p>Through sharing experience, the Working Group aims to enhance the metadata produced across government, and to make it available via the Government Data Catalogue as it develops, and thus improve the discoverability of data assets. We will do this by:</p>
+<ol>
+<li><strong>Gaining and sharing knowledge</strong> on the implementation of the Metadata Exchange Model Specification, collaborating to tackle any common issues that may arise </li>
+<li><strong>Enrich</strong> the Metadata Exchange Model Specification based on members’ experience of implementation, and, following adoption of essential components of the specification, develop further aspects of the wider Cross-Government Metadata Implementation Approach to improve Metadata Management capability</li>
+<li><strong>Advise</strong> on development of a Playbook to support Cross-Government Data Sharing focusing initially on practical guidance to adopt the Metadata Exchange Model Specification</li>
+<li><strong>Assisting</strong> organisations with the onboarding of their critical data asset metadata into the Government Data Marketplace</li>
+</ol>
+<h2 id="time-commitment">Time Commitment</h2>
+<ul>
+<li>Meetings are convened on a monthly basis. Frequency is adjusted according to workslate.</li>
+<li>Each session is 1 hour, with approximately an additional hour of preparation time required.</li>
+</ul>
+<h2 id="key-deliverables">Key Deliverables</h2>
+<ul>
+<li>Work through the content of the Metadata Exchange Model Specification to validate and agree core set of attributes essential to support a cross-government data share</li>
+<li>Identify any extensions to the core DCAT profile which may be required for different use cases, scenarios that organisations may need to cater for specifically, e.g. geospatial, health data sets, etc</li>
+<li>Feed metadata requirements to the development of the underlying metamodel that will support the delivery of the Government Data Marketplace</li>
+<li>Contribute to the action plan for metadata for Phase IV of the CDDO Portfolio roadmap </li>
+</ul>
+<h2 id="preparation-for-initial-and-subsequent-meeting-sessions">Preparation for initial and subsequent meeting sessions</h2>
+<p>Members’ are asked to:</p>
+<ul>
+<li>share their experiences of using DCAT, which elements of the specification they may have already adopted, and any areas that are more challenging to implement.</li>
+<li>complete in advance of the first meeting a short summary of their position on the above to facilitate this discussion. </li>
+</ul>
+<p>In parallel:</p>
+<ul>
+<li>Members will also be given regular updates on progress of the Government Data Marketplace development.</li>
+</ul>
+<h2 id="governance">Governance</h2>
+<ul>
+<li>Output of the WG will be reported through the DQ Hub and DSA Peer Review Group (PRG) as well as the DSA Steering Board (also to be used in case of any escalation being required)</li>
+<li>Where relevant, an update will also be communicated through existing channels to the:</li>
+<li>CDO Council</li>
+<li>Data and Technology Architecture Design Authority (DTADA) and the </li>
+<li>Government Data Architecture Community (GDAC)</li>
+</ul>
+<h2 id="comms-and-collaboration-space">Comms and Collaboration space</h2>
+<ul>
+<li>Meetings are held via MS Teams, with collaboration workspaces in KHub.net and UK Gov Slack</li>
 </ul>
 
 
