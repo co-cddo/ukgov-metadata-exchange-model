@@ -161,7 +161,8 @@ doc-setup:
 	mkdir -p $(EXAMPLEDIR)
 	cp src/data/*/valid/* $(EXAMPLEDIR)
 
-gendoc: gen-examples
+#gendoc: doc-setup
+gendoc: test
 	cp src/docs/*.md $(DOCDIR)
 	cp LICENSE.md $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR) \
