@@ -396,6 +396,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#obligation-and-cardinality" class="md-nav__link">
+    Obligation and Cardinality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage-notes" class="md-nav__link">
     Usage Notes
   </a>
@@ -474,8 +481,26 @@
 <h1 id="property-downloadurl">Property: downloadURL</h1>
 <p>The electronic location where the item (file) being described can be found.</p>
 <p>The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's <code>dcterms:format</code> and/or <code>dcat:mediaType</code>.</p>
-<p>URI: <a href="http://www.w3.org/ns/dcat#downloadURL">dcat:downloadURL</a></p>
-<p>Range: <a href="../Uri/">Uri</a></p>
+<h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
+<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Range</th>
+<th>Obligation</th>
+<th>Cardinality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3.org/ns/dcat#downloadURL">dcat:downloadURL</a></td>
+<td><a href="../Uri/">Uri</a></td>
+<td>Optional</td>
+<td>One</td>
+</tr>
+</tbody>
+</table>
 <h2 id="usage-notes">Usage Notes</h2>
 <h3 id="purpose">Purpose</h3>
 <p><code>downloadURL</code> provides the access point to the electronic file being described.</p>

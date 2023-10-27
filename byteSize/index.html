@@ -396,6 +396,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#obligation-and-cardinality" class="md-nav__link">
+    Obligation and Cardinality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage-notes" class="md-nav__link">
     Usage Notes
   </a>
@@ -495,10 +502,26 @@
 <h1 id="property-bytesize">Property: byteSize</h1>
 <p>The filesize of the item (file) being described.</p>
 <p>The size of the distribution in bytes.</p>
-<p>URI: <a href="http://www.w3.org/ns/dcat#byteSize">dcat:byteSize</a></p>
-<p>Range: <a href="../Integer/">Integer</a></p>
-<p>Recommended: True</p>
-<p>Minimum Value: 1</p>
+<h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
+<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Range</th>
+<th>Obligation</th>
+<th>Cardinality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3.org/ns/dcat#byteSize">dcat:byteSize</a></td>
+<td><a href="../Integer/">Integer</a> <br/>Minimum Value: 1</td>
+<td>Recommended</td>
+<td>One</td>
+</tr>
+</tbody>
+</table>
 <h2 id="usage-notes">Usage Notes</h2>
 <h3 id="purpose">Purpose</h3>
 <p>FILESIZE information can help users decide whether or not to commit to downloading the described item (file) by providing information on the amount of physical or digital storage space that it requires and an estimate of the length of time it might take to download.</p>

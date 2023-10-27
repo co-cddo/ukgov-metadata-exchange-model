@@ -176,6 +176,25 @@
 <a class="md-nav__link" href="#properties">
     Properties
   </a>
+<nav aria-label="Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mandatory-properties">
+    Mandatory Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recommended-properties">
+    Recommended Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optional-properties">
+    Optional Properties
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#identifier-and-mapping-information">
@@ -251,6 +270,25 @@
 <a class="md-nav__link" href="#properties">
     Properties
   </a>
+<nav aria-label="Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mandatory-properties">
+    Mandatory Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recommended-properties">
+    Recommended Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optional-properties">
+    Optional Properties
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#identifier-and-mapping-information">
@@ -360,141 +398,168 @@
 </li>
 </ul>
 <h2 id="properties">Properties</h2>
+<h3 id="mandatory-properties">Mandatory Properties</h3>
 <table>
 <thead>
 <tr>
 <th>Name</th>
-<th>Cardinality and Range</th>
+<th>Range</th>
 <th>Description</th>
-<th>Inheritance</th>
+<th>Cardinality</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../distribution/">distribution</a></td>
-<td>0..* <em>recommended</em> <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>An available distribution of the dataset</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../updateFrequency/">updateFrequency</a></td>
-<td>1..1 <br/> <a href="../FrequencyValues/">FrequencyValues</a></td>
-<td>The time interval at which new or updated versions of an information resource...</td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../accessRights/">accessRights</a></td>
-<td>1..1 <br/> <a href="../AccessRightsValues/">AccessRightsValues</a></td>
+<td><a href="../AccessRightsValues/">AccessRightsValues</a></td>
 <td>A rights statement that concerns how the distribution is accessed</td>
-<td><a href="../DataResource/">DataResource</a></td>
-</tr>
-<tr>
-<td><a href="../alternativeTitle/">alternativeTitle</a></td>
-<td>0..* <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>An alternative name used as a substitute or additional access point for an in...</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../contactPoint/">contactPoint</a></td>
-<td>1..1 <br/> <a href="../ContactPoint/">ContactPoint</a></td>
+<td><a href="../ContactPoint/">ContactPoint</a></td>
 <td>The e-mail address to be used to contact the organisational contact for the r...</td>
-<td><a href="../DataResource/">DataResource</a></td>
-</tr>
-<tr>
-<td><a href="../created/">created</a></td>
-<td>0..1 <br/> <a href="../Date/">Date</a></td>
-<td>The date, or date and time, on which the content of an information resource i...</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../creator/">creator</a></td>
-<td>1..* <br/> <a href="../OrganisationValues/">OrganisationValues</a></td>
+<td><a href="../OrganisationValues/">OrganisationValues</a></td>
 <td>The business entity responsible for creating or compiling the original conten...</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>Many</td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
+<td><a href="../String/">String</a></td>
 <td>A concise narrative of the content of an information resource</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../identifier/">identifier</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td><a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>A unique number, code, or reference value assigned to an information resource...</td>
-<td><a href="../DataResource/">DataResource</a></td>
-</tr>
-<tr>
-<td><a href="../issued/">issued</a></td>
-<td>0..1 <br/> <a href="../Date/">Date</a></td>
-<td>The date, or date and time, on which an information resource was originally p...</td>
-<td><a href="../DataResource/">DataResource</a></td>
-</tr>
-<tr>
-<td><a href="../keyword/">keyword</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
-<td>Uncontrolled terms (words or phrases) assigned to describe an information res...</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../licence/">licence</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
+<td><a href="../String/">String</a></td>
 <td>Reference to the legal document outlining access and usage rights for an info...</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../modified/">modified</a></td>
-<td>1..1 <br/> <a href="../Date/">Date</a></td>
+<td><a href="../Date/">Date</a></td>
 <td>The date, or date and time, on which the content of an information resource i...</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../publisher/">publisher</a></td>
-<td>1..1 <br/> <a href="../OrganisationValues/">OrganisationValues</a></td>
+<td><a href="../OrganisationValues/">OrganisationValues</a></td>
 <td>The business entity responsible for making an information resource publicly a...</td>
-<td><a href="../DataResource/">DataResource</a></td>
-</tr>
-<tr>
-<td><a href="../relatedResource/">relatedResource</a></td>
-<td>0..* <em>recommended</em> <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>A resource that bears a close relationship to the described resource</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../securityClassification/">securityClassification</a></td>
-<td>1..1 <br/> <a href="../SecurityClassificationValues/">SecurityClassificationValues</a></td>
+<td><a href="../SecurityClassificationValues/">SecurityClassificationValues</a></td>
 <td>An information security designation that identifies the minimum level of prot...</td>
-<td><a href="../DataResource/">DataResource</a></td>
-</tr>
-<tr>
-<td><a href="../summary/">summary</a></td>
-<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>"A short textual summary of the resource with a maximum length of 250 charact...</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../title/">title</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
+<td><a href="../String/">String</a></td>
 <td>The full and formal name given to an information resource</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../type/">type</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td><a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>The type of the resource being defined</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
 </tr>
 <tr>
-<td><a href="../theme/">theme</a></td>
-<td>0..* <em>recommended</em> <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>Topic</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td><a href="../updateFrequency/">updateFrequency</a></td>
+<td><a href="../FrequencyValues/">FrequencyValues</a></td>
+<td>The time interval at which new or updated versions of an information resource...</td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../version/">version</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
+<td><a href="../String/">String</a></td>
 <td>The version indicator (name or identifier) of a resource</td>
-<td><a href="../DataResource/">DataResource</a></td>
+<td>One</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-properties">Recommended Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Range</th>
+<th>Description</th>
+<th>Cardinality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../alternativeTitle/">alternativeTitle</a></td>
+<td><a href="../String/">String</a></td>
+<td>An alternative name used as a substitute or additional access point for an in...</td>
+<td>Many</td>
+</tr>
+<tr>
+<td><a href="../distribution/">distribution</a></td>
+<td><a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>An available distribution of the dataset</td>
+<td>Many</td>
+</tr>
+<tr>
+<td><a href="../relatedResource/">relatedResource</a></td>
+<td><a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>A resource that bears a close relationship to the described resource</td>
+<td>Many</td>
+</tr>
+<tr>
+<td><a href="../summary/">summary</a></td>
+<td><a href="../String/">String</a><br/>Regex pattern: <code>^.{1,250}$</code></td>
+<td>A short textual summary of the resource with a maximum length of 250 characte...</td>
+<td>One</td>
+</tr>
+<tr>
+<td><a href="../theme/">theme</a></td>
+<td><a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Topic</td>
+<td>Many</td>
+</tr>
+</tbody>
+</table>
+<h3 id="optional-properties">Optional Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Range</th>
+<th>Description</th>
+<th>Cardinality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../created/">created</a></td>
+<td><a href="../Date/">Date</a></td>
+<td>The date, or date and time, on which the content of an information resource i...</td>
+<td>One</td>
+</tr>
+<tr>
+<td><a href="../issued/">issued</a></td>
+<td><a href="../Date/">Date</a></td>
+<td>The date, or date and time, on which an information resource was originally p...</td>
+<td>One</td>
+</tr>
+<tr>
+<td><a href="../keyword/">keyword</a></td>
+<td><a href="../String/">String</a></td>
+<td>Uncontrolled terms (words or phrases) assigned to describe an information res...</td>
+<td>Many</td>
 </tr>
 </tbody>
 </table>

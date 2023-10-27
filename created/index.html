@@ -396,6 +396,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#obligation-and-cardinality" class="md-nav__link">
+    Obligation and Cardinality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage-notes" class="md-nav__link">
     Usage Notes
   </a>
@@ -481,8 +488,26 @@
 <h1 id="property-created">Property: created</h1>
 <p>The date, or date and time, on which the content of an information resource is created or compiled. </p>
 <p><strong>When used on a metadata record</strong> The date and time on which an information resource is made available through the catalogue.</p>
-<p>URI: <a href="http://purl.org/dc/terms/created">dct:created</a></p>
-<p>Range: <a href="../Date/">Date</a></p>
+<h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
+<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Range</th>
+<th>Obligation</th>
+<th>Cardinality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://purl.org/dc/terms/created">dct:created</a></td>
+<td><a href="../Date/">Date</a></td>
+<td>Optional</td>
+<td>One</td>
+</tr>
+</tbody>
+</table>
 <h2 id="usage-notes">Usage Notes</h2>
 <h3 id="purpose">Purpose</h3>
 <p>The use of <code>created</code> helps users assess the relevance of the content to their information needs, and allows users to distinguish between when the content of an information resource was created or compiled and when the resource was publicly released.</p>

@@ -396,6 +396,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#obligation-and-cardinality" class="md-nav__link">
+    Obligation and Cardinality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage-notes" class="md-nav__link">
     Usage Notes
   </a>
@@ -480,9 +487,26 @@
 
 <h1 id="property-publisher">Property: publisher</h1>
 <p>The business entity responsible for making an information resource publicly available.</p>
-<p>URI: <a href="http://purl.org/dc/terms/publisher">dct:publisher</a></p>
-<p>Range: <a href="../OrganisationValues/">OrganisationValues</a></p>
-<p>Required: True</p>
+<h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
+<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Range</th>
+<th>Obligation</th>
+<th>Cardinality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://purl.org/dc/terms/publisher">dct:publisher</a></td>
+<td><a href="../OrganisationValues/">OrganisationValues</a></td>
+<td>Mandatory</td>
+<td>One</td>
+</tr>
+</tbody>
+</table>
 <h2 id="usage-notes">Usage Notes</h2>
 <h3 id="purpose">Purpose</h3>
 <p>In the context of the Government Data Catalogue, the <code>publisher</code> is the department or other organisational entity responsible for the public release of the resource. Use of <code>publisher</code> supports the assignment of accountability for accuracy of the resource, quality assurance and timeliness, as well as related quality control and life cycle management processes.</p>

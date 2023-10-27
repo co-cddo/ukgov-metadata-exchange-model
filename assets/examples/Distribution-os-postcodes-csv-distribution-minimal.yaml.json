@@ -1,8 +1,0 @@
-{
-  "identifier": "https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=CSV&redirect",
-  "licence": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-  "mediaType": "text/csv",
-  "title": "Code-Point Open - CSV GB",
-  "type": "dcat:Distribution",
-  "@type": "Distribution"
-}

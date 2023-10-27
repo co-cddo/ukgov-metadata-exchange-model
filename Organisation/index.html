@@ -195,6 +195,15 @@
 <a class="md-nav__link" href="#properties">
     Properties
   </a>
+<nav aria-label="Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mandatory-properties">
+    Mandatory Properties
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#identifier-and-mapping-information">
@@ -241,27 +250,28 @@
 </div>
 <!-- no inheritance hierarchy -->
 <h2 id="properties">Properties</h2>
+<h3 id="mandatory-properties">Mandatory Properties</h3>
 <table>
 <thead>
 <tr>
 <th>Name</th>
-<th>Cardinality and Range</th>
+<th>Range</th>
 <th>Description</th>
-<th>Inheritance</th>
+<th>Cardinality</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="../identifier/">identifier</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td><a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>A unique number, code, or reference value assigned to an information resource...</td>
-<td>direct</td>
+<td>One</td>
 </tr>
 <tr>
 <td><a href="../title/">title</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
+<td><a href="../String/">String</a></td>
 <td>The full and formal name given to an information resource</td>
-<td>direct</td>
+<td>One</td>
 </tr>
 </tbody>
 </table>

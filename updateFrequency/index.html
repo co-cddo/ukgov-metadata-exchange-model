@@ -396,6 +396,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#obligation-and-cardinality" class="md-nav__link">
+    Obligation and Cardinality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage-notes" class="md-nav__link">
     Usage Notes
   </a>
@@ -482,9 +489,26 @@
 <p>The time interval at which new or updated versions of an information resource are issued.</p>
 <p>The frequency at which a dataset is published.  </p>
 <p>An available distribution of the dataset. If the frequency is unknown then use the value <code>freq:irregular</code>.</p>
-<p>URI: <a href="http://purl.org/dc/terms/accrualPeriodicity">dct:accrualPeriodicity</a></p>
-<p>Range: <a href="../FrequencyValues/">FrequencyValues</a></p>
-<p>Required: True</p>
+<h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
+<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Range</th>
+<th>Obligation</th>
+<th>Cardinality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://purl.org/dc/terms/accrualPeriodicity">dct:accrualPeriodicity</a></td>
+<td><a href="../FrequencyValues/">FrequencyValues</a></td>
+<td>Mandatory</td>
+<td>One</td>
+</tr>
+</tbody>
+</table>
 <h2 id="usage-notes">Usage Notes</h2>
 <h3 id="purpose">Purpose</h3>
 <p>Documenting the periods at which new or updated versions or issues of a resource are released can help users understand the context, availability and relevance of its content. FREQUENCY also is a component in managing the publication process.</p>

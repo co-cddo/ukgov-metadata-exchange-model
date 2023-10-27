@@ -396,6 +396,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#obligation-and-cardinality" class="md-nav__link">
+    Obligation and Cardinality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage-notes" class="md-nav__link">
     Usage Notes
   </a>
@@ -481,8 +488,26 @@
 <h1 id="property-description">Property: description</h1>
 <p>A concise narrative of the content of an information resource.</p>
 <p>A free-text account of the distribution.</p>
-<p>URI: <a href="http://purl.org/dc/terms/description">dct:description</a></p>
-<p>Range: <a href="../String/">String</a></p>
+<h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
+<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Range</th>
+<th>Obligation</th>
+<th>Cardinality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://purl.org/dc/terms/description">dct:description</a></td>
+<td><a href="../String/">String</a></td>
+<td>Mandatory</td>
+<td>One</td>
+</tr>
+</tbody>
+</table>
 <h2 id="usage-notes">Usage Notes</h2>
 <h3 id="purpose">Purpose</h3>
 <p>Use of DESCRIPTION provides an explanation of the contents of a resource to assist in retrieval and to help users determine if a resource is relevant to their needs. The description can also describe the purpose of an information resource (what it was intended to accomplish), what the resource "is" or what it measures, its function and potential uses.</p>
@@ -526,12 +551,12 @@
 <tr>
 <td><a href="../DataResource/">DataResource</a></td>
 <td>Resource published or curated by a single agent</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 <tr>
 <td><a href="../Distribution/">Distribution</a></td>
 <td>A specific representation of a dataset</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td><a href="../DataService/">DataService</a></td>

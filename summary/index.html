@@ -396,6 +396,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#obligation-and-cardinality" class="md-nav__link">
+    Obligation and Cardinality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-notes" class="md-nav__link">
+    Usage Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-not-confuse-with" class="md-nav__link">
+    Do not confuse with
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guidelines" class="md-nav__link">
+    Guidelines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#applicable-classes" class="md-nav__link">
     Applicable Classes
   </a>
@@ -445,11 +486,37 @@
 <!-- Last check 25 August 2023 -->
 
 <h1 id="property-summary">Property: summary</h1>
-<p>"A short textual summary of the resource with a maximum length of 250 characters. </p>
-<p>Usage note: The intended use of this text is in a page containing multiple search results. If omitted, the first part of the description text will be used. This may be up to a certain character count or the detection of a paragraph break."</p>
-<p>URI: <a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
-<p>Range: <a href="../String/">String</a></p>
-<p>Recommended: True</p>
+<p>A short textual summary of the resource with a maximum length of 250 characters. </p>
+<h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
+<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Range</th>
+<th>Obligation</th>
+<th>Cardinality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></td>
+<td><a href="../String/">String</a> <br/>Regex pattern: <code>^.{1,250}$</code></td>
+<td>Recommended</td>
+<td>One</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage-notes">Usage Notes</h2>
+<h3 id="purpose">Purpose</h3>
+<p>The intended use of this text is in a page containing multiple search results where a short one sentence or so summary is needed. </p>
+<p>If omitted, the first part of the description text will be used. This may be up to a certain character count or the detection of a paragraph break, it is up to the application to decide.</p>
+<h3 id="do-not-confuse-with">Do not confuse with</h3>
+<ul>
+<li><a href="/ukgov-metadata-exchange-model/description"><code>description</code></a>: to capture a full overview of the data asset</li>
+</ul>
+<h3 id="guidelines">Guidelines</h3>
+<p>The <code>summary</code> will be used where a short text overview of the data asset is required, e.g. in a page of search results. It should provide an idea of what the data asset provides but not give full details. Conciseness is key. </p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
