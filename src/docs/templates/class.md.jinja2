@@ -51,10 +51,10 @@ URI: {{ gen.uri_link(element) }}
 {% endif %}
 {%- endmacro %}
 
-{% set slots = schemaview.class_induced_slots(element.name) | rejectattr("required", "none") | sort(attribute='name') -%}
+{% set slots = schemaview.class_induced_slots(element.name) | rejectattr("required", "none") | rejectattr("required", "false") | sort(attribute='name') -%}
 {{ slots_table("Mandatory", slots) }}
 
-{% set slots = schemaview.class_induced_slots(element.name) | rejectattr("recommended", "none") | sort(attribute='name') -%}
+{% set slots = schemaview.class_induced_slots(element.name) | rejectattr("recommended", "none") | rejectattr("recommended", "false") | sort(attribute='name') -%}
 {{ slots_table("Recommended", slots) }}
 
 {% set slots = schemaview.class_induced_slots(element.name) | rejectattr("required") | rejectattr("recommended") | sort(attribute='name') -%}
