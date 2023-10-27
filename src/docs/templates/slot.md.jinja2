@@ -15,31 +15,13 @@
 {% endfor %}
 {% endif %}
 
-URI: {{ gen.uri_link(element) }}
+## Obligation and Cardinality
 
-Range: {{gen.link(element.range)}}
+The obligation or cardinality can be overridden when used by classes. Check the [Applicable Classes](#applicable-classes) section below for details.
 
-{% if element.multivalued %}
-Multivalued: {{ element.multivalued }}
-{% endif -%}
-
-{% if element.required %}
-Required: {{ element.required }}
-{% elif element.recommended %}
-Recommended: {{ element.recommended }}
-{% endif -%}
-
-{% if element.minimum_value is not none %}
-Minimum Value: {{ element.minimum_value|int }}
-{% endif -%}
-
-{% if element.maximum_value is not none %}
-Maximum Value: {{ element.maximum_value|int }}
-{% endif -%}
-
-{% if element.pattern %}
-Regex pattern: {{ '`' }}{{  element.pattern }}{{ '`' }}
-{% endif -%}
+| URL                         | Range                       | Obligation  | Cardinality |
+|-----------------------------|-----------------------------|-------------|-------------|
+| {{ gen.uri_link(element) }} | {{gen.link(element.range)}} {% if element.minimum_value is not none %}<br/>Minimum Value: {{ element.minimum_value|int }}{% endif %}{% if element.maximum_value is not none %}<br/>Maximum Value: {{ element.maximum_value|int }}{% endif %}{% if element.pattern %}<br/>Regex pattern: {{ '`' }}{{  element.pattern }}{{ '`' }}{% endif %} | {% if element.required %}Mandatory{% elif element.recommended %}Recommended{% else %}Optional{% endif %} | {% if element.multivalued %}Many{% else %}One{% endif %} |
 
 {% if schemaview.is_mixin(element.name) %}
 Mixin: {{ element.mixin }}
