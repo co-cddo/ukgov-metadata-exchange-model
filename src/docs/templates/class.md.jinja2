@@ -40,31 +40,25 @@ URI: {{ gen.uri_link(element) }}
 {% endif %}
 
 ## Properties
-{% macro slot_table_header() -%}
+{% macro slots_table(heading, slots) -%}
+{% if slots | length > 0 %}
+### {{ heading }} Properties
 | Name | Range | Description | Cardinality |
 | ---  | --- | --- | --- |
-{%- endmacro %}
-
-{% macro slot_table(slot) -%}
+{% for slot in slots -%}
 | {{gen.link(slot)}} | {{ gen.link(slot.range) }}{% if slot.minimum_value is not none %}<br/>Minimum Value: {{ slot.minimum_value|int }}{% endif %}{% if slot.maximum_value is not none %}<br/>Maximum Value: {{ slot.maximum_value|int }}{% endif %}{% if slot.pattern %}<br/>Regex pattern: {{ '`' }}{{  slot.pattern }}{{ '`' }}{% endif %} | {{ slot.description|enshorten }} | {% if slot.multivalued %}Many{% else %}One{% endif %} |
+{% endfor %}
+{% endif %}
 {%- endmacro %}
 
-### Mandatory Properties
-{{ slot_table_header() }}
-{% for slot in schemaview.class_induced_slots(element.name) | rejectattr("required", "none") | sort(attribute='name') -%}
-{{ slot_table(slot) }}
-{% endfor %}
+{% set slots = schemaview.class_induced_slots(element.name) | rejectattr("required", "none") | sort(attribute='name') -%}
+{{ slots_table("Mandatory", slots) }}
 
-### Recommended Properties
-{{ slot_table_header() }}
-{% for slot in schemaview.class_induced_slots(element.name) | rejectattr("recommended", "none") | sort(attribute='name') -%}
-{{ slot_table(slot) }}
-{% endfor %}
-### Optional Properties
-{{ slot_table_header() }}
-{% for slot in schemaview.class_induced_slots(element.name) | rejectattr("required") | rejectattr("recommended") | sort(attribute='name') -%}
-{{ slot_table(slot) }}
-{% endfor %}
+{% set slots = schemaview.class_induced_slots(element.name) | rejectattr("recommended", "none") | sort(attribute='name') -%}
+{{ slots_table("Recommended", slots) }}
+
+{% set slots = schemaview.class_induced_slots(element.name) | rejectattr("required") | rejectattr("recommended") | sort(attribute='name') -%}
+{{ slots_table("Optional", slots) }}
 
 {% if schemaview.is_mixin(element.name) %}
 ## Mixin Usage
