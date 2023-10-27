@@ -40,19 +40,31 @@ URI: {{ gen.uri_link(element) }}
 {% endif %}
 
 ## Properties
-
-| Name | Cardinality and Range | Description | Inheritance |
+{% macro slot_table_header() -%}
+| Name | Range | Description | Cardinality |
 | ---  | --- | --- | --- |
-{% if gen.get_direct_slots(element)|length > 0 %}
-{%- for slot in gen.get_direct_slots(element) -%}
-| {{ gen.link(slot) }} | {{ gen.cardinality(slot) }} <br/> {{ gen.link(slot.range) }} | {{ slot.description|enshorten }} | direct |
-{% endfor -%}
-{% endif -%}
-{% if gen.get_indirect_slots(element)|length > 0 %}
-{%- for slot in gen.get_indirect_slots(element) -%}
-| {{ gen.link(slot) }} | {{ gen.cardinality(slot) }} <br/> {{ gen.link(slot.range) }} | {{ slot.description|enshorten }} | {{ gen.links(gen.get_slot_inherited_from(element.name, slot.name))|join(', ') }} |
-{% endfor -%}
-{% endif %}
+{%- endmacro %}
+
+{% macro slot_table(slot) -%}
+| {{gen.link(slot)}} | {{ gen.link(slot.range) }}{% if slot.minimum_value is not none %}<br/>Minimum Value: {{ slot.minimum_value|int }}{% endif %}{% if slot.maximum_value is not none %}<br/>Maximum Value: {{ slot.maximum_value|int }}{% endif %}{% if slot.pattern %}<br/>Regex pattern: {{ '`' }}{{  slot.pattern }}{{ '`' }}{% endif %} | {{ slot.description|enshorten }} | {% if slot.multivalued %}Many{% else %}One{% endif %} |
+{%- endmacro %}
+
+### Mandatory Properties
+{{ slot_table_header() }}
+{% for slot in schemaview.class_induced_slots(element.name) | rejectattr("required", "none") | sort(attribute='name') -%}
+{{ slot_table(slot) }}
+{% endfor %}
+
+### Recommended Properties
+{{ slot_table_header() }}
+{% for slot in schemaview.class_induced_slots(element.name) | rejectattr("recommended", "none") | sort(attribute='name') -%}
+{{ slot_table(slot) }}
+{% endfor %}
+### Optional Properties
+{{ slot_table_header() }}
+{% for slot in schemaview.class_induced_slots(element.name) | rejectattr("required") | rejectattr("recommended") | sort(attribute='name') -%}
+{{ slot_table(slot) }}
+{% endfor %}
 
 {% if schemaview.is_mixin(element.name) %}
 ## Mixin Usage
