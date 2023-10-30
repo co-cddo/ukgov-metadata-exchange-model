@@ -440,7 +440,10 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       The file format or encoding method of the item (file) being described.
       The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
     required: true
-    range: uri
+    range: string
+    pattern: ^application/\S+|^audio/\S+|^font/\S+|^image/\S+|^message/\S+|^model/\S+|^multipart/\S+|^text/\S+|^video/\S+
+    # While the above is equivalent to the below, the tests fail with the expression below.
+    # pattern: ^[application|audio|font|image|message|model|multipart|text|video]/\S+
     comments: |
       purpose:
         Use of `mediaType` supports retrieval, as well as control, storage, preservation and access management of resources through time. It can alert users to the existence of requirements for software, hardware or equipment other than a web browser to display, use, or manage a resource.
@@ -448,8 +451,14 @@ Note that there could be a security risk in sharing the endpoint URL for interna
         - AVAILABILITY: used when the described resource is available in print or in another digital format through another government or non-government source.
         - TYPE: describes the business structure of the content of a resource, e.g. fact sheet, policy, report, guide, statistics.
       guidance:
-        `mediaType` refers to the encoding method used to store digital resource and convert it into human-accessible form.
-        A resource with identical or near-identical intellectual content may have multiple formats. For example, a resource may be available for download in html, pdf and docx formats.
+        `mediaType` refers to the encoding method used to store the digital resource and convert it into human-accessible form. The value should be provided as per the Template column provided in the [IANA pages](https://www.iana.org/assignments/media-types/media-types.xhtml). Below are some examples:
+        - CSV: `text/csv`
+        - Excel (`.xlsx`): `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+        - Geopackage: `application/geopackage+sqlite3`
+        - HTML: `text/html`
+        - PDF: `application/pdf`
+        - Word (`.docx`): `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
+        A resource with identical or near-identical intellectual content may be available in multiple formats. For example, a resource may be available for download in html, pdf and docx formats. These should be captured as separate [distributions](/ukgov-metadata-exchange-model/Distribution) of the Dataset with each distribution having a different mediatype value.
   modified:
     slot_uri: dct:modified
     description: The date, or date and time, on which the content of an information resource is changed.
