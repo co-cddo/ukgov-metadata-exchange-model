@@ -1,0 +1,8 @@
+# Example Excel (.xlsx) Distribution description
+# The example is based on CSV distribution of the OS CodePoint data
+---
+identifier: https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=EXCEL&redirect
+type: dcat:Distribution
+title: Code-Point Open - Excel GB
+licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+mediaType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet

@@ -1,0 +1,8 @@
+# Example CSV Distribution description
+# The example corresponds to the CSV distribution of the OS CodePoint data
+---
+identifier: https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=CSV&redirect
+type: dcat:Distribution
+title: Code-Point Open - CSV GB
+licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+mediaType: https://w3id.org/uri4uri/mime/text/csv
