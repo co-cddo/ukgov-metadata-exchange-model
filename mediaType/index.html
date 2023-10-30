@@ -502,7 +502,7 @@
 <tbody>
 <tr>
 <td><a href="http://www.w3.org/ns/dcat#mediaType">dcat:mediaType</a></td>
-<td><a href="../Uri/">Uri</a></td>
+<td><a href="../String/">String</a> <br/>Regex pattern: <code>^application/\S+|^audio/\S+|^font/\S+|^image/\S+|^message/\S+|^model/\S+|^multipart/\S+|^text/\S+|^video/\S+</code></td>
 <td>Mandatory</td>
 <td>One</td>
 </tr>
@@ -521,8 +521,28 @@
 </li>
 </ul>
 <h3 id="guidelines">Guidelines</h3>
-<p><code>mediaType</code> refers to the encoding method used to store digital resource and convert it into human-accessible form.</p>
-<p>A resource with identical or near-identical intellectual content may have multiple formats. For example, a resource may be available for download in html, pdf and docx formats.</p>
+<p><code>mediaType</code> refers to the encoding method used to store the digital resource and convert it into human-accessible form. The value should be provided as per the Template column provided in the <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA pages</a>. Below are some examples:</p>
+<ul>
+<li>
+<p>CSV: <code>text/csv</code></p>
+</li>
+<li>
+<p>Excel (<code>.xlsx</code>): <code>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</code></p>
+</li>
+<li>
+<p>Geopackage: <code>application/geopackage+sqlite3</code></p>
+</li>
+<li>
+<p>HTML: <code>text/html</code></p>
+</li>
+<li>
+<p>PDF: <code>application/pdf</code></p>
+</li>
+<li>
+<p>Word (<code>.docx</code>): <code>application/vnd.openxmlformats-officedocument.wordprocessingml.document</code></p>
+</li>
+</ul>
+<p>A resource with identical or near-identical intellectual content may be available in multiple formats. For example, a resource may be available for download in html, pdf and docx formats. These should be captured as separate <a href="/ukgov-metadata-exchange-model/Distribution">distributions</a> of the Dataset with each distribution having a different mediatype value.</p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
