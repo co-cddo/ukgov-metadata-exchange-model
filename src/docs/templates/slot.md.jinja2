@@ -35,9 +35,8 @@ The table below details the classes which use this property and the conditions o
 Mixin: {{ element.mixin }}
 {% endif -%}
 
-{% if element.comments %}
 ## Usage Notes
-
+{% if element.comments %}
 {% set comments = element.comments | join('') %}
 
 {% set comments_lines = comments.split('\n') %}
@@ -52,6 +51,8 @@ Mixin: {{ element.mixin }}
 {{ line }}
 {% endif %}
 {% endfor %}
+{% else %}
+_Usage notes still to be provided._
 {% endif %}
 
 {% if schemaview.slot_parents(element.name) or schemaview.slot_children(element.name, mixins=False) %}
