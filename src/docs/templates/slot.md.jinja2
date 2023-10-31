@@ -15,13 +15,21 @@
 {% endfor %}
 {% endif %}
 
+URI: {{ gen.uri_link(element) }}
+
 ## Obligation and Cardinality
 
-The obligation or cardinality can be overridden when used by classes. Check the [Applicable Classes](#applicable-classes) section below for details.
+The table below details the classes which use this property and the conditions of its use.
 
-| URL                         | Range                       | Obligation  | Cardinality |
+| Class                       | Range                       | Obligation  | Cardinality |
 |-----------------------------|-----------------------------|-------------|-------------|
-| {{ gen.uri_link(element) }} | {{gen.link(element.range)}} {% if element.minimum_value is not none %}<br/>Minimum Value: {{ element.minimum_value|int }}{% endif %}{% if element.maximum_value is not none %}<br/>Maximum Value: {{ element.maximum_value|int }}{% endif %}{% if element.pattern %}<br/>Regex pattern: {{ '`' }}{{  element.pattern }}{{ '`' }}{% endif %} | {% if element.required %}Mandatory{% elif element.recommended %}Recommended{% else %}Optional{% endif %} | {% if element.multivalued %}Many{% else %}One{% endif %} |
+{% for c in schemaview.get_classes_by_slot(element, include_induced=True) -%}
+{%- for slot in schemaview.class_induced_slots(c) -%}
+{%- if gen.name(slot) == gen.name(element) -%}
+| {{ gen.link(c) }} | {{ gen.link(slot.range) }}{% if slot.minimum_value is not none %}<br/>Minimum Value: {{ slot.minimum_value|int }}{% endif %}{% if slot.maximum_value is not none %}<br/>Maximum Value: {{ slot.maximum_value|int }}{% endif %}{% if slot.pattern %}<br/>Regex pattern: {{ '`' }}{{  slot.pattern }}{{ '`' }}{% endif %} | {% if slot.required %}Mandatory{% elif slot.recommended %}Recommended{% else %}Optional{% endif %} | {% if slot.multivalued %}Many{% else %}One{% endif %} |
+{%- endif -%}
+{% endfor %}
+{% endfor %}
 
 {% if schemaview.is_mixin(element.name) %}
 Mixin: {{ element.mixin }}
@@ -54,19 +62,6 @@ Mixin: {{ element.mixin }}
 {% else %}
 <!-- no inheritance hierarchy -->
 {% endif %}
-
-{% if schemaview.get_classes_by_slot(element, include_induced=True) %}
-
-## Applicable Classes
-
-| Name | Description | Modifies Property |
-| --- | --- | --- |
-{% for c in schemaview.get_classes_by_slot(element, include_induced=True) -%}
-{{ gen.link(c) }} | {{ schemaview.get_class(c).description|enshorten }} | {% if c in schemaview.get_classes_modifying_slot(element) %} yes {% else %} no {% endif %} |
-{% endfor %}
-
-{% endif %}
-
 
 {% if schemaview.is_mixin(element.name) %}
 ## Mixin Usage
