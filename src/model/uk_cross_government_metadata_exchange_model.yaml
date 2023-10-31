@@ -75,6 +75,13 @@ classes:
       - type
       - theme
       - version
+    slot_usage:
+      accessRights:
+        required: true
+      description:
+        required: true
+      modified:
+        required: true
 
   DataService:
     is_a: DataResource
@@ -115,12 +122,7 @@ classes:
       - title
       - type
     slot_usage:
-      accessRights: 
-        required: false
-      description:
-        required: false
       modified:
-        required: false
         recommended: true
 
   Organisation:
@@ -146,7 +148,6 @@ slots:
   accessRights:
     slot_uri: dct:accessRights
     description: A rights statement that concerns how the distribution is accessed.
-    required: true
     range: AccessRightsValues
   address:
     slot_uri: vcard:hasAddress
@@ -293,7 +294,6 @@ slots:
     description: |
       A concise narrative of the content of an information resource.
       A free-text account of the distribution.
-    required: true
     range: string
     comments: |
       purpose:
@@ -462,7 +462,6 @@ Note that there could be a security risk in sharing the endpoint URL for interna
   modified:
     slot_uri: dct:modified
     description: The date, or date and time, on which the content of an information resource is changed.
-    required: true
     range: date
     comments: |
       purpose:
