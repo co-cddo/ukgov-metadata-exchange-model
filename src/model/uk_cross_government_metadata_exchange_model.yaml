@@ -184,7 +184,7 @@ slots:
         Include special characters such as quotations marks, apostrophes, and accented characters, e.g. Métis.
   byteSize:
     slot_uri: dcat:byteSize
-    description: |
+    description: |-
       The filesize of the item (file) being described.
       The size of the distribution in bytes.
     recommended: true
@@ -236,7 +236,7 @@ slots:
     #   - range: ContactPoint
   created:
     slot_uri: dct:created
-    description: |
+    description: |-
       The date, or date and time, on which the content of an information resource is created or compiled. 
       
       __When used on a metadata record__ The date and time on which an information resource is made available through the catalogue.
@@ -291,7 +291,7 @@ slots:
       - Decide what to do about `contributor`
   description:
     slot_uri: dct:description
-    description: |
+    description: |-
       A concise narrative of the content of an information resource.
       A free-text account of the distribution.
     range: string
@@ -318,7 +318,7 @@ slots:
     # range: Dataset
   downloadURL:
     slot_uri: dcat:downloadURL
-    description: |
+    description: |-
       The electronic location where the item (file) being described can be found.
       The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's `dcterms:format` and/or `dcat:mediaType`.
     range: uri
@@ -351,7 +351,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: uri
   identifier:
     slot_uri: dct:identifier
-    description: |
+    description: |-
       A unique number, code, or reference value assigned to an information resource within a given context.
       A unique identifier of the resource being described or catalogued.
     identifier: true
@@ -419,7 +419,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
         - Special characters, such as accent marks, should be included as long as they reflect common usage (e.g. Métis).
   licence:
     slot_uri: dct:license
-    description: |
+    description: |-
       Reference to the legal document outlining access and usage rights for an information resource.
       A legal document under which the distribution is made available.
     required: true
@@ -436,7 +436,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
         Rules as per Open Data Policy, all information and data that is made publicly available by HMG is likely to be released under the Open Government licence unless it is exempt under specific conditions. Any other applicable licences should be explicitly stated.
   mediaType:
     slot_uri: dcat:mediaType
-    description: |
+    description: |-
       The file format or encoding method of the item (file) being described.
       The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES](https://www.iana.org/assignments/media-types/media-types.xhtml).
     required: true
@@ -556,15 +556,14 @@ Note that there could be a security risk in sharing the endpoint URL for interna
         The value of the `servesData` property should be the URI that identifies a dataset.
   serviceStatus:
     slot_uri: adms:status
-    description: |
+    description: |-
       The status of the resource in the context of a particular workflow process. 
-
       Lifecycle status
     required: true
     range: ServiceStatusValues
   serviceType:
     slot_uri: dct:type
-    description: |
+    description: |-
       The nature or genre of the resource.
 
       The business design or structure used in the presentation and publication of an information resource.
@@ -574,7 +573,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: ServiceTypeValues
   summary:
     slot_uri: rdfs:comment
-    description: |
+    description: |-
       A short textual summary of the resource with a maximum length of 250 characters. 
     recommended: true
     range: string
@@ -594,7 +593,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: string
   theme:
     slot_uri: dcat:theme
-    description: |
+    description: |-
       Topic
       A controlled term that expresses the broad topical content of an information resource.
       Subject
@@ -640,7 +639,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
       - Indicate vocabularies to be used
   title:
     slot_uri: dct:title
-    description: |
+    description: |-
       The full and formal name given to an information resource.
       A name given to the distribution.
     required: true
@@ -672,7 +671,7 @@ Note that there could be a security risk in sharing the endpoint URL for interna
     range: uriorcurie
   updateFrequency:
     slot_uri: dct:accrualPeriodicity
-    description: |
+    description: |-
       The time interval at which new or updated versions of an information resource are issued.
 
       The frequency at which a dataset is published.	
