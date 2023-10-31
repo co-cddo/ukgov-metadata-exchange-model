@@ -1,17 +1,17 @@
 {
   "identifier": "https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=CSV&redirect",
-  "accessRights": "OPEN",
-  "description": "Free and open postcode location data. Can be used for geographical analysis simple route planning asset management and much more.",
   "licence": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
   "mediaType": "text/csv",
-  "modified": "2023-02-01",
   "title": "Code-Point Open - CSV GB",
   "type": "dcat:Distribution",
+  "accessRights": "OPEN",
   "accessService": [
     "retirement-bereavement-care-address-lookup-location-service-v2.0.0"
   ],
   "byteSize": 14330000,
+  "description": "Free and open postcode location data. Can be used for geographical analysis simple route planning asset management and much more.",
   "downloadURL": "https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=CSV&redirect",
   "issued": "2023-02-01",
+  "modified": "2023-02-01",
   "@type": "Distribution"
 }

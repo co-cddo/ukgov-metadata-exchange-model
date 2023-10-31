@@ -437,13 +437,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -486,14 +479,15 @@
 <!-- Last check 25 August 2023 -->
 
 <h1 id="property-mediatype">Property: mediaType</h1>
-<p>The file format or encoding method of the item (file) being described.</p>
-<p>The media type of the distribution as defined by IANA <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA-MEDIA-TYPES</a>.</p>
+<p><em>The file format or encoding method of the item (file) being described.</em></p>
+<p><em>The media type of the distribution as defined by IANA <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA-MEDIA-TYPES</a>.</em></p>
+<p>URI: <a href="http://www.w3.org/ns/dcat#mediaType">dcat:mediaType</a></p>
 <h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
-<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<p>The table below details the classes which use this property and the conditions of its use.</p>
 <table>
 <thead>
 <tr>
-<th>URL</th>
+<th>Class</th>
 <th>Range</th>
 <th>Obligation</th>
 <th>Cardinality</th>
@@ -501,8 +495,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="http://www.w3.org/ns/dcat#mediaType">dcat:mediaType</a></td>
-<td><a href="../String/">String</a> <br/>Regex pattern: <code>^application/\S+|^audio/\S+|^font/\S+|^image/\S+|^message/\S+|^model/\S+|^multipart/\S+|^text/\S+|^video/\S+</code></td>
+<td><a href="../Distribution/">Distribution</a></td>
+<td><a href="../String/">String</a><br/>Regex pattern: <code>^application/\S+|^audio/\S+|^font/\S+|^image/\S+|^message/\S+|^model/\S+|^multipart/\S+|^text/\S+|^video/\S+</code></td>
 <td>Mandatory</td>
 <td>One</td>
 </tr>
@@ -545,23 +539,6 @@
 <p>A resource with identical or near-identical intellectual content may be available in multiple formats. For example, a resource may be available for download in html, pdf and docx formats. These should be captured as separate <a href="/ukgov-metadata-exchange-model/Distribution">distributions</a> of the Dataset with each distribution having a different mediatype value.</p>
 <!-- no inheritance hierarchy -->
 
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Modifies Property</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Distribution/">Distribution</a></td>
-<td>A specific representation of a dataset</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <!-- Jinja2 template based on https://github.com/linkml/linkml/blob/main/linkml/generators/docgen/common_metadata.md.jinja2 -->
 <!-- This file should be periodically checked against the original source -->
 <!-- Last check 25 August 2023 -->

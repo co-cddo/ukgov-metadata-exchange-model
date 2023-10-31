@@ -1,0 +1,8 @@
+{
+  "identifier": "https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=EXCEL&redirect",
+  "licence": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "mediaType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "title": "Code-Point Open - Excel GB",
+  "type": "dcat:Distribution",
+  "@type": "Distribution"
+}

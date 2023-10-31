@@ -430,13 +430,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#todos" class="md-nav__link">
     TODOs
   </a>
@@ -486,15 +479,18 @@
 <!-- Last check 25 August 2023 -->
 
 <h1 id="property-updatefrequency">Property: updateFrequency</h1>
-<p>The time interval at which new or updated versions of an information resource are issued.</p>
-<p>The frequency at which a dataset is published.  </p>
-<p>An available distribution of the dataset. If the frequency is unknown then use the value <code>freq:irregular</code>.</p>
+<p><em>The time interval at which new or updated versions of an information resource are issued.</em></p>
+<p>__</p>
+<p>_The frequency at which a dataset is published. _</p>
+<p>__</p>
+<p><em>An available distribution of the dataset. If the frequency is unknown then use the value <code>freq:irregular</code>.</em></p>
+<p>URI: <a href="http://purl.org/dc/terms/accrualPeriodicity">dct:accrualPeriodicity</a></p>
 <h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
-<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<p>The table below details the classes which use this property and the conditions of its use.</p>
 <table>
 <thead>
 <tr>
-<th>URL</th>
+<th>Class</th>
 <th>Range</th>
 <th>Obligation</th>
 <th>Cardinality</th>
@@ -502,7 +498,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="http://purl.org/dc/terms/accrualPeriodicity">dct:accrualPeriodicity</a></td>
+<td><a href="../Dataset/">Dataset</a></td>
 <td><a href="../FrequencyValues/">FrequencyValues</a></td>
 <td>Mandatory</td>
 <td>One</td>
@@ -519,23 +515,6 @@
 <p>If the frequency with which the described resource changes (e.g. A quarterly publication is changed to a monthly publication) update the frequency metadata element to reflect the new frequency. A note can be added under the ADDITIONAL INFORMATION metadata element to mark the change in frequency.</p>
 <!-- no inheritance hierarchy -->
 
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Modifies Property</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Dataset/">Dataset</a></td>
-<td>A collection of data, published or curated by a single agent, and available f...</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <!-- Jinja2 template based on https://github.com/linkml/linkml/blob/main/linkml/generators/docgen/common_metadata.md.jinja2 -->
 <!-- This file should be periodically checked against the original source -->
 <!-- Last check 25 August 2023 -->

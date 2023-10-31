@@ -437,13 +437,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#todos" class="md-nav__link">
     TODOs
   </a>
@@ -493,13 +486,14 @@
 <!-- Last check 25 August 2023 -->
 
 <h1 id="property-modified">Property: modified</h1>
-<p>The date, or date and time, on which the content of an information resource is changed.</p>
+<p><em>The date, or date and time, on which the content of an information resource is changed.</em></p>
+<p>URI: <a href="http://purl.org/dc/terms/modified">dct:modified</a></p>
 <h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
-<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<p>The table below details the classes which use this property and the conditions of its use.</p>
 <table>
 <thead>
 <tr>
-<th>URL</th>
+<th>Class</th>
 <th>Range</th>
 <th>Obligation</th>
 <th>Cardinality</th>
@@ -507,7 +501,25 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="http://purl.org/dc/terms/modified">dct:modified</a></td>
+<td><a href="../DataResource/">DataResource</a></td>
+<td><a href="../Date/">Date</a></td>
+<td>Mandatory</td>
+<td>One</td>
+</tr>
+<tr>
+<td><a href="../Distribution/">Distribution</a></td>
+<td><a href="../Date/">Date</a></td>
+<td>Recommended</td>
+<td>One</td>
+</tr>
+<tr>
+<td><a href="../DataService/">DataService</a></td>
+<td><a href="../Date/">Date</a></td>
+<td>Mandatory</td>
+<td>One</td>
+</tr>
+<tr>
+<td><a href="../Dataset/">Dataset</a></td>
 <td><a href="../Date/">Date</a></td>
 <td>Mandatory</td>
 <td>One</td>
@@ -539,38 +551,6 @@
 <p>For most publications and many other information resources in the Government Data Catalogue, the DATE CREATED and DATE MODIFIED will be the same and will likely remain the same.</p>
 <!-- no inheritance hierarchy -->
 
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Modifies Property</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../DataResource/">DataResource</a></td>
-<td>Resource published or curated by a single agent</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Distribution/">Distribution</a></td>
-<td>A specific representation of a dataset</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../DataService/">DataService</a></td>
-<td>A collection of operations that provides access to one or more datasets or da...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Dataset/">Dataset</a></td>
-<td>A collection of data, published or curated by a single agent, and available f...</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <!-- Jinja2 template based on https://github.com/linkml/linkml/blob/main/linkml/generators/docgen/common_metadata.md.jinja2 -->
 <!-- This file should be periodically checked against the original source -->
 <!-- Last check 25 August 2023 -->

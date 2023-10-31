@@ -437,13 +437,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -486,14 +479,16 @@
 <!-- Last check 25 August 2023 -->
 
 <h1 id="property-created">Property: created</h1>
-<p>The date, or date and time, on which the content of an information resource is created or compiled. </p>
-<p><strong>When used on a metadata record</strong> The date and time on which an information resource is made available through the catalogue.</p>
+<p>_The date, or date and time, on which the content of an information resource is created or compiled. _</p>
+<p>__</p>
+<p><em><strong>When used on a metadata record</strong> The date and time on which an information resource is made available through the catalogue.</em></p>
+<p>URI: <a href="http://purl.org/dc/terms/created">dct:created</a></p>
 <h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
-<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<p>The table below details the classes which use this property and the conditions of its use.</p>
 <table>
 <thead>
 <tr>
-<th>URL</th>
+<th>Class</th>
 <th>Range</th>
 <th>Obligation</th>
 <th>Cardinality</th>
@@ -501,7 +496,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="http://purl.org/dc/terms/created">dct:created</a></td>
+<td><a href="../DataResource/">DataResource</a></td>
+<td><a href="../Date/">Date</a></td>
+<td>Optional</td>
+<td>One</td>
+</tr>
+<tr>
+<td><a href="../DataService/">DataService</a></td>
+<td><a href="../Date/">Date</a></td>
+<td>Optional</td>
+<td>One</td>
+</tr>
+<tr>
+<td><a href="../Dataset/">Dataset</a></td>
 <td><a href="../Date/">Date</a></td>
 <td>Optional</td>
 <td>One</td>
@@ -551,33 +558,6 @@
 <p><code>created</code> will be the date the metadata record was first “published” within the Government Data Catalogue environment.</p>
 <!-- no inheritance hierarchy -->
 
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Modifies Property</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../DataResource/">DataResource</a></td>
-<td>Resource published or curated by a single agent</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DataService/">DataService</a></td>
-<td>A collection of operations that provides access to one or more datasets or da...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Dataset/">Dataset</a></td>
-<td>A collection of data, published or curated by a single agent, and available f...</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <!-- Jinja2 template based on https://github.com/linkml/linkml/blob/main/linkml/generators/docgen/common_metadata.md.jinja2 -->
 <!-- This file should be periodically checked against the original source -->
 <!-- Last check 25 August 2023 -->

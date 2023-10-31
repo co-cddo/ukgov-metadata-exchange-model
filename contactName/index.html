@@ -437,13 +437,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#aliases" class="md-nav__link">
     Aliases
   </a>
@@ -493,13 +486,14 @@
 <!-- Last check 25 August 2023 -->
 
 <h1 id="property-contactname">Property: contactName</h1>
-<p>The organisational contact to obtain further information or provide feedback about an information resource.</p>
+<p><em>The organisational contact to obtain further information or provide feedback about an information resource.</em></p>
+<p>URI: <a href="http://www.w3.org/2006/vcard/ns#fn">vcard:fn</a></p>
 <h2 id="obligation-and-cardinality">Obligation and Cardinality</h2>
-<p>The obligation or cardinality can be overridden when used by classes. Check the <a href="#applicable-classes">Applicable Classes</a> section below for details.</p>
+<p>The table below details the classes which use this property and the conditions of its use.</p>
 <table>
 <thead>
 <tr>
-<th>URL</th>
+<th>Class</th>
 <th>Range</th>
 <th>Obligation</th>
 <th>Cardinality</th>
@@ -507,7 +501,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="http://www.w3.org/2006/vcard/ns#fn">vcard:fn</a></td>
+<td><a href="../ContactPoint/">ContactPoint</a></td>
 <td><a href="../String/">String</a></td>
 <td>Mandatory</td>
 <td>One</td>
@@ -535,23 +529,6 @@
 <p>When a <code>contactName</code> is provided for an information resource, it should be combined with a <a href="/ukgov-metadata-exchange-model/email"><code>email</code></a>.</p>
 <!-- no inheritance hierarchy -->
 
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Modifies Property</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../ContactPoint/">ContactPoint</a></td>
-<td>Contact information</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <!-- Jinja2 template based on https://github.com/linkml/linkml/blob/main/linkml/generators/docgen/common_metadata.md.jinja2 -->
 <!-- This file should be periodically checked against the original source -->
 <!-- Last check 25 August 2023 -->
