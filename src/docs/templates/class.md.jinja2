@@ -109,6 +109,8 @@ URI: {{ gen.uri_link(element) }}
 {% endfor %}
 {% endif %}
 
+{% include "feedback_footer.md.jinja2" %}
+
 {%- if footer -%}
 {{footer}}
 {%- endif -%}
