@@ -628,6 +628,94 @@
 </table>
 <h2 id="examples">Examples</h2>
 <ul>
+<li><a href="../assets/examples/DataService-nhs-vaccination-events.yaml.json">DataService-nhs-vaccination-events</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: DataService-nhs-vaccination-events
+
+<pre><code class="language-yaml">## NHS Vaccination Events
+---
+identifier: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir
+type: dcat:DataService
+serviceType: EVENT
+title: Vaccination Events - FHIR
+description: Publish or receive messages about changes to a patient's vaccination details.
+keyword: 
+  - Community of care
+  - Vaccination
+  - Community health
+  - Hospital
+  - Inpatient
+  - Outpatient
+  - GP / Primary Care
+  - Publish/Subscribe Events
+  - Internet Facing
+  - FHIR
+  - STU3
+  - MESH
+  - NEMS
+theme: 
+  - http://eurovoc.europa.eu/c_af502da0
+  - http://eurovoc.europa.eu/4636
+serviceStatus: LIVE
+accessRights: INTERNAL
+securityClassification: NOT_APPLICABLE
+licence: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir#who-can-use-this
+contactPoint: 
+  contactName: nrlnems.ls@nhs.net
+  email: nrlnems.ls@nhs.net
+modified: &quot;2022-10-24&quot;
+creator: 
+  - nhs-digital
+publisher: nhs-digital
+version: live
+endpointDescription: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir
+</code></pre>
+
+-->
+<ul>
+<li><a href="../assets/examples/DataService-fsa-food-alertsservice.yaml.json">DataService-fsa-food-alertsservice</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: DataService-fsa-food-alertsservice
+
+<pre><code class="language-yaml">## FSA Food Alerts Service
+---
+identifier: https://data.food.gov.uk/food-alerts/
+type: dcat:DataService
+serviceType: EVENT
+title: FSA Food Alerts
+description: &quot;The FSA Food Alerts API provides access to current and recent Food Alerts: Allergy Alerts (AA), Product Recall Information Notices (PRIN) and Food Alerts for Action (FAFA). It provides applications with the facility to list alerts matching some filter criterion, and to retrieve a description of an alert.&quot;
+keyword: 
+  - Alert
+  - Allergy
+  - Product Recall
+  - PRIN
+  - Food
+  - FAFA
+theme: 
+  - http://eurovoc.europa.eu/c_af502da0
+  - http://eurovoc.europa.eu/6569
+  - http://eurovoc.europa.eu/5431
+licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+serviceStatus: BETA
+version: &quot;0.1&quot;
+accessRights: OPEN
+securityClassification: OFFICIAL
+issued: &quot;2018-01-01&quot;
+contactPoint:
+    contactName: Data Team
+    email: data@food.gov.uk
+modified: &quot;2018-01-30&quot;
+creator: 
+  - food-standards-agency
+publisher: food-standards-agency
+endpointURL: http://data.food.gov.uk/food-alerts/
+endpointDescription: http://data.food.gov.uk/food-alerts/ui/reference
+</code></pre>
+
+-->
+<ul>
 <li><a href="../assets/examples/DataService-nhs-os-places-api.yaml.json">DataService-nhs-os-places-api</a></li>
 </ul>
 <!-- Commenting out code that displays example inline as a yaml block
@@ -727,94 +815,6 @@ endpointDescription: https://developer.service.hmrc.gov.uk/api-documentation/doc
 endpointURL: https://api.service.hmrc.gov.uk/
 serviceStatus: BETA
 serviceType: REST
-</code></pre>
-
--->
-<ul>
-<li><a href="../assets/examples/DataService-fsa-food-alertsservice.yaml.json">DataService-fsa-food-alertsservice</a></li>
-</ul>
-<!-- Commenting out code that displays example inline as a yaml block
-### Example: DataService-fsa-food-alertsservice
-
-<pre><code class="language-yaml">## FSA Food Alerts Service
----
-identifier: https://data.food.gov.uk/food-alerts/
-type: dcat:DataService
-serviceType: EVENT
-title: FSA Food Alerts
-description: &quot;The FSA Food Alerts API provides access to current and recent Food Alerts: Allergy Alerts (AA), Product Recall Information Notices (PRIN) and Food Alerts for Action (FAFA). It provides applications with the facility to list alerts matching some filter criterion, and to retrieve a description of an alert.&quot;
-keyword: 
-  - Alert
-  - Allergy
-  - Product Recall
-  - PRIN
-  - Food
-  - FAFA
-theme: 
-  - http://eurovoc.europa.eu/c_af502da0
-  - http://eurovoc.europa.eu/6569
-  - http://eurovoc.europa.eu/5431
-licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
-serviceStatus: BETA
-version: &quot;0.1&quot;
-accessRights: OPEN
-securityClassification: OFFICIAL
-issued: &quot;2018-01-01&quot;
-contactPoint:
-    contactName: Data Team
-    email: data@food.gov.uk
-modified: &quot;2018-01-30&quot;
-creator: 
-  - food-standards-agency
-publisher: food-standards-agency
-endpointURL: http://data.food.gov.uk/food-alerts/
-endpointDescription: http://data.food.gov.uk/food-alerts/ui/reference
-</code></pre>
-
--->
-<ul>
-<li><a href="../assets/examples/DataService-nhs-vaccination-events.yaml.json">DataService-nhs-vaccination-events</a></li>
-</ul>
-<!-- Commenting out code that displays example inline as a yaml block
-### Example: DataService-nhs-vaccination-events
-
-<pre><code class="language-yaml">## NHS Vaccination Events
----
-identifier: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir
-type: dcat:DataService
-serviceType: EVENT
-title: Vaccination Events - FHIR
-description: Publish or receive messages about changes to a patient's vaccination details.
-keyword: 
-  - Community of care
-  - Vaccination
-  - Community health
-  - Hospital
-  - Inpatient
-  - Outpatient
-  - GP / Primary Care
-  - Publish/Subscribe Events
-  - Internet Facing
-  - FHIR
-  - STU3
-  - MESH
-  - NEMS
-theme: 
-  - http://eurovoc.europa.eu/c_af502da0
-  - http://eurovoc.europa.eu/4636
-serviceStatus: LIVE
-accessRights: INTERNAL
-securityClassification: NOT_APPLICABLE
-licence: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir#who-can-use-this
-contactPoint: 
-  contactName: nrlnems.ls@nhs.net
-  email: nrlnems.ls@nhs.net
-modified: &quot;2022-10-24&quot;
-creator: 
-  - nhs-digital
-publisher: nhs-digital
-version: live
-endpointDescription: https://digital.nhs.uk/developer/api-catalogue/vaccination-events-fhir
 </code></pre>
 
 -->
