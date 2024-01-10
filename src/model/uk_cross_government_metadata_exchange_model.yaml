@@ -51,7 +51,7 @@ classes:
       - telephone
       - address      
 
-  DataResource:
+  CataloguedResource:
     abstract: true
     class_uri: dcat:Resource
     description: Resource published or curated by a single agent.
@@ -84,7 +84,7 @@ classes:
         required: true
 
   DataService:
-    is_a: DataResource
+    is_a: CataloguedResource
     class_uri: dcat:DataService
     description: A collection of operations that provides access to one or more datasets or data processing functions.
     slots:
@@ -98,7 +98,7 @@ classes:
         recommended: true
 
   Dataset:
-    is_a: DataResource
+    is_a: CataloguedResource
     class_uri: dcat:Dataset
     description: A collection of data, published or curated by a single agent, and available for access or download in one or more representations.
     slots:
