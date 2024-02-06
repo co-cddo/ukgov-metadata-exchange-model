@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://co-cddo.github.io/ukgov-metadata-exchange-model/DataResource/" rel="canonical"/>
+<link href="https://co-cddo.github.io/ukgov-metadata-exchange-model/CataloguedResource/" rel="canonical"/>
 <link href="../assets/favicons/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.4.4" name="generator"/>
-<title>DataResource - UK Cross-Government Metadata Exchange Model</title>
+<title>CataloguedResource - UK Cross-Government Metadata Exchange Model</title>
 <link href="../assets/stylesheets/main.bd3936ea.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/extra.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-dataresource">
+<a class="md-skip" href="#class-cataloguedresource">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              DataResource
+              CataloguedResource
             
           </span>
 </div>
@@ -254,7 +254,7 @@
 <!-- Jinja2 template based on https://github.com/linkml/linkml/blob/main/linkml/generators/docgen/class.md.jinja2 -->
 <!-- This file should be periodically checked against the original source -->
 <!-- Last check 25 August 2023 -->
-<h1 id="class-dataresource">Class: DataResource</h1>
+<h1 id="class-cataloguedresource">Class: CataloguedResource</h1>
 <p><em>Resource published or curated by a single agent.</em></p>
 <ul>
 <li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
@@ -264,63 +264,63 @@
 <!-- This file should be periodically checked against the original source -->
 <!-- Last check 25 August 2023 -->
 <div class="mermaid"> classDiagram
-    class DataResource
-      DataResource &lt;|-- DataService
-      DataResource &lt;|-- Dataset
+    class CataloguedResource
+      CataloguedResource &lt;|-- DataService
+      CataloguedResource &lt;|-- Dataset
 
-      DataResource : accessRights
+      CataloguedResource : accessRights
 
-          DataResource --|&gt; AccessRightsValues : accessRights
+          CataloguedResource --|&gt; AccessRightsValues : accessRights
 
-      DataResource : alternativeTitle
+      CataloguedResource : alternativeTitle
 
-      DataResource : contactPoint
+      CataloguedResource : contactPoint
 
-          DataResource --|&gt; ContactPoint : contactPoint
+          CataloguedResource --|&gt; ContactPoint : contactPoint
 
-      DataResource : created
+      CataloguedResource : created
 
-      DataResource : creator
+      CataloguedResource : creator
 
-          DataResource --|&gt; OrganisationValues : creator
+          CataloguedResource --|&gt; OrganisationValues : creator
 
-      DataResource : description
+      CataloguedResource : description
 
-      DataResource : identifier
+      CataloguedResource : identifier
 
-      DataResource : issued
+      CataloguedResource : issued
 
-      DataResource : keyword
+      CataloguedResource : keyword
 
-      DataResource : licence
+      CataloguedResource : licence
 
-      DataResource : modified
+      CataloguedResource : modified
 
-      DataResource : publisher
+      CataloguedResource : publisher
 
-          DataResource --|&gt; OrganisationValues : publisher
+          CataloguedResource --|&gt; OrganisationValues : publisher
 
-      DataResource : relatedResource
+      CataloguedResource : relatedResource
 
-      DataResource : securityClassification
+      CataloguedResource : securityClassification
 
-          DataResource --|&gt; SecurityClassificationValues : securityClassification
+          CataloguedResource --|&gt; SecurityClassificationValues : securityClassification
 
-      DataResource : summary
+      CataloguedResource : summary
 
-      DataResource : theme
+      CataloguedResource : theme
 
-      DataResource : title
+      CataloguedResource : title
 
-      DataResource : type
+      CataloguedResource : type
 
-      DataResource : version
+      CataloguedResource : version
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><strong>DataResource</strong><ul>
+<li><strong>CataloguedResource</strong><ul>
 <li><a href="../DataService/">DataService</a></li>
 <li><a href="../Dataset/">Dataset</a></li>
 </ul>
@@ -503,12 +503,12 @@
 </tr>
 <tr>
 <td>native</td>
-<td>ukgov_metadata:DataResource</td>
+<td>ukgov_metadata:CataloguedResource</td>
 </tr>
 </tbody>
 </table>
 <h2 id="provide-feedback">Provide Feedback</h2>
-<p><a href="https://github.com/co-cddo/ukgov-metadata-exchange-model/issues/new?body=Feedback+on+%5BDataResource%5D%28https://co-cddo.github.io/ukgov-metadata-exchange-model/DataResource%29%0A%0A%2A%2ADescribe%20the%20bug%2A%2A%0AA%20clear%20and%20concise%20description%20of%20what%20the%20bug%20is.%0A%0A%2A%2ATo%20Reproduce%2A%2A%0ASteps%20to%20reproduce%20the%20behavior%3A%0A1.%20Go%20to%20%27...%27%0A2.%20Click%20on%20%27....%27%0A3.%20Scroll%20down%20to%20%27....%27%0A4.%20See%20error%0A%0A%2A%2AExpected%20behavior%2A%2A%0AA%20clear%20and%20concise%20description%20of%20what%20you%20expected%20to%20happen.%0A%0A%2A%2AScreenshots%2A%2A%0AIf%20applicable%2C%20add%20screenshots%20to%20help%20explain%20your%20problem.%0A%0A%2A%2ADesktop%20%28please%20complete%20the%20following%20information%29%3A%2A%2A%0A%20-%20OS%3A%20%5Be.g.%20iOS%5D%0A%20-%20Browser%20%5Be.g.%20chrome%2C%20safari%5D%0A%20-%20Version%20%5Be.g.%2022%5D%0A%0A%2A%2ASmartphone%20%28please%20complete%20the%20following%20information%29%3A%2A%2A%0A%20-%20Device%3A%20%5Be.g.%20iPhone6%5D%0A%20-%20OS%3A%20%5Be.g.%20iOS8.1%5D%0A%20-%20Browser%20%5Be.g.%20stock%20browser%2C%20safari%5D%0A%20-%20Version%20%5Be.g.%2022%5D%0A%0A%2A%2AAdditional%20context%2A%2A%0AAdd%20any%20other%20context%20about%20the%20problem%20here.&amp;labels=bug">New GitHub Issue</a></p>
+<p><a href="https://github.com/co-cddo/ukgov-metadata-exchange-model/issues/new?body=Feedback+on+%5BCataloguedResource%5D%28https://co-cddo.github.io/ukgov-metadata-exchange-model/CataloguedResource%29%0A%0A%2A%2ADescribe%20the%20bug%2A%2A%0AA%20clear%20and%20concise%20description%20of%20what%20the%20bug%20is.%0A%0A%2A%2ATo%20Reproduce%2A%2A%0ASteps%20to%20reproduce%20the%20behavior%3A%0A1.%20Go%20to%20%27...%27%0A2.%20Click%20on%20%27....%27%0A3.%20Scroll%20down%20to%20%27....%27%0A4.%20See%20error%0A%0A%2A%2AExpected%20behavior%2A%2A%0AA%20clear%20and%20concise%20description%20of%20what%20you%20expected%20to%20happen.%0A%0A%2A%2AScreenshots%2A%2A%0AIf%20applicable%2C%20add%20screenshots%20to%20help%20explain%20your%20problem.%0A%0A%2A%2ADesktop%20%28please%20complete%20the%20following%20information%29%3A%2A%2A%0A%20-%20OS%3A%20%5Be.g.%20iOS%5D%0A%20-%20Browser%20%5Be.g.%20chrome%2C%20safari%5D%0A%20-%20Version%20%5Be.g.%2022%5D%0A%0A%2A%2ASmartphone%20%28please%20complete%20the%20following%20information%29%3A%2A%2A%0A%20-%20Device%3A%20%5Be.g.%20iPhone6%5D%0A%20-%20OS%3A%20%5Be.g.%20iOS8.1%5D%0A%20-%20Browser%20%5Be.g.%20stock%20browser%2C%20safari%5D%0A%20-%20Version%20%5Be.g.%2022%5D%0A%0A%2A%2AAdditional%20context%2A%2A%0AAdd%20any%20other%20context%20about%20the%20problem%20here.&amp;labels=bug">New GitHub Issue</a></p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
