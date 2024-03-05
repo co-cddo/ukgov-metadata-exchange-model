@@ -602,6 +602,35 @@
 </table>
 <h2 id="examples">Examples</h2>
 <ul>
+<li><a href="../assets/examples/Dataset-minimal-datset.yaml.json">Dataset-minimal-datset</a></li>
+</ul>
+<!-- Commenting out code that displays example inline as a yaml block
+### Example: Dataset-minimal-datset
+
+<pre><code class="language-yaml"># Example dataset metadata
+# Corresponds to the DWP OS postcodes dataset
+---
+identifier: https://www.data.gov.uk/dataset/2dfb82b4-741a-4b93-807e-11abb4bb0875/os-postcodes-data
+type: dcat:Dataset
+title: OS Postcodes Data
+description: &quot;The United Kingdom's (England, Scotland, Wales, Northern Ireland) postcodes represented as points and polygons. This data is often used for service delivery and statistical analysis. OS Postcodes Data is made available in a number of Ordnance Survey Products: Codepoint (point geometry), Codepoint Open (point geometry) and Codepoint with Polygons (polygon geometry). The postcode is sourced from Royal Mail. The polygon geometry is calculated using address geometry provided by Local Authority Land and Property Gazetteer custodians as a base.&quot;
+licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+version: 2023-02
+accessRights: COMMERCIAL
+securityClassification: OFFICIAL
+contactPoint:
+  contactName: Ordnance Survey Customer Service Centre
+  email: customerservices@os.uk
+modified: &quot;2023-02-01&quot;
+creator: 
+  - ordnance-survey
+publisher: department-for-work-pensions
+updateFrequency: freq:monthly
+
+</code></pre>
+
+-->
+<ul>
 <li><a href="../assets/examples/Dataset-os-postcodes-datset.yaml.json">Dataset-os-postcodes-datset</a></li>
 </ul>
 <!-- Commenting out code that displays example inline as a yaml block
@@ -636,35 +665,6 @@ updateFrequency: freq:quarterly
 distribution:
   - https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&amp;format=CSV&amp;redirect
   - https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&amp;format=GeoPackage&amp;redirect
-
-</code></pre>
-
--->
-<ul>
-<li><a href="../assets/examples/Dataset-minimal-datset.yaml.json">Dataset-minimal-datset</a></li>
-</ul>
-<!-- Commenting out code that displays example inline as a yaml block
-### Example: Dataset-minimal-datset
-
-<pre><code class="language-yaml"># Example dataset metadata
-# Corresponds to the DWP OS postcodes dataset
----
-identifier: https://www.data.gov.uk/dataset/2dfb82b4-741a-4b93-807e-11abb4bb0875/os-postcodes-data
-type: dcat:Dataset
-title: OS Postcodes Data
-description: &quot;The United Kingdom's (England, Scotland, Wales, Northern Ireland) postcodes represented as points and polygons. This data is often used for service delivery and statistical analysis. OS Postcodes Data is made available in a number of Ordnance Survey Products: Codepoint (point geometry), Codepoint Open (point geometry) and Codepoint with Polygons (polygon geometry). The postcode is sourced from Royal Mail. The polygon geometry is calculated using address geometry provided by Local Authority Land and Property Gazetteer custodians as a base.&quot;
-licence: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
-version: 2023-02
-accessRights: COMMERCIAL
-securityClassification: OFFICIAL
-contactPoint:
-  contactName: Ordnance Survey Customer Service Centre
-  email: customerservices@os.uk
-modified: &quot;2023-02-01&quot;
-creator: 
-  - ordnance-survey
-publisher: department-for-work-pensions
-updateFrequency: freq:monthly
 
 </code></pre>
 
