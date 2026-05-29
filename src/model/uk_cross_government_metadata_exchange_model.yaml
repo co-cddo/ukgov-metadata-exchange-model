@@ -209,7 +209,7 @@ slots:
   contactName:
     slot_uri: vcard:fn
     aliases: Team name
-    description: The organisational contact to obtain further information or provide feedback about an information resource.
+    description: The name of the organisational contact to obtain further information or provide feedback about an information resource.
     required: true 
     range: string
     comments: |
@@ -227,7 +227,7 @@ slots:
         When a `contactName` is provided for an information resource, it should be combined with a [`email`](/ukgov-metadata-exchange-model/email).
   contactPoint:
     slot_uri: dcat:contactPoint
-    description: The e-mail address to be used to contact the organisational contact for the resource as listed in the Contact Name.
+    description: The organisational contact to obtain further information or provide feedback about an information resource.
     required: true
     range: ContactPoint
     # any_of:
